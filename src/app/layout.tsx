@@ -1,27 +1,27 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter_Tight, Geist } from "next/font/google";
+import { Fraunces, Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
-
 const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-fraunces",
   axes: ["opsz", "SOFT", "WONK"],
+  display: "swap",
 });
 
 const interTight = Inter_Tight({
   subsets: ["latin"],
   variable: "--font-inter",
   weight: ["400", "600"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "You Feed Them",
-  description: "Building programs. Communities sustain them.",
+  description: "We build programs. Communities sustain them. 17 years of sustainable impact in East Africa.",
 };
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(fraunces.variable, interTight.variable, "font-sans", geist.variable)}>
+    <html lang="en" className={cn(fraunces.variable, interTight.variable)}>
       <body className="bg-forest text-cream font-sans antialiased selection:bg-gold selection:text-forest">
         <Navbar />
         {children}
