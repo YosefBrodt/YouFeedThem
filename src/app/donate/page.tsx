@@ -9,6 +9,8 @@ const tiers = [
   { amount: 100, label: "one medical camp supply kit" },
   { amount: 250, label: "one teacher stipend for a month" },
   { amount: 500, label: "one term of tuition for an alumni candidate" },
+  { amount: 5000, label: "funds a full program cycle" },
+  { amount: 10000, label: "names a cohort" },
 ];
 
 export default function Donate() {
@@ -17,7 +19,9 @@ export default function Donate() {
   const [customAmount, setCustomAmount] = useState<string>("");
 
   const isCustom = !tiers.some((t) => t.amount === amount);
-  const displayAmount = isCustom ? customAmount : amount;
+  const displayAmount = isCustom
+    ? customAmount
+    : amount.toLocaleString();
 
   return (
     <main className="min-h-screen pt-40 pb-32 bg-forest text-cream">
@@ -103,11 +107,11 @@ export default function Donate() {
               </div>
 
               {/* Tier buttons */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
                 {tiers.map((tier) => (
                   <button
                     key={tier.amount}
-                    className={`bg-transparent border p-6 transition-all duration-200 cursor-pointer text-left ${
+                    className={`bg-transparent border p-5 sm:p-6 transition-all duration-200 cursor-pointer text-left ${
                       amount === tier.amount
                         ? "bg-forest text-cream border-forest"
                         : "border-forest/20 text-forest hover:border-forest"
@@ -117,14 +121,16 @@ export default function Donate() {
                       setCustomAmount("");
                     }}
                   >
-                    <span className="font-heading text-2xl block">${tier.amount}</span>
-                    <span className={`font-sans text-xs mt-1 block ${amount === tier.amount ? "text-cream/70" : "text-forest/50"}`}>
+                    <span className="font-heading text-xl sm:text-2xl block">
+                      ${tier.amount.toLocaleString()}
+                    </span>
+                    <span className={`font-sans text-xs mt-1 block leading-snug ${amount === tier.amount ? "text-cream/70" : "text-forest/50"}`}>
                       {tier.label}
                     </span>
                   </button>
                 ))}
                 {/* Custom */}
-                <div className="col-span-2 relative flex items-center">
+                <div className="col-span-2 sm:col-span-3 relative flex items-center">
                   <span className="absolute left-6 font-heading text-2xl text-forest">$</span>
                   <input
                     type="number"

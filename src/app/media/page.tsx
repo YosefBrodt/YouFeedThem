@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { BlurFade } from "@/components/ui/blur-fade";
 
 export default function Media() {
@@ -108,6 +109,33 @@ export default function Media() {
                   Mission trip video (pending)
                 </p>
               </div>
+            </div>
+          </BlurFade>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-charcoal py-32 text-center text-cream">
+        <div className="container mx-auto px-8 flex flex-col items-center">
+          <BlurFade>
+            <h2 className="font-heading text-4xl md:text-6xl mb-6 max-w-3xl leading-[1.1]">
+              The work is the proof. Fund the next deployment.
+            </h2>
+          </BlurFade>
+          <BlurFade delay={0.15}>
+            <div className="flex flex-wrap justify-center gap-6 mt-6">
+              <Link
+                href="/donate"
+                className="bg-gold text-forest hover:bg-[#d1a862] text-sm uppercase tracking-wider font-semibold py-4 px-10 transition-colors inline-block"
+              >
+                Invest now
+              </Link>
+              <Link
+                href="/impact"
+                className="bg-transparent text-cream border border-cream/40 hover:border-cream hover:bg-cream/10 text-sm uppercase tracking-wider font-semibold py-4 px-10 transition-colors inline-block"
+              >
+                Read alumni stories
+              </Link>
             </div>
           </BlurFade>
         </div>

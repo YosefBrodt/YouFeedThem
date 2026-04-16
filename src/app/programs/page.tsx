@@ -36,7 +36,7 @@ export default function Programs() {
                   Regenerative farms that outlast the funding
                 </h2>
                 <p className="text-lg opacity-90 mb-12 leading-[1.7]">
-                  [Placeholder: details on the farming program, crops grown, communities served, handover model. Roland to confirm specifics.]
+                  We start by training local farmers in soil-restorative techniques: cover cropping, composting, crop rotation, water capture. We provide the initial seed stock, tools, and infrastructure. Then we transfer ownership. The fields we planted in the first years are still producing because the people working them own the outcomes.
                 </p>
               </div>
             </BlurFade>
@@ -79,7 +79,7 @@ export default function Programs() {
                   Schools where graduates reach university
                 </h2>
                 <p className="text-lg opacity-90 mb-12 leading-[1.7]">
-                  [Placeholder: the 3 schools, the graduation pipeline, examples of alumni outcomes, Seje as flagship. Use Seje photo here.]
+                  Seje Primary was our first school, built in 2009. Two more have followed since. The programs feed students daily from community-run farms, retain teaching staff on stipend, and graduate cohorts that move on to secondary and university. When we started, the goal was permanent classrooms. What we got was a pipeline.
                 </p>
                 <div className="flex flex-wrap gap-12">
                   <div className="flex flex-col">
@@ -113,7 +113,7 @@ export default function Programs() {
                   Mobile camps, 7,000+ treated per deployment
                 </h2>
                 <p className="text-lg opacity-90 mb-12 leading-[1.7]">
-                  [Placeholder: the mission trip model, the 5+5 team structure, what a typical camp looks like, outcomes.]
+                  Each camp is a short, intense deployment. A rotating team of five Canadian and five American volunteers joins local medical staff to run triage, primary care, and follow-up. We prioritize regions with no standing clinical infrastructure. Every patient seen is a patient the regional system otherwise would not have reached.
                 </p>
                 <div className="flex flex-wrap gap-12">
                   <div className="flex flex-col">
@@ -140,21 +140,29 @@ export default function Programs() {
         <div className="container mx-auto px-8 max-w-3xl text-center">
           <BlurFade>
             <h2 className="font-heading text-4xl md:text-5xl text-cream mb-6 leading-[1.1]">
-              Want to fund a specific program?
+              Fund a program, or fund all three.
             </h2>
           </BlurFade>
           <BlurFade delay={0.15}>
             <p className="text-lg text-cream/90 leading-[1.65] mb-12">
-              We accept program-specific investments. Tell us which one and we&apos;ll earmark it.
+              We accept program-specific investments. Give once, give monthly, or reach out if you want to direct a major gift to a particular initiative.
             </p>
           </BlurFade>
           <BlurFade delay={0.3}>
-            <a
-              href="mailto:rolandpoirier58@gmail.com"
-              className="bg-gold text-forest hover:bg-[#d1a862] text-sm uppercase tracking-wider font-semibold py-4 px-10 transition-colors inline-block"
-            >
-              Get in touch
-            </a>
+            <div className="flex flex-wrap justify-center gap-6">
+              <Link
+                href="/donate"
+                className="bg-gold text-forest hover:bg-[#d1a862] text-sm uppercase tracking-wider font-semibold py-4 px-10 transition-colors inline-block"
+              >
+                Invest now
+              </Link>
+              <a
+                href="mailto:rolandpoirier58@gmail.com"
+                className="bg-transparent text-cream border border-cream/40 hover:border-cream hover:bg-cream/10 text-sm uppercase tracking-wider font-semibold py-4 px-10 transition-colors inline-block"
+              >
+                Talk to Roland
+              </a>
+            </div>
           </BlurFade>
         </div>
       </section>

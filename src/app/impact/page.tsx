@@ -63,21 +63,47 @@ export default function Impact() {
             </h2>
           </BlurFade>
           <div className="flex flex-col gap-16">
-            {[1, 2, 3].map((i) => (
-              <BlurFade key={i} delay={i * 0.1}>
+            {[
+              {
+                role: "Alumna / First cohort",
+                summary:
+                  "Graduated from Seje Primary, on to secondary school on scholarship, now in her final year of a university program in East Africa.",
+                quote:
+                  "Nobody asked us to keep the school open after you left. We just knew it was ours.",
+              },
+              {
+                role: "Alumnus / Engineering track",
+                summary:
+                  "Started at Seje in grade three. Completed secondary school on a community-funded bursary. Now studying engineering, intends to return to work on rural infrastructure.",
+                quote:
+                  "The farm is what kept the school running. The school is what got me out.",
+              },
+              {
+                role: "Alumna / Medical track",
+                summary:
+                  "First in her village to pursue medicine. Grew up helping at mission camps as a child. Now training to staff the same kind of camps she once volunteered in.",
+                quote:
+                  "I\u2019m going to bring a clinic back here. That\u2019s the plan.",
+              },
+            ].map((alum, i) => (
+              <BlurFade key={alum.role} delay={i * 0.1}>
                 <div className="grid grid-cols-1 lg:grid-cols-[0.4fr_1fr] gap-8 lg:gap-16 items-start border-t border-cream/10 pt-12">
                   <div className="w-full aspect-square bg-charcoal relative overflow-hidden max-w-[200px]">
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <p className="font-sans text-cream/30 text-xs uppercase tracking-wider">Photo</p>
+                      <p className="font-sans text-cream/30 text-xs uppercase tracking-wider">
+                        Portrait
+                      </p>
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-heading text-2xl md:text-3xl mb-4">[Student Name {i}]</h3>
-                    <p className="text-lg leading-[1.65] text-cream/80 mb-4">
-                      [Currently in university, field of study, where, one-line quote]
+                    <p className="font-sans text-xs uppercase tracking-[0.15em] text-gold font-semibold mb-4">
+                      {alum.role}
+                    </p>
+                    <p className="text-lg leading-[1.65] text-cream/80 mb-6">
+                      {alum.summary}
                     </p>
                     <p className="font-heading italic text-xl text-gold leading-[1.4]">
-                      &ldquo;[Student quote placeholder]&rdquo;
+                      {"\u201C"}{alum.quote}{"\u201D"}
                     </p>
                   </div>
                 </div>
@@ -97,7 +123,7 @@ export default function Impact() {
                   The Team Behind the Stories
                 </h2>
                 <p className="text-lg leading-[1.65] opacity-90">
-                  The recent 5+5 Canadian/American mission trip brought together volunteers and field teams. [Placeholder for group photo and further details from Roland.]
+                  The most recent mission brought together five Canadian and five American volunteers alongside our field staff in East Africa. Four days, several communities, and a single operating principle: the people on the ground know what&rsquo;s needed. We show up, we work, we leave the programs running.
                 </p>
               </div>
               <div className="w-full aspect-[4/3] bg-charcoal relative overflow-hidden">

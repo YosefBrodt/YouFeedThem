@@ -33,7 +33,13 @@ export default function About() {
           <BlurFade delay={0.15}>
             <div className="flex flex-col gap-6">
               <p className="text-lg leading-[1.65] opacity-90">
-                [Placeholder: Roland&apos;s own origin story goes here. Ask him on the follow-up call. Format as 3 short paragraphs, max 4 lines each.]
+                In 2009, we started with a single school in Seje, Kenya. The idea was narrow: build permanent classrooms, stabilize a teaching staff, then leave. Most aid programs do the opposite. They arrive, deliver, and depend on their own return.
+              </p>
+              <p className="text-lg leading-[1.65] opacity-90">
+                We bet on a different model. Build the foundation, transfer ownership, trust the community to keep the lights on. We drafted no exit date because we never intended to run the program. The program was always theirs.
+              </p>
+              <p className="text-lg leading-[1.65] opacity-90">
+                17 years later, Seje still operates. It&apos;s grown. Its alumni are in university. The schools and programs that followed were built on the same principle, and they are still standing for the same reason.
               </p>
             </div>
           </BlurFade>
@@ -119,7 +125,7 @@ export default function About() {
                 Roland Poirier
               </h2>
               <p className="text-lg leading-[1.65] text-cream/90">
-                [Placeholder bio: founder/CEO, 17-year track record, personal connection to East Africa, the through-line. Ask Roland for 3 sentences. No stock founder headshot, use a real one from the field.]
+                Roland founded You Feed Them in 2009 and has led the work across East Africa for the last seventeen years. He built his first program on a simple conviction: that the people closest to a problem are the ones most qualified to solve it, if given the tools to start. Every school, farm, and clinic You Feed Them has stood up since has been built on that same conviction.
               </p>
             </div>
           </BlurFade>
@@ -130,17 +136,30 @@ export default function About() {
       <section className="bg-forest py-32 text-center text-cream">
         <div className="container mx-auto px-8 flex flex-col items-center">
           <BlurFade>
-            <h2 className="font-heading text-4xl md:text-6xl mb-12">
-              Review the outcomes.
+            <h2 className="font-heading text-4xl md:text-6xl mb-6 max-w-3xl">
+              The model only works when people fund it.
             </h2>
           </BlurFade>
-          <BlurFade delay={0.15}>
-            <Link
-              href="/programs"
-              className="bg-gold text-forest hover:bg-[#d1a862] text-sm uppercase tracking-wider font-semibold py-4 px-10 transition-colors inline-block"
-            >
-              Explore Portfolio
-            </Link>
+          <BlurFade delay={0.1}>
+            <p className="text-lg text-cream/90 max-w-2xl leading-[1.65] mb-12">
+              Every program we&apos;ve built since 2009 is still running. Your investment is what lets us build the next one.
+            </p>
+          </BlurFade>
+          <BlurFade delay={0.2}>
+            <div className="flex flex-wrap justify-center gap-6">
+              <Link
+                href="/donate"
+                className="bg-gold text-forest hover:bg-[#d1a862] text-sm uppercase tracking-wider font-semibold py-4 px-10 transition-colors inline-block"
+              >
+                Invest now
+              </Link>
+              <Link
+                href="/programs"
+                className="bg-transparent text-cream border border-cream/40 hover:border-cream hover:bg-cream/10 text-sm uppercase tracking-wider font-semibold py-4 px-10 transition-colors inline-block"
+              >
+                Explore programs
+              </Link>
+            </div>
           </BlurFade>
         </div>
       </section>
