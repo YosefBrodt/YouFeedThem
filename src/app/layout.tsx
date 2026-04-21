@@ -20,8 +20,24 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "You Feed Them",
-  description: "We build programs. Communities sustain them. 17 years of sustainable impact in East Africa.",
+  metadataBase: new URL("https://youfeedthem.com"),
+  title: {
+    default: "You Feed Them | Building Relationships. Bringing Hope.",
+    template: "%s | You Feed Them",
+  },
+  description:
+    "Since 2008, You Feed Them has walked alongside remote villages in Kenya and Tanzania: clean water, food security, schools, and hope. 481 students today. 27 in university.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/logo/apple-touch-icon.png",
+  },
+  openGraph: {
+    title: "You Feed Them | Building Relationships. Bringing Hope.",
+    description:
+      "Since 2008, You Feed Them has walked alongside remote villages in Kenya and Tanzania: clean water, food security, schools, and hope.",
+    images: ["/logo/yft-logo-512.png"],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
