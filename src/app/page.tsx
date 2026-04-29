@@ -11,15 +11,26 @@ export default function Home() {
       {/* ── Hero ── */}
       <section className="relative w-full h-[90vh] min-h-[600px] flex items-end pb-24 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-charcoal">
+          <video
+            src="/hero-school-children.mp4"
+            poster="/hero-school-children-poster.jpg"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            aria-label="Kenyan students gathering outside school"
+            className="absolute inset-0 w-full h-full object-cover object-center motion-reduce:hidden"
+          />
           <Image
-            src="/photos/community-gathering.jpg"
-            alt="Students at Yogo Glory Centre Academy, the school You Feed Them built in Kenya"
+            src="/hero-school-children-poster.jpg"
+            alt="Kenyan students gathering outside school"
             fill
-            className="object-cover object-center saturate-[0.9]"
+            className="object-cover object-center hidden motion-reduce:block"
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-forest/95 via-forest/60 to-forest/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-forest/95 via-forest/65 to-forest/25" />
         </div>
         <div className="container mx-auto px-8 max-w-7xl relative z-10">
           <BlurFade delay={0.1}>
