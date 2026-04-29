@@ -29,26 +29,11 @@ export default function Footer() {
           <p className="font-sans text-sm text-cream/60 leading-relaxed">
             Since 2008. Kenya. Tanzania. Home base: South Lancaster, Ontario, Canada.
           </p>
-          <div className="flex gap-6 mt-8">
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-sm text-cream/60 hover:text-gold transition-colors uppercase tracking-wider font-semibold"
-              aria-label="Facebook"
-            >
-              Facebook
-            </a>
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-sm text-cream/60 hover:text-gold transition-colors uppercase tracking-wider font-semibold"
-              aria-label="Instagram"
-            >
-              Instagram
-            </a>
-          </div>
+          {/*
+            Social links removed pending real handles from Roland. Re-add once we have:
+            <a href="https://www.facebook.com/<page>" target="_blank" rel="noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/<handle>" target="_blank" rel="noreferrer">Instagram</a>
+          */}
         </div>
 
         <div className="flex flex-wrap gap-12 md:gap-24">

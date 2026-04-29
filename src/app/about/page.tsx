@@ -38,7 +38,7 @@ const partners = [
   {
     name: "The Great Commission Foundation",
     region: "Canada",
-    note: "Issues CRA tax receipts for Canadian donors giving to Partners in Hope Tanzania (YFT&rsquo;s Mwalwigi work).",
+    note: "Issues CRA tax receipts for Canadian donors giving to Partners in Hope Tanzania (YFT's Mwalwigi work).",
     href: "https://gcfcanada.com/partners-in-hope-tanzania/",
   },
   {

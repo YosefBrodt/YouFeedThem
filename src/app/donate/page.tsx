@@ -274,10 +274,19 @@ export default function Donate() {
 
               {/* Submit */}
               <div className="flex flex-col gap-4">
-                <button className="w-full bg-gold text-forest hover:bg-[#d1a862] text-lg uppercase tracking-wider font-bold py-6 transition-colors cursor-pointer">
+                <a
+                  href={`mailto:roland@youfeedthem.com?subject=${encodeURIComponent(
+                    `${donateType === "recurring" ? "Monthly" : "One-time"} partnership: $${displayAmount || "—"}`
+                  )}&body=${encodeURIComponent(
+                    `Hi Roland,\n\nI'd like to partner with You Feed Them.\n\nAmount: $${displayAmount || "—"}${
+                      donateType === "recurring" ? " per month" : " (one-time)"
+                    }\nDirect to: ${selectedDesignation?.label}\n\nPlease send me payment instructions.\n\nName:\nLocation:\n`
+                  )}`}
+                  className="w-full text-center bg-gold text-forest hover:bg-[#d1a862] text-lg uppercase tracking-wider font-bold py-6 transition-colors cursor-pointer"
+                >
                   Partner {displayAmount ? `$${displayAmount}` : ""}
                   {donateType === "recurring" ? " / month" : ""}
-                </button>
+                </a>
                 <p className="text-center text-sm text-forest/60 leading-relaxed">
                   Direct gifts to YFT reach {selectedDesignation?.label.toLowerCase()} immediately. Not tax-receipted.
                   <br />

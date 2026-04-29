@@ -59,6 +59,11 @@ export function NumberTicker({
     [springValue, decimalPlaces]
   )
 
+  const formattedValue = Intl.NumberFormat("en-US", {
+    minimumFractionDigits: decimalPlaces,
+    maximumFractionDigits: decimalPlaces,
+  }).format(direction === "down" ? startValue : value)
+
   return (
     <span
       ref={ref}
@@ -68,7 +73,7 @@ export function NumberTicker({
       )}
       {...props}
     >
-      {startValue}
+      {formattedValue}
     </span>
   )
 }

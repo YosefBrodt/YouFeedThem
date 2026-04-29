@@ -69,15 +69,15 @@ export default function Programs() {
               </div>
             </BlurFade>
             <BlurFade delay={0.2}>
-              <div className="w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative">
+              <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative group">
                 <Image
                   src="/photos/shucking-peanuts-yogo.jpg"
                   alt="Shucking peanuts at Yogo farm, Kenya"
                   fill
-                  className="object-cover transition-transform duration-700 ease-out hover:scale-105 saturate-[0.9] sepia-[0.03]"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-[0.9] sepia-[0.03]"
                   sizes="(max-width: 1024px) 100vw, 60vw"
                 />
-              </div>
+              </Link>
             </BlurFade>
           </div>
         </div>
@@ -95,15 +95,15 @@ export default function Programs() {
         <div className="container mx-auto px-8 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-24 items-center">
             <BlurFade>
-              <div className="w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative order-2 lg:order-1">
+              <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative order-2 lg:order-1 group">
                 <Image
                   src="/seje_school_photo.png"
                   alt="Seje Glory Centre Academy, Siaya District, Kenya"
                   fill
-                  className="object-cover transition-transform duration-700 ease-out hover:scale-105 saturate-[0.85] sepia-[0.05]"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-[0.85] sepia-[0.05]"
                   sizes="(max-width: 1024px) 100vw, 60vw"
                 />
-              </div>
+              </Link>
             </BlurFade>
             <BlurFade delay={0.2}>
               <div className="order-1 lg:order-2">
@@ -176,15 +176,15 @@ export default function Programs() {
               </div>
             </BlurFade>
             <BlurFade delay={0.2}>
-              <div className="w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative">
+              <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative group">
                 <Image
                   src="/photos/pastor-titus-blankets.jpg"
                   alt="Pastor Titus distributing blankets in Mwalwigi, Tanzania"
                   fill
-                  className="object-cover saturate-[0.9]"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-[0.9]"
                   sizes="(max-width: 1024px) 100vw, 60vw"
                 />
-              </div>
+              </Link>
             </BlurFade>
           </div>
         </div>

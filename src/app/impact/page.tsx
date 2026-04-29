@@ -190,17 +190,17 @@ export default function Impact() {
         </div>
       </section>
 
-      {/* Before / After */}
+      {/* Then / Now */}
       <section className="bg-forest py-24 md:py-28 text-cream">
         <div className="container mx-auto px-8 max-w-7xl">
           <BlurFade>
             <p className="font-sans text-sm uppercase tracking-[0.2em] text-gold font-bold mb-6">
-              Before and After
+              Then and Now
             </p>
           </BlurFade>
           <BlurFade delay={0.1}>
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl mb-16 leading-[1.1] max-w-3xl">
-              What clean water looks like, from one side
+              What eighteen years of partnership looks like
             </h2>
           </BlurFade>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
@@ -209,17 +209,17 @@ export default function Impact() {
                 <div className="w-full aspect-[4/3] overflow-hidden bg-charcoal relative">
                   <Image
                     src="/photos/water-dirty.jpg"
-                    alt="Water source before intervention, contaminated and boiled for drinking"
+                    alt="Contaminated village water source in Yogo, pre-2011"
                     fill
                     className="object-cover saturate-[0.95]"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <p className="font-sans text-xs uppercase tracking-[0.15em] text-gold font-bold mt-4 mb-2">
-                  Before &middot; Yogo, pre-2011
+                  Then &middot; Yogo, Kenya, pre-2011
                 </p>
                 <p className="text-lg text-cream/85 leading-[1.65]">
-                  Water was boiled since the only well in the village was contaminated. Women and children traveled to gather water for washing and drinking, hours a day.
+                  Yogo&rsquo;s only village well was contaminated. Women and children walked hours each day to gather water that had to be boiled before use. Half the children in the community were dying from water-borne disease and malnutrition.
                 </p>
               </div>
             </BlurFade>
@@ -228,17 +228,17 @@ export default function Impact() {
                 <div className="w-full aspect-[4/3] overflow-hidden bg-charcoal relative">
                   <Image
                     src="/photos/drought-crops-titus.jpg"
-                    alt="Working crops with Pastor Titus"
+                    alt="Pastor Titus working drought-tolerant crops in Mwalwigi, Tanzania"
                     fill
                     className="object-cover saturate-[0.95]"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <p className="font-sans text-xs uppercase tracking-[0.15em] text-gold font-bold mt-4 mb-2">
-                  After &middot; Yogo, 2011 onward
+                  Now &middot; Mwalwigi, Tanzania
                 </p>
                 <p className="text-lg text-cream/85 leading-[1.65]">
-                  A drilled, working well. Storage tanks. Drip-line irrigation on the farm. Plenty of clean water for drinking and for the crops that feed the school.
+                  The model that worked in Yogo, hydrological survey, drilling, drip-line irrigation, drought-tolerant crops, is now being applied in Mwalwigi. Pastor Titus and his community are the next chapter of the work.
                 </p>
               </div>
             </BlurFade>
