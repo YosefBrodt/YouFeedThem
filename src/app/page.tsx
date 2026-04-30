@@ -127,15 +127,20 @@ export default function Home() {
             </div>
           </BlurFade>
           <BlurFade delay={0.2}>
-            <div className="w-full h-[400px] lg:h-[500px] bg-charcoal relative overflow-hidden ring-1 ring-forest/15 shadow-2xl shadow-black/15">
-              <Image
-                src="/photos/pastor-titus-family-2020.jpg"
-                alt="Pastor Titus Mashalla and family, YFT's field partner in Tanzania"
-                fill
-                className="object-cover saturate-[0.9] sepia-[0.03]"
-                sizes="(max-width: 1024px) 100vw, 40vw"
-              />
-            </div>
+            <figure className="flex flex-col gap-4">
+              <div className="w-full h-[400px] lg:h-[500px] bg-charcoal relative overflow-hidden ring-1 ring-forest/25 shadow-[0_30px_60px_-20px_rgba(26,61,46,0.45)]">
+                <Image
+                  src="/photos/pastor-titus-family-2020.jpg"
+                  alt="Pastor Titus, Happiness, and family"
+                  fill
+                  className="object-cover saturate-[0.9] sepia-[0.03]"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
+              </div>
+              <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-terracotta font-bold">
+                Pastor Titus and family &middot; Mwalwigi, Tanzania
+              </figcaption>
+            </figure>
           </BlurFade>
         </div>
       </section>
@@ -207,15 +212,20 @@ export default function Home() {
       <section className="bg-cream py-24 md:py-28 text-forest">
         <div className="container mx-auto px-8 max-w-7xl grid grid-cols-1 lg:grid-cols-[0.6fr_1fr] gap-16 lg:gap-32 items-center">
           <BlurFade>
-            <div className="w-full aspect-[3/4] bg-charcoal relative overflow-hidden ring-1 ring-forest/15 shadow-2xl shadow-black/15">
-              <Image
-                src="/photos/water-dirty.jpg"
-                alt="Unsafe water source in Mwalwigi, Tanzania before YFT intervention"
-                fill
-                className="object-cover saturate-[0.9]"
-                sizes="(max-width: 1024px) 100vw, 40vw"
-              />
-            </div>
+            <figure className="flex flex-col gap-4">
+              <div className="w-full aspect-[3/4] bg-charcoal relative overflow-hidden ring-1 ring-forest/25 shadow-[0_30px_60px_-20px_rgba(26,61,46,0.45)]">
+                <Image
+                  src="/photos/water-dirty.jpg"
+                  alt="Surface water source before the well was drilled"
+                  fill
+                  className="object-cover saturate-[0.9]"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
+              </div>
+              <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-terracotta font-bold">
+                The water before &middot; Mwalwigi, Tanzania
+              </figcaption>
+            </figure>
           </BlurFade>
           <BlurFade delay={0.2}>
             <div>

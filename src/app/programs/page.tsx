@@ -69,15 +69,20 @@ export default function Programs() {
               </div>
             </BlurFade>
             <BlurFade delay={0.2}>
-              <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative group ring-1 ring-forest/15 shadow-2xl shadow-black/15">
-                <Image
-                  src="/photos/shucking-peanuts-yogo.jpg"
-                  alt="Sorting peanuts at Yogo farm, Kenya"
-                  fill
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-[0.9] sepia-[0.03]"
-                  sizes="(max-width: 1024px) 100vw, 60vw"
-                />
-              </Link>
+              <figure className="flex flex-col gap-4">
+                <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative group ring-1 ring-forest/25 shadow-[0_30px_60px_-20px_rgba(26,61,46,0.45)]">
+                  <Image
+                    src="/photos/shucking-peanuts-yogo.jpg"
+                    alt="Sorting peanuts at the Yogo farm"
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-[0.9] sepia-[0.03]"
+                    sizes="(max-width: 1024px) 100vw, 60vw"
+                  />
+                </Link>
+                <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-terracotta font-bold">
+                  Sorting the harvest &middot; Yogo, Kenya
+                </figcaption>
+              </figure>
             </BlurFade>
           </div>
         </div>
@@ -95,15 +100,20 @@ export default function Programs() {
         <div className="container mx-auto px-8 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-24 items-center">
             <BlurFade>
-              <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative order-2 lg:order-1 group ring-1 ring-forest/15 shadow-2xl shadow-black/15">
-                <Image
-                  src="/photos/wayback-pulls/seje-academy-exterior.jpg"
-                  alt="Seje academy under construction, Siaya District, Kenya"
-                  fill
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-[0.92]"
-                  sizes="(max-width: 1024px) 100vw, 60vw"
-                />
-              </Link>
+              <figure className="flex flex-col gap-4 order-2 lg:order-1">
+                <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative group ring-1 ring-forest/25 shadow-[0_30px_60px_-20px_rgba(26,61,46,0.45)]">
+                  <Image
+                    src="/photos/wayback-pulls/seje-academy-exterior.jpg"
+                    alt="Seje academy under construction"
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-[0.92]"
+                    sizes="(max-width: 1024px) 100vw, 60vw"
+                  />
+                </Link>
+                <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-terracotta font-bold">
+                  Academy under construction &middot; Seje, Kenya
+                </figcaption>
+              </figure>
             </BlurFade>
             <BlurFade delay={0.2}>
               <div className="order-1 lg:order-2">
@@ -176,15 +186,20 @@ export default function Programs() {
               </div>
             </BlurFade>
             <BlurFade delay={0.2}>
-              <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative group ring-1 ring-forest/15 shadow-2xl shadow-black/15">
-                <Image
-                  src="/photos/pastor-titus-blankets.jpg"
-                  alt="Distributing blankets at Mitindo, Tanzania"
-                  fill
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-[0.9]"
-                  sizes="(max-width: 1024px) 100vw, 60vw"
-                />
-              </Link>
+              <figure className="flex flex-col gap-4">
+                <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative group ring-1 ring-forest/25 shadow-[0_30px_60px_-20px_rgba(26,61,46,0.45)]">
+                  <Image
+                    src="/photos/pastor-titus-blankets.jpg"
+                    alt="Distributing blankets at the Mitindo school"
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-[0.9]"
+                    sizes="(max-width: 1024px) 100vw, 60vw"
+                  />
+                </Link>
+                <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-terracotta font-bold">
+                  Distributing blankets &middot; Mitindo, Tanzania
+                </figcaption>
+              </figure>
             </BlurFade>
           </div>
         </div>

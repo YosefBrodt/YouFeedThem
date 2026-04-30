@@ -205,8 +205,8 @@ export default function Impact() {
           </BlurFade>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
             <BlurFade delay={0.1}>
-              <div>
-                <div className="w-full aspect-[4/3] overflow-hidden bg-charcoal relative ring-1 ring-cream/15 shadow-2xl shadow-black/35">
+              <figure className="flex flex-col gap-4">
+                <div className="w-full aspect-[4/3] overflow-hidden bg-charcoal relative ring-1 ring-cream/20 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)]">
                   <Image
                     src="/photos/water-dirty.jpg"
                     alt="Contaminated water source, pre-2011"
@@ -215,32 +215,32 @@ export default function Impact() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
-                <p className="font-sans text-xs uppercase tracking-[0.15em] text-gold font-bold mt-4 mb-2">
-                  Then &middot; Yogo, Kenya, pre-2011
-                </p>
+                <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-gold font-bold">
+                  Then &middot; The water before, pre-2011
+                </figcaption>
                 <p className="text-lg text-cream/85 leading-[1.65]">
-                  Yogo&rsquo;s only village well was contaminated. Women and children walked hours each day to gather water that had to be boiled before use. Half the children in the community were dying from water-borne disease and malnutrition.
+                  Women and children walked hours each day to gather water that had to be boiled before use. The first village well had been dug by hand and was contaminated.
                 </p>
-              </div>
+              </figure>
             </BlurFade>
             <BlurFade delay={0.2}>
-              <div>
-                <div className="w-full aspect-[4/3] overflow-hidden bg-charcoal relative ring-1 ring-cream/15 shadow-2xl shadow-black/35">
+              <figure className="flex flex-col gap-4">
+                <div className="w-full aspect-[4/3] overflow-hidden bg-charcoal relative ring-1 ring-cream/20 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)]">
                   <Image
                     src="/photos/drought-crops-titus.jpg"
-                    alt="Pastor Titus working drought-tolerant crops in Mwalwigi, Tanzania"
+                    alt="Working drought-tolerant crops in Mwalwigi"
                     fill
                     className="object-cover saturate-[0.95]"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
-                <p className="font-sans text-xs uppercase tracking-[0.15em] text-gold font-bold mt-4 mb-2">
-                  Now &middot; Mwalwigi, Tanzania
-                </p>
+                <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-gold font-bold">
+                  Now &middot; Drought-tolerant crops, Mwalwigi
+                </figcaption>
                 <p className="text-lg text-cream/85 leading-[1.65]">
-                  The model that worked in Yogo, hydrological survey, drilling, drip-line irrigation, drought-tolerant crops, is now being applied in Mwalwigi. Pastor Titus and his community are the next chapter of the work.
+                  The model that worked in Yogo, hydrological survey, drilling, drip-line irrigation, drought-tolerant crops, is now being applied in Mwalwigi. Pastor Titus and his community are the next chapter.
                 </p>
-              </div>
+              </figure>
             </BlurFade>
           </div>
         </div>

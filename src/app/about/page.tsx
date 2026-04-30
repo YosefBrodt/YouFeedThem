@@ -255,20 +255,20 @@ export default function About() {
       <section className="bg-charcoal py-24 md:py-28 text-cream">
         <div className="container mx-auto px-8 max-w-7xl grid grid-cols-1 lg:grid-cols-[0.8fr_1fr] gap-16 lg:gap-32 items-center">
           <BlurFade>
-            <div className="flex flex-col gap-3">
-              <div className="w-full aspect-[4/3] bg-forest relative overflow-hidden ring-1 ring-cream/15 shadow-2xl shadow-black/40">
+            <figure className="flex flex-col gap-4">
+              <div className="w-full aspect-[4/3] bg-forest relative overflow-hidden ring-1 ring-cream/20 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.55)]">
                 <Image
                   src="/photos/wayback-pulls/roland-congregation.jpg"
-                  alt="Roland with the Yogo congregation, November 2008"
+                  alt="Roland with the Yogo congregation"
                   fill
                   className="object-cover saturate-[0.9]"
                   sizes="(max-width: 1024px) 100vw, 40vw"
                 />
               </div>
-              <p className="font-sans text-xs uppercase tracking-[0.15em] text-gold/80 font-semibold">
-                Yogo, Kenya &middot; November 2008
-              </p>
-            </div>
+              <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-gold font-bold">
+                Roland in Yogo &middot; November 2008
+              </figcaption>
+            </figure>
           </BlurFade>
           <BlurFade delay={0.2}>
             <div>
