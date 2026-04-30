@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="w-full">
       {/* ── Hero ── */}
-      <section className="relative w-full min-h-[90vh] flex items-end pt-32 md:pt-36 pb-24 md:pb-32 overflow-hidden">
+      <section className="relative w-full min-h-screen flex items-end pt-32 md:pt-36 pb-24 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-charcoal">
           <video
             src="/hero-school-children.mp4"

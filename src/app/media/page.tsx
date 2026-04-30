@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ArrowLeft, ArrowRight, Download, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, X } from "lucide-react";
 import { BlurFade } from "@/components/ui/blur-fade";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -274,16 +274,14 @@ const chapters: Chapter[] = [
 ];
 
 const newsletters = [
-  { file: "2013-spring-newsletter.pdf", era: "Spring 2013", title: "Yogo, four years in" },
-  { file: "2013-fall-newsletter.pdf", era: "Fall 2013", title: "The first walking tractor" },
-  { file: "2021-08-12-albino-attack-update.pdf", era: "August 12, 2021", title: "Attack at Mitindo: initial update" },
-  { file: "2021-08-26-albino-response.pdf", era: "August 26, 2021", title: "Response and care for the affected children" },
-  { file: "2021-09-20-albino-recovery.pdf", era: "September 20, 2021", title: "Recovery and ongoing support" },
-  { file: "newsletter-33920168-2023.pdf", era: "2023", title: "Field update from Mwalwigi" },
-  { file: "newsletter-8ac3f432-2024.pdf", era: "2024", title: "Yogo, fifteen years on" },
-  { file: "newsletter-a863e7f8-2024.pdf", era: "2024", title: "Field update" },
-  { file: "newsletter-f7e4406c-2024.pdf", era: "2024", title: "Field update" },
-  { file: "newsletter-fa68e1c0-2024.pdf", era: "2024", title: "Year in review" },
+  { slug: "2013-spring-newsletter", era: "Spring 2013", title: "Yogo, four years in" },
+  { slug: "2013-fall-newsletter", era: "Fall 2013", title: "The first walking tractor" },
+  { slug: "2021-08-12-albino-attack-update", era: "August 12, 2021", title: "Attack at Mitindo: initial update" },
+  { slug: "newsletter-33920168-2023", era: "2023", title: "Field update from Mwalwigi" },
+  { slug: "newsletter-8ac3f432-2024", era: "2024", title: "Yogo, fifteen years on" },
+  { slug: "newsletter-a863e7f8-2024", era: "2024", title: "Field update" },
+  { slug: "newsletter-f7e4406c-2024", era: "2024", title: "Field update" },
+  { slug: "newsletter-fa68e1c0-2024", era: "2024", title: "Year in review" },
 ];
 
 // Flatten all photos with chapter context for the lightbox
@@ -436,10 +434,9 @@ export default function Media() {
           </BlurFade>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {newsletters.map((n, i) => (
-              <BlurFade key={n.file} delay={0.1 + i * 0.04}>
-                <a
-                  href={`/newsletters/${n.file}`}
-                  download
+              <BlurFade key={n.slug} delay={0.1 + i * 0.04}>
+                <Link
+                  href={`/media/newsletter/${n.slug}`}
                   className="group block border-t border-cream/15 pt-6 transition-colors hover:border-gold"
                 >
                   <div className="flex items-start justify-between gap-6">
@@ -451,12 +448,12 @@ export default function Media() {
                         {n.title}
                       </p>
                     </div>
-                    <Download
-                      className="w-5 h-5 text-cream/60 group-hover:text-gold transition-colors shrink-0 mt-2"
+                    <ArrowRight
+                      className="w-5 h-5 text-cream/60 group-hover:text-gold group-hover:translate-x-1 transition-all shrink-0 mt-2"
                       strokeWidth={1.75}
                     />
                   </div>
-                </a>
+                </Link>
               </BlurFade>
             ))}
           </div>
