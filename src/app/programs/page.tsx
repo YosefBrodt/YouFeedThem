@@ -35,7 +35,7 @@ export default function Programs() {
             <BlurFade>
               <div>
                 <span className="font-sans uppercase tracking-[0.15em] text-xs text-terracotta font-bold block mb-6">
-                  Village 01 &middot; Yogo, Siaya District, Kenya &middot; Since 2008
+                  Yogo, Siaya District, Kenya &middot; Since 2008
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl mb-8 leading-[1.1]">
                   Where this all started
@@ -108,7 +108,7 @@ export default function Programs() {
             <BlurFade delay={0.2}>
               <div className="order-1 lg:order-2">
                 <span className="font-sans uppercase tracking-[0.15em] text-xs text-terracotta font-bold block mb-6">
-                  Village 02 &middot; Seje, Siaya District, Kenya
+                  Seje, Siaya District, Kenya
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl mb-8 leading-[1.1]">
                   A sister village, a second school
@@ -153,7 +153,7 @@ export default function Programs() {
             <BlurFade>
               <div>
                 <span className="font-sans uppercase tracking-[0.15em] text-xs text-terracotta font-bold block mb-6">
-                  Village 03 &middot; Mwalwigi, Mwanza Region, Tanzania
+                  Mwalwigi, Mwanza Region, Tanzania
                 </span>
                 <h2 className="font-heading text-4xl md:text-5xl mb-8 leading-[1.1]">
                   The current urgent project
@@ -207,7 +207,7 @@ export default function Programs() {
             <BlurFade delay={0.1}>
               <div className="border-t border-cream/15 pt-8">
                 <p className="font-sans text-xs uppercase tracking-[0.15em] text-gold font-bold mb-3">
-                  01 &middot; Clean Water
+                  Clean Water
                 </p>
                 <h3 className="font-heading text-2xl md:text-3xl text-cream mb-4 leading-[1.2]">
                   Wells that work
@@ -220,7 +220,7 @@ export default function Programs() {
             <BlurFade delay={0.2}>
               <div className="border-t border-cream/15 pt-8">
                 <p className="font-sans text-xs uppercase tracking-[0.15em] text-gold font-bold mb-3">
-                  02 &middot; Food Security
+                  Food Security
                 </p>
                 <h3 className="font-heading text-2xl md:text-3xl text-cream mb-4 leading-[1.2]">
                   Farms that feed the school
@@ -233,7 +233,7 @@ export default function Programs() {
             <BlurFade delay={0.3}>
               <div className="border-t border-cream/15 pt-8">
                 <p className="font-sans text-xs uppercase tracking-[0.15em] text-gold font-bold mb-3">
-                  03 &middot; Education
+                  Education
                 </p>
                 <h3 className="font-heading text-2xl md:text-3xl text-cream mb-4 leading-[1.2]">
                   Schools that send graduates to university
@@ -246,7 +246,7 @@ export default function Programs() {
             <BlurFade delay={0.4}>
               <div className="border-t border-cream/15 pt-8">
                 <p className="font-sans text-xs uppercase tracking-[0.15em] text-gold font-bold mb-3">
-                  04 &middot; Church &amp; Community
+                  Church &amp; Community
                 </p>
                 <h3 className="font-heading text-2xl md:text-3xl text-cream mb-4 leading-[1.2]">
                   Places to gather
