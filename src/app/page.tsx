@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="w-full">
       {/* ── Hero ── */}
-      <section className="relative w-full h-[90vh] min-h-[600px] flex items-end pb-24 md:pb-32 overflow-hidden">
+      <section className="relative w-full min-h-[90vh] flex items-end pt-32 md:pt-36 pb-24 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-charcoal">
           <video
             src="/hero-school-children.mp4"
@@ -18,7 +18,7 @@ export default function Home() {
             loop
             muted
             playsInline
-            preload="metadata"
+            preload="auto"
             aria-label="Kenyan students gathering outside school"
             className="absolute inset-0 w-full h-full object-cover object-center motion-reduce:hidden"
           />
@@ -30,7 +30,7 @@ export default function Home() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-forest/95 via-forest/65 to-forest/25" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/15" />
         </div>
         <div className="container mx-auto px-8 max-w-7xl relative z-10">
           <BlurFade delay={0.1}>
