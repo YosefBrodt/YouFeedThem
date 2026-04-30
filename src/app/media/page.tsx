@@ -514,39 +514,73 @@ function ActiveChapterIndicator({
   activeChapter: string;
   visible: boolean;
 }) {
-  const activeIdx = chapters.findIndex((c) => c.id === activeChapter);
-  const isArchive = activeChapter === "archive";
+  const items = [
+    ...chapters.map((c, i) => ({
+      id: c.id,
+      kicker: `Chapter ${toRoman(i + 1)}`,
+      label: c.shortLabel,
+    })),
+    { id: "archive", kicker: "The Archive", label: "Newsletters" },
+  ];
+
+  // Determine the bg of the section currently in view, so the rail text
+  // adapts to be readable against cream / forest / charcoal sections.
+  const currentBg =
+    activeChapter === "archive"
+      ? "forest"
+      : chapters.find((c) => c.id === activeChapter)?.bg ?? "forest";
+  const isLight = currentBg === "cream";
+
+  const baseColor = isLight ? "text-forest" : "text-cream";
+  const mutedColor = isLight ? "text-forest/40" : "text-cream/40";
+  const hoverColor = isLight ? "group-hover:text-forest/75" : "group-hover:text-cream/75";
+  const tickMuted = isLight ? "bg-forest/30" : "bg-cream/30";
+  const tickHover = isLight ? "group-hover:bg-forest/60" : "group-hover:bg-cream/60";
 
   return (
-    <div
-      aria-hidden="true"
-      className={`hidden md:flex fixed bottom-8 right-8 z-40 items-stretch transition-all duration-300 ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+    <nav
+      aria-label="Chapter navigation"
+      className={`hidden lg:flex fixed top-1/2 right-8 xl:right-12 -translate-y-1/2 z-40 flex-col gap-7 transition-opacity duration-500 ${
+        visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
-      <div className="flex items-stretch bg-charcoal/95 text-cream backdrop-blur-md shadow-2xl shadow-black/30 border border-cream/10">
-        <div className="flex flex-col justify-center gap-2 px-4 py-4 border-r border-cream/10">
-          {chapters.map((c, i) => (
+      {items.map((item) => {
+        const isActive = item.id === activeChapter;
+        return (
+          <a
+            key={item.id}
+            href={`#${item.id}`}
+            className="group flex items-center gap-4 justify-end text-right"
+          >
+            <div className="flex flex-col items-end">
+              <span
+                className={`font-sans text-[9px] uppercase tracking-[0.25em] font-bold leading-none mb-1 transition-colors duration-500 ${
+                  isActive ? "text-gold" : `${mutedColor} ${hoverColor}`
+                }`}
+              >
+                {item.kicker}
+              </span>
+              <span
+                className={`font-heading leading-none transition-all duration-500 ${
+                  isActive
+                    ? `${baseColor} text-base`
+                    : `${mutedColor} text-sm ${hoverColor}`
+                }`}
+              >
+                {item.label}
+              </span>
+            </div>
             <span
-              key={c.id}
-              className={`block transition-all duration-300 rounded-full ${
-                i === activeIdx && !isArchive
-                  ? "w-2 h-2 bg-gold"
-                  : "w-1.5 h-1.5 bg-cream/30"
+              className={`block transition-all duration-500 ${
+                isActive
+                  ? "w-7 h-[2px] bg-gold"
+                  : `w-3 h-[1px] ${tickMuted} group-hover:w-5 ${tickHover}`
               }`}
             />
-          ))}
-        </div>
-        <div className="px-5 py-3.5 flex flex-col justify-center min-w-[180px]">
-          <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-gold font-bold leading-none mb-1.5">
-            {isArchive ? "Archive" : `Chapter ${activeIdx >= 0 ? toRoman(activeIdx + 1) : ""}`}
-          </p>
-          <p className="font-heading text-base text-cream leading-tight">
-            {isArchive ? "Newsletters" : chapters[activeIdx]?.shortLabel ?? ""}
-          </p>
-        </div>
-      </div>
-    </div>
+          </a>
+        );
+      })}
+    </nav>
   );
 }
 
