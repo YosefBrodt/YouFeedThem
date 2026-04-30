@@ -82,82 +82,56 @@ const chapters: Chapter[] = [
     photos: [
       {
         src: "/photos/wayback-pulls/yogo-school-exterior.jpg",
-        alt: "School building in Yogo",
-        caption: "A YFT-built school in Yogo.",
-        location: "Yogo, Kenya",
-      },
-      {
-        src: "/photos/wayback-pulls/yogo-meal-ugali.jpg",
-        alt: "Students eating at Yogo",
-        caption: "Mealtime.",
+        alt: "Drilling rig hitting water at Yogo, 2011",
+        caption: "The moment water was reached.",
         location: "Yogo, Kenya",
         story:
-          "The school feeding program (a hot uji breakfast and a midday meal of ugali with beans or vegetables) is the single largest line item in the YFT budget. Every dollar of where-needed-most giving stabilises this program first.",
-      },
-      {
-        src: "/photos/wayback-pulls/yogo-class-portrait.jpg",
-        alt: "Group of students in Yogo",
-        caption: "Students at Yogo.",
-        location: "Yogo, Kenya",
-      },
-      {
-        src: "/photos/wayback-pulls/yogo-cgc-classroom.jpg",
-        alt: "Classroom interior in Yogo",
-        caption: "Inside the academy.",
-        location: "Yogo, Kenya",
-      },
-      {
-        src: "/photos/wayback-pulls/yogo-well-drilling-2011.jpg",
-        alt: "Drilling for water at Yogo",
-        caption: "Drilling for water.",
-        location: "Yogo, Kenya",
-        story:
-          "Two previous drilling attempts in the area had failed. YFT funded a hydrological survey before the third try, and the team hit clean water on the first attempt in 2011. The well has run continuously since.",
-      },
-      {
-        src: "/photos/wayback-pulls/water-storage-tank.jpg",
-        alt: "Water tank at Yogo",
-        caption: "Water infrastructure at the school.",
-        location: "Yogo, Kenya",
+          "The third drilling attempt in the area, after two prior had failed. YFT funded a hydrological survey first; the team hit clean water on the first attempt in 2011. The well has run continuously since.",
       },
       {
         src: "/photos/wayback-pulls/elisha-farm-manager.jpg",
-        alt: "On the Yogo farm",
-        caption: "On the farm.",
+        alt: "Yogo Academy students playing a string game",
+        caption: "Yogo Academy students at play.",
+        date: "February 2014",
         location: "Yogo, Kenya",
-      },
-      {
-        src: "/photos/wayback-pulls/walking-tractor-2014.jpg",
-        alt: "Walking tractor at Yogo Farm",
-        caption: "A walking tractor at the farm.",
-        location: "Yogo, Kenya",
-        story:
-          "Yogo's first walking tractor was funded by a young donor named Melissa, who organised her own fundraiser to buy it. It replaced sixty people working the land for six weeks every planting season.",
       },
       {
         src: "/photos/wayback-pulls/kale-snowpea-shade-planting.jpg",
-        alt: "Companion planting at Yogo Farm",
-        caption: "Companion planting.",
+        alt: "Early-era Yogo Farm, raised beds with drip irrigation",
+        caption: "The farm in its early years.",
+        date: "October 2009",
         location: "Yogo, Kenya",
         story:
-          "The Yogo farm runs raised-bed square-foot gardening, drip-line irrigation, sugar-cane composting, and bio-fertilisers across twelve acres.",
+          "Raised-bed square-foot gardening with drip-line irrigation, even in the founding years. The Yogo farm grew from four acres in 2009 to twelve acres by 2014, with crop yields up roughly tenfold after sugar-cane composting and bio-fertilisers were introduced.",
       },
       {
-        src: "/photos/wayback-pulls/yogo-cabbage-harvest.jpg",
-        alt: "Cabbage harvest at Yogo",
-        caption: "From the harvest.",
-        location: "Yogo, Kenya",
+        src: "/photos/wayback-pulls/walking-tractor-2014.jpg",
+        alt: "Rows of cabbage with drip-line irrigation, Yogo Farm",
+        caption: "Cabbage rows with drip-line irrigation.",
+        location: "Yogo Farm, Kenya",
       },
       {
         src: "/photos/wayback-pulls/drying-corn-millet.jpg",
-        alt: "Grain drying at Yogo",
-        caption: "Grain, drying for storage.",
+        alt: "A man waving in a tall field of corn at Yogo",
+        caption: "In the maize, at full height.",
+        location: "Yogo Farm, Kenya",
+      },
+      {
+        src: "/photos/wayback-pulls/yogo-meal-ugali.jpg",
+        alt: "Corn and grain drying outside a storehouse at Yogo",
+        caption: "Corn and grain, drying for storage.",
         location: "Yogo, Kenya",
       },
       {
         src: "/photos/shucking-peanuts-yogo.jpg",
-        alt: "Shucking peanuts at Yogo",
-        caption: "Shucking peanuts.",
+        alt: "Group sorting through the harvest at Yogo",
+        caption: "Sorting through the harvest.",
+        location: "Yogo, Kenya",
+      },
+      {
+        src: "/photos/wayback-pulls/yogo-cabbage-harvest.jpg",
+        alt: "A homestead of thatched-roof huts in Yogo",
+        caption: "A homestead in Yogo.",
         location: "Yogo, Kenya",
       },
     ],
@@ -181,45 +155,35 @@ const chapters: Chapter[] = [
     ],
     photos: [
       {
-        src: "/photos/wayback-pulls/seje-academy-exterior.jpg",
-        alt: "Seje Glory Centre Academy",
+        src: "/photos/wayback-pulls/seje-group-portrait.jpg",
+        alt: "Seje Glory Centre Academy with students lined up outside",
         caption: "Seje Glory Centre Academy.",
         location: "Seje, Kenya",
       },
       {
-        src: "/photos/wayback-pulls/seje-breakfast.jpg",
-        alt: "Meal service at Seje",
-        caption: "A meal at Seje.",
+        src: "/photos/wayback-pulls/seje-academy-exterior.jpg",
+        alt: "The Seje academy under construction, brick walls without a roof",
+        caption: "The academy, under construction.",
         location: "Seje, Kenya",
-      },
-      {
-        src: "/photos/wayback-pulls/seje-lunch-beans.jpg",
-        alt: "Beans being prepared at Seje",
-        caption: "Beans being prepared.",
-        location: "Seje, Kenya",
+        story:
+          "Built in partnership with Stittsville Community Bible Church (Ontario, Canada), who raised the construction funds and sent the first mission teams. The school has since absorbed twelve cohorts of mission-trip volunteers from churches across Ontario.",
       },
       {
         src: "/photos/wayback-pulls/seje-breakfast-crowd.jpg",
-        alt: "Students at mealtime at Seje",
-        caption: "At mealtime.",
+        alt: "Children in school uniforms standing on small playground stools, waving",
+        caption: "Seje students.",
         location: "Seje, Kenya",
       },
       {
         src: "/photos/wayback-pulls/seje-water-collection-drought.jpg",
-        alt: "Water collection at Seje",
-        caption: "Water collection.",
+        alt: "Raised bed of green seedlings under a wood-stick lattice shade",
+        caption: "Seedlings under a stick-lattice shade.",
         location: "Seje, Kenya",
       },
       {
         src: "/photos/wayback-pulls/seje-playground.jpg",
-        alt: "Children at Seje",
-        caption: "Children at Seje.",
-        location: "Seje, Kenya",
-      },
-      {
-        src: "/photos/wayback-pulls/seje-group-portrait.jpg",
-        alt: "Class group at Seje",
-        caption: "A class group at Seje.",
+        alt: "Two children in school uniform on a red plastic slide",
+        caption: "On the slide.",
         location: "Seje, Kenya",
       },
     ],
@@ -244,57 +208,26 @@ const chapters: Chapter[] = [
     ],
     photos: [
       {
-        src: "/photos/wayback-pulls/titus-happiness-family.jpg",
-        alt: "Pastor Titus and family",
-        caption: "Pastor Titus, Happiness, and family.",
-        location: "Mwalwigi, Tanzania",
-        story:
-          "Pastor Titus Mashalla, his wife Happiness, and their three children. Field partner for YFT in Tanzania, in the role since the Bukwimba years (2010 to 2018) and continuing through the Mwalwigi relocation.",
+        src: "/photos/water-dirty.jpg",
+        alt: "Four women collecting water from a muddy stream",
+        caption: "Where the water was collected before.",
+        location: "Mwalwigi, Tanzania, pre-2021",
       },
       {
         src: "/photos/wayback-pulls/mwalwigi-women-collecting-water.jpeg",
-        alt: "At the Mwalwigi well",
-        caption: "At the well.",
+        alt: "A man in a red shirt at the Mwalwigi well drilling rig",
+        caption: "At the Mwalwigi drilling site.",
         location: "Mwalwigi, Tanzania",
         story:
-          "Within a week of the solar pump being installed, the well became the primary water source for the village. Women and children now make a five-minute walk to it, twice a day, instead of the four-hour round trip to the river.",
-      },
-      {
-        src: "/photos/wayback-pulls/mwalwigi-well-success.jpg",
-        alt: "The day water was reached at Mwalwigi",
-        caption: "The day water was reached.",
-        date: "October 14, 2021",
-        location: "Mwalwigi, Tanzania",
-        story:
-          "Drilling started when 75% of the cost had been raised. The remaining $3,500 was raised in the days after water was reached. Total cost included drilling, the solar pump, the 5,000-litre tank, and fencing.",
-      },
-      {
-        src: "/photos/wayback-pulls/mwalwigi-church-under-tree.jpeg",
-        alt: "Mwalwigi congregation gathering under a tree",
-        caption: "Sunday gathering, under a tree.",
-        location: "Mwalwigi, Tanzania",
-        story:
-          "Four temporary church structures have been destroyed by weather since 2018. The current congregation, roughly 250 people, gathers under this tree every Sunday. The church build campaign is the current YFT urgent priority.",
-      },
-      {
-        src: "/photos/pastor-titus-blankets.jpg",
-        alt: "Pastor Titus distributing blankets",
-        caption: "Distributing blankets in Mwalwigi.",
-        location: "Mwalwigi, Tanzania",
+          "The contractor was Supreme Water Drilling Ltd. The team drilled to ninety metres on October 14, 2021, after two years of fundraising. Within a week of the solar pump being installed, the well became the primary water source for the village.",
       },
       {
         src: "/photos/drought-crops-titus.jpg",
-        alt: "Working drought-tolerant crops",
-        caption: "Working drought-tolerant crops.",
+        alt: "Pastor Titus inspecting struggling crops in a dry field",
+        caption: "Inspecting drought-tolerant crops.",
         location: "Mwalwigi, Tanzania",
         story:
           "Mwalwigi has sporadic rainfall: heavy downpours in the wet season, near-drought the rest of the year. Drought-tolerant crops, drip-line irrigation, composting, and bio-fertilisers are how the farm produces year-round.",
-      },
-      {
-        src: "/photos/water-dirty.jpg",
-        alt: "Contaminated surface water",
-        caption: "What the water source looked like before.",
-        location: "Mwalwigi, Tanzania, pre-2021",
       },
     ],
   },
@@ -302,16 +235,39 @@ const chapters: Chapter[] = [
     id: "mitindo",
     number: "Chapter Five",
     shortLabel: "Mitindo",
-    era: "August 2021",
+    era: "August 2021 onward",
     location: "Mitindo, Tanzania",
     title: "When the attack came, the response had to come too.",
     bg: "charcoal",
     lead: [
       "On August 12, 2021, seven children with albinism were attacked near a remote Tanzanian village. The motivation was ritual superstition. It was not the first such attack in the region.",
-      "Mitindo village houses and protects roughly 200 children with albinism year-round, shielded from violence and given access to the medical care, sun protection, and special-needs support that their condition requires. After the August attack, 38 additional children were brought to Mitindo for protection. YFT mobilised funds for bedding, clothing, and care supplies, alongside our partner ministries.",
+      "Mitindo school houses and protects roughly 200 children with albinism year-round, shielded from violence and given access to the medical care, sun protection, and special-needs support that their condition requires. After the August attack, 38 additional children were brought to Mitindo for protection. YFT mobilised funds for bedding, blankets, sun hats, and care supplies.",
       "We don't lead with this story. We don't put it on the home page. But it is part of what we do, and the donors who fund this work deserve to know that their gifts also go to children who have nowhere else to be safe.",
     ],
-    photos: [],
+    photos: [
+      {
+        src: "/photos/wayback-pulls/mwalwigi-well-success.jpg",
+        alt: "A large group of children at Mitindo holding up colorful new blankets",
+        caption: "Mitindo students with newly distributed blankets.",
+        location: "Mitindo, Tanzania",
+        story:
+          "Many of the children visible here have albinism (note the wide-brimmed sun hats, which protect against severe UV damage). The blankets, sun hats, and mosquito netting were funded directly through YFT donors and partner ministries after the August 2021 events.",
+      },
+      {
+        src: "/photos/pastor-titus-blankets.jpg",
+        alt: "Pastor Titus distributing folded blankets at Mitindo",
+        caption: "Distributing the blankets.",
+        location: "Mitindo, Tanzania",
+      },
+      {
+        src: "/photos/wayback-pulls/mwalwigi-church-under-tree.jpeg",
+        alt: "Bunk beds with floral bedding and pink mosquito netting in a dormitory",
+        caption: "A dormitory at the Mitindo school.",
+        location: "Mitindo, Tanzania",
+        story:
+          "The mosquito netting is essential — malaria is endemic and children with albinism are at higher risk for skin cancer if forced to sleep in screened-but-uncovered conditions. The colourful bedding came from the same supply run as the blankets in the photos above.",
+      },
+    ],
     closing:
       "Three newsletter PDFs from August and September 2021 document the attack, the response, and the recovery in detail. They are linked in the archive at the bottom of this page.",
   },
@@ -380,7 +336,6 @@ export default function Media() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        // Use the entry closest to the top of the viewport
         const visible = entries
           .filter((e) => e.isIntersecting)
           .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
@@ -397,7 +352,6 @@ export default function Media() {
     return () => observer.disconnect();
   }, []);
 
-  // Show the indicator only after we scroll past the cover
   useEffect(() => {
     const onScroll = () => setShowIndicator(window.scrollY > 400);
     onScroll();
@@ -408,8 +362,6 @@ export default function Media() {
   const selected = selectedIdx !== null ? allPhotos[selectedIdx] : null;
   const indexFor = (src: string, chapterTitle: string) =>
     allPhotos.findIndex((p) => p.src === src && p.chapterTitle === chapterTitle);
-
-  const activeChapterMeta = chapters.find((c) => c.id === activeChapter) ?? chapters[0];
 
   return (
     <main className="w-full pt-28 md:pt-32">
@@ -538,7 +490,6 @@ export default function Media() {
         </div>
       </section>
 
-      {/* ─── Lightbox ─── */}
       {selected && selectedIdx !== null && (
         <Lightbox
           photo={selected}
@@ -567,7 +518,6 @@ function ActiveChapterIndicator({
   visible: boolean;
 }) {
   const activeIdx = chapters.findIndex((c) => c.id === activeChapter);
-  // If the user has scrolled past all chapters into the archive, show "Archive"
   const isArchive = activeChapter === "archive";
 
   return (
@@ -578,7 +528,6 @@ function ActiveChapterIndicator({
       }`}
     >
       <div className="flex items-stretch bg-charcoal/95 text-cream backdrop-blur-md shadow-2xl shadow-black/30 border border-cream/10">
-        {/* Progress dots */}
         <div className="flex flex-col justify-center gap-2 px-4 py-4 border-r border-cream/10">
           {chapters.map((c, i) => (
             <span
@@ -591,7 +540,6 @@ function ActiveChapterIndicator({
             />
           ))}
         </div>
-        {/* Active label */}
         <div className="px-5 py-3.5 flex flex-col justify-center min-w-[180px]">
           <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-gold font-bold leading-none mb-1.5">
             {isArchive ? "Archive" : `Chapter ${activeIdx >= 0 ? toRoman(activeIdx + 1) : ""}`}
@@ -638,7 +586,6 @@ function ChapterSection({
       className={`${bgClass} py-24 md:py-32 border-t ${border}`}
     >
       <div className="container mx-auto px-8 max-w-7xl">
-        {/* Chapter header */}
         <BlurFade>
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-10 lg:gap-20 mb-16 md:mb-20">
             <div>
@@ -675,7 +622,6 @@ function ChapterSection({
           </div>
         </BlurFade>
 
-        {/* Stats break */}
         {chapter.stats && (
           <BlurFade delay={0.1}>
             <div
@@ -705,7 +651,6 @@ function ChapterSection({
           </BlurFade>
         )}
 
-        {/* Pull quote */}
         {chapter.pullQuote && (
           <BlurFade delay={0.15}>
             <figure
@@ -725,12 +670,10 @@ function ChapterSection({
           </BlurFade>
         )}
 
-        {/* Photo grid */}
         {chapter.photos.length > 0 && (
           <PhotoGrid photos={chapter.photos} bg={chapter.bg} onSelect={onSelect} />
         )}
 
-        {/* Closing */}
         {chapter.closing && (
           <BlurFade delay={0.2}>
             <p
@@ -757,92 +700,37 @@ function PhotoGrid({
   const cardBg =
     bg === "cream" ? "bg-charcoal text-cream" : "bg-charcoal/60 text-cream";
 
-  const PhotoCard = ({ photo, className = "" }: { photo: Photo; className?: string }) => (
-    <button
-      type="button"
-      onClick={() => onSelect(photo.src)}
-      className={`group block w-full overflow-hidden ${cardBg} relative text-left cursor-pointer focus:outline-none focus:ring-2 focus:ring-gold ${className}`}
-      aria-label={`Open detail for ${photo.alt}`}
-    >
-      <div className="relative w-full aspect-[4/3] overflow-hidden bg-charcoal">
-        <Image
-          src={photo.src}
-          alt={photo.alt}
-          fill
-          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04] saturate-[0.92]"
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        />
-      </div>
-      <div className="p-5 md:p-6">
-        <p className="font-sans text-base md:text-lg leading-[1.4]">
-          {photo.caption}
-        </p>
-        {photo.location && (
-          <p className="font-sans text-xs uppercase tracking-[0.12em] text-gold/80 font-semibold mt-2">
-            {photo.location}
-            {photo.date && ` · ${photo.date}`}
-          </p>
-        )}
-      </div>
-    </button>
-  );
-
-  // Asymmetric layout: rotate solo / 2-up / 3-up / 2-up
-  const groups: Photo[][] = [];
-  let i = 0;
-  let pattern = 0;
-  while (i < photos.length) {
-    const remaining = photos.length - i;
-    if (pattern % 4 === 0 && remaining >= 1) {
-      groups.push([photos[i]]);
-      i += 1;
-    } else if (pattern % 4 === 1 && remaining >= 2) {
-      groups.push([photos[i], photos[i + 1]]);
-      i += 2;
-    } else if (pattern % 4 === 2 && remaining >= 3) {
-      groups.push([photos[i], photos[i + 1], photos[i + 2]]);
-      i += 3;
-    } else if (pattern % 4 === 3 && remaining >= 2) {
-      groups.push([photos[i], photos[i + 1]]);
-      i += 2;
-    } else {
-      groups.push([photos[i]]);
-      i += 1;
-    }
-    pattern += 1;
-  }
-
   return (
-    <div className="flex flex-col gap-6 md:gap-8">
-      {groups.map((group, gi) => {
-        if (group.length === 1) {
-          return (
-            <BlurFade key={gi} delay={0.05}>
-              <PhotoCard photo={group[0]} className="w-full" />
-            </BlurFade>
-          );
-        }
-        if (group.length === 2) {
-          return (
-            <div key={gi} className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              {group.map((p, pi) => (
-                <BlurFade key={`${gi}-${pi}`} delay={0.05 + pi * 0.05}>
-                  <PhotoCard photo={p} />
-                </BlurFade>
-              ))}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      {photos.map((photo, i) => (
+        <BlurFade key={photo.src} delay={0.05 + i * 0.04}>
+          <button
+            type="button"
+            onClick={() => onSelect(photo.src)}
+            className={`group block w-full overflow-hidden ${cardBg} relative text-left cursor-pointer focus:outline-none focus:ring-2 focus:ring-gold`}
+            aria-label={`Open detail for ${photo.alt}`}
+          >
+            <div className="relative w-full aspect-[4/3] overflow-hidden bg-charcoal">
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04] saturate-[0.92]"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
             </div>
-          );
-        }
-        return (
-          <div key={gi} className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {group.map((p, pi) => (
-              <BlurFade key={`${gi}-${pi}`} delay={0.05 + pi * 0.05}>
-                <PhotoCard photo={p} />
-              </BlurFade>
-            ))}
-          </div>
-        );
-      })}
+            <div className="p-5">
+              <p className="font-sans text-base leading-[1.4]">{photo.caption}</p>
+              {photo.location && (
+                <p className="font-sans text-xs uppercase tracking-[0.12em] text-gold/80 font-semibold mt-2">
+                  {photo.location}
+                  {photo.date && ` · ${photo.date}`}
+                </p>
+              )}
+            </div>
+          </button>
+        </BlurFade>
+      ))}
     </div>
   );
 }
