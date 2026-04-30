@@ -69,10 +69,10 @@ export default function Programs() {
               </div>
             </BlurFade>
             <BlurFade delay={0.2}>
-              <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative group">
+              <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative group ring-1 ring-forest/15 shadow-2xl shadow-black/15">
                 <Image
                   src="/photos/shucking-peanuts-yogo.jpg"
-                  alt="Shucking peanuts at Yogo farm, Kenya"
+                  alt="Sorting peanuts at Yogo farm, Kenya"
                   fill
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-[0.9] sepia-[0.03]"
                   sizes="(max-width: 1024px) 100vw, 60vw"
@@ -95,10 +95,10 @@ export default function Programs() {
         <div className="container mx-auto px-8 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-24 items-center">
             <BlurFade>
-              <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative order-2 lg:order-1 group">
+              <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative order-2 lg:order-1 group ring-1 ring-forest/15 shadow-2xl shadow-black/15">
                 <Image
                   src="/photos/wayback-pulls/seje-academy-exterior.jpg"
-                  alt="Seje Glory Centre Academy, Siaya District, Kenya"
+                  alt="Seje academy under construction, Siaya District, Kenya"
                   fill
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-[0.92]"
                   sizes="(max-width: 1024px) 100vw, 60vw"
@@ -176,10 +176,10 @@ export default function Programs() {
               </div>
             </BlurFade>
             <BlurFade delay={0.2}>
-              <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative group">
+              <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative group ring-1 ring-forest/15 shadow-2xl shadow-black/15">
                 <Image
                   src="/photos/pastor-titus-blankets.jpg"
-                  alt="Pastor Titus distributing blankets in Mwalwigi, Tanzania"
+                  alt="Distributing blankets at Mitindo, Tanzania"
                   fill
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-[0.9]"
                   sizes="(max-width: 1024px) 100vw, 60vw"

@@ -127,7 +127,7 @@ export default function Home() {
             </div>
           </BlurFade>
           <BlurFade delay={0.2}>
-            <div className="w-full h-[400px] lg:h-[500px] bg-charcoal relative overflow-hidden">
+            <div className="w-full h-[400px] lg:h-[500px] bg-charcoal relative overflow-hidden ring-1 ring-forest/15 shadow-2xl shadow-black/15">
               <Image
                 src="/photos/pastor-titus-family-2020.jpg"
                 alt="Pastor Titus Mashalla and family, YFT's field partner in Tanzania"
@@ -207,7 +207,7 @@ export default function Home() {
       <section className="bg-cream py-24 md:py-28 text-forest">
         <div className="container mx-auto px-8 max-w-7xl grid grid-cols-1 lg:grid-cols-[0.6fr_1fr] gap-16 lg:gap-32 items-center">
           <BlurFade>
-            <div className="w-full aspect-[3/4] bg-charcoal relative overflow-hidden">
+            <div className="w-full aspect-[3/4] bg-charcoal relative overflow-hidden ring-1 ring-forest/15 shadow-2xl shadow-black/15">
               <Image
                 src="/photos/water-dirty.jpg"
                 alt="Unsafe water source in Mwalwigi, Tanzania before YFT intervention"

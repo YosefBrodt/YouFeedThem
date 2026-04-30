@@ -49,12 +49,12 @@ const chapters: Chapter[] = [
       "He came back with a phrase he hasn't stopped repeating: you feed them, we help you do it.",
     ],
     pullQuote: {
-      text: "I have seen the face of starvation. I have held it in my arms. It is a face of desperation, depravation and hopelessness. We came home with a goat in the truck, a 12-acre farm purchased, and a board of four Kenyans willing to give the rest of their lives to feeding their own village.",
+      text: "I have seen the face of starvation. I have held it in my arms. It is a face of desperation, depravation and hopelessness.",
       attribution: "Roland Poirier, trip-return letter, November 23, 2008",
     },
     photos: [],
     closing:
-      "The first Kenyan board: Doctarie Peter Okosh as Chairman, Pastor Pauline Owiti Oduor as signatory (she gave her own $20/month salary to fund the pre-school in the early years), Eric Magunga, and Bernard O. Oguna. Theresa Poirier handled the website, the newsletters, the graphics, and the bookkeeping for the next fifteen years. The current site is the second one she helped imagine. She passed away before it shipped.",
+      "Roland came home from that first trip with a goat in the truck, a 12-acre farm purchased, and a four-person Kenyan board to run it: Doctarie Peter Okosh as Chairman, Pastor Pauline Owiti Oduor as signatory (she gave her own $20/month salary to fund the pre-school in the early years), Eric Magunga, and Bernard O. Oguna. Theresa Poirier handled the website, the newsletters, the graphics, and the bookkeeping for the next fifteen years. The current site is the second one she helped imagine. She passed away before it shipped.",
   },
   {
     id: "yogo",
@@ -76,8 +76,8 @@ const chapters: Chapter[] = [
       { value: "27", label: "alumni in university" },
     ],
     pullQuote: {
-      text: "The thirst for knowledge was even more powerful than the thirst for food.",
-      attribution: "Bishop Silas Owiti-Oduor, on the early years at Yogo",
+      text: "Yogo CBO has hosted the United Nations World Food Day at the farm. The model has been studied, copied, and replicated in Seje and Mwalwigi.",
+      attribution: "From the YFT field record",
     },
     photos: [
       {
@@ -274,14 +274,14 @@ const chapters: Chapter[] = [
 ];
 
 const newsletters = [
-  { slug: "2013-spring-newsletter", era: "Spring 2013", title: "Yogo, four years in" },
-  { slug: "2013-fall-newsletter", era: "Fall 2013", title: "The first walking tractor" },
-  { slug: "2021-08-12-albino-attack-update", era: "August 12, 2021", title: "Attack at Mitindo: initial update" },
-  { slug: "newsletter-33920168-2023", era: "2023", title: "Field update from Mwalwigi" },
-  { slug: "newsletter-8ac3f432-2024", era: "2024", title: "Yogo, fifteen years on" },
-  { slug: "newsletter-a863e7f8-2024", era: "2024", title: "Field update" },
-  { slug: "newsletter-f7e4406c-2024", era: "2024", title: "Field update" },
-  { slug: "newsletter-fa68e1c0-2024", era: "2024", title: "Year in review" },
+  { slug: "2013-spring-newsletter", era: "Spring 2013", title: "Spring 2013 Newsletter" },
+  { slug: "2013-fall-newsletter", era: "Fall 2013", title: "Fall 2013 Newsletter" },
+  { slug: "2021-08-12-albino-attack-update", era: "August 12, 2021", title: "Mitindo Update" },
+  { slug: "newsletter-33920168-2023", era: "2023", title: "2023 Newsletter" },
+  { slug: "newsletter-8ac3f432-2024", era: "2024", title: "2024 Newsletter (One)" },
+  { slug: "newsletter-a863e7f8-2024", era: "2024", title: "2024 Newsletter (Two)" },
+  { slug: "newsletter-f7e4406c-2024", era: "2024", title: "2024 Newsletter (Three)" },
+  { slug: "newsletter-fa68e1c0-2024", era: "2024", title: "2024 Newsletter (Four)" },
 ];
 
 // Flatten all photos with chapter context for the lightbox

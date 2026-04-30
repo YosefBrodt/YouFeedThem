@@ -206,10 +206,10 @@ export default function Impact() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
             <BlurFade delay={0.1}>
               <div>
-                <div className="w-full aspect-[4/3] overflow-hidden bg-charcoal relative">
+                <div className="w-full aspect-[4/3] overflow-hidden bg-charcoal relative ring-1 ring-cream/15 shadow-2xl shadow-black/35">
                   <Image
                     src="/photos/water-dirty.jpg"
-                    alt="Contaminated village water source in Yogo, pre-2011"
+                    alt="Contaminated water source, pre-2011"
                     fill
                     className="object-cover saturate-[0.95]"
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -225,7 +225,7 @@ export default function Impact() {
             </BlurFade>
             <BlurFade delay={0.2}>
               <div>
-                <div className="w-full aspect-[4/3] overflow-hidden bg-charcoal relative">
+                <div className="w-full aspect-[4/3] overflow-hidden bg-charcoal relative ring-1 ring-cream/15 shadow-2xl shadow-black/35">
                   <Image
                     src="/photos/drought-crops-titus.jpg"
                     alt="Pastor Titus working drought-tolerant crops in Mwalwigi, Tanzania"
@@ -246,17 +246,12 @@ export default function Impact() {
         </div>
       </section>
 
-      {/* Quote section */}
+      {/* Reflection */}
       <section className="bg-cream py-24 md:py-28 text-forest">
-        <div className="container mx-auto px-8 max-w-4xl text-center">
+        <div className="container mx-auto px-8 max-w-3xl text-center">
           <BlurFade>
-            <p className="font-heading italic text-3xl md:text-5xl text-forest leading-[1.3] mb-8">
-              &ldquo;Possibility is our faith language. Who would have fathomed that some of these children would come this far, especially when we began the journey.&rdquo;
-            </p>
-          </BlurFade>
-          <BlurFade delay={0.15}>
-            <p className="font-sans text-sm uppercase tracking-[0.2em] text-gold font-bold">
-              Bishop Silas Owiti Oduor &middot; Field Partner, Kenya
+            <p className="font-heading text-3xl md:text-4xl text-forest leading-[1.3]">
+              The first cohort of Yogo students, who started in pre-K in 2008 with mud-walls and depleted soil, are now in their third year of university.
             </p>
           </BlurFade>
         </div>

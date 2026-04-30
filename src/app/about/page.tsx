@@ -104,13 +104,13 @@ export default function About() {
           <BlurFade delay={0.15}>
             <div className="flex flex-col gap-6">
               <p className="text-xl leading-[1.6] opacity-90">
-                After visiting Kenya, our founders, Roland and his late wife Theresa Poirier, were profoundly impacted by what they witnessed. During prayer, Roland felt the Lord say: <em className="font-heading">&ldquo;You feed them.&rdquo;</em>
+                In the spring of 2008, Roland and his late wife Theresa Poirier were part of a 40 Days of Community small group at Trinity Bible Church in Osgoode, Ontario. The opening session showed a video about the gospel account of Jesus and the loaves and fishes, the moment Jesus turned to His disciples about a hungry crowd and answered: <em className="font-heading">&ldquo;you give them something to eat.&rdquo;</em> The group decided to act.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
-                The name comes from the biblical miracle of the loaves and fishes. Multitudes had gathered to hear Jesus teach. The disciples, worried about dinner, asked Him to send the crowd away. Jesus turned the problem back on them: <em>you feed them</em>. A young boy offered five loaves and two fish. Jesus blessed what was offered, and it multiplied until everyone had eaten and there were twelve baskets left over (Luke 9:10-17).
+                Lynn Fraser, a longtime friend of the family, introduced the Poiriers to Silas Owiti-Oduor, originally from a Kenyan village called Yogo. Pastor Shawn Ketcheson blessed the church&rsquo;s new organic gardens that September. Roland flew to Kenya in November.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
-                That&rsquo;s the posture of this work. We bring what we have, we partner with the people on the ground, we watch God multiply the effort. The mission began with nourishing the soil. Today lush farms are growing, schools have been built, fresh water flows, and medical, dental, and vision help is available to all.
+                He came back with a goat in the truck, a 12-acre farm purchased, a board of four Kenyans willing to run it, and a phrase he hasn&rsquo;t stopped repeating: <em className="font-heading">you feed them, we help you do it</em>. The mission began with nourishing the soil. Today lush farms are growing, two schools have been built, fresh water flows, and medical, dental, and vision care is part of every mission trip.
               </p>
             </div>
           </BlurFade>
@@ -255,10 +255,10 @@ export default function About() {
       <section className="bg-charcoal py-24 md:py-28 text-cream">
         <div className="container mx-auto px-8 max-w-7xl grid grid-cols-1 lg:grid-cols-[0.8fr_1fr] gap-16 lg:gap-32 items-center">
           <BlurFade>
-            <div className="w-full aspect-[3/4] bg-forest relative overflow-hidden">
+            <div className="w-full aspect-[3/4] bg-forest relative overflow-hidden ring-1 ring-cream/15 shadow-2xl shadow-black/40">
               <Image
                 src="/photos/portrait-a.jpg"
-                alt="Roland Poirier in the field"
+                alt="In the field, Kenya"
                 fill
                 className="object-cover saturate-[0.9] sepia-[0.05]"
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -268,16 +268,16 @@ export default function About() {
           <BlurFade delay={0.2}>
             <div>
               <p className="font-sans text-sm uppercase tracking-[0.15em] text-gold font-semibold mb-6">
-                A note from Roland
+                The Posture
               </p>
               <h2 className="font-heading text-4xl md:text-5xl mb-8 leading-[1.1]">
                 Building relationships. Bringing hope.
               </h2>
               <p className="text-xl leading-[1.6] text-cream/90 mb-6">
-                I founded You Feed Them in 2008 with my late wife Theresa after a trip to Kenya broke something loose in both of us. We didn&rsquo;t set out to start a charity. We set out to walk alongside one community and be useful. Eighteen years later, that&rsquo;s still the whole plan.
+                YFT did not set out to start a charity. It set out to walk alongside one community and be useful. Eighteen years later, that is still the whole plan.
               </p>
               <p className="text-xl leading-[1.6] text-cream/90">
-                When you partner with YFT, you&rsquo;re partnering with a team that has skin in the game, knows the people by name, and will still be in that village in five years to see what you helped plant.
+                Partnering with YFT means partnering with a team that has skin in the game, knows the people by name, and will still be in the village in five years to see what was planted.
               </p>
             </div>
           </BlurFade>

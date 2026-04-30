@@ -18,14 +18,14 @@ type Newsletter = {
 };
 
 const newsletters: Newsletter[] = [
-  { slug: "2013-spring-newsletter", era: "Spring 2013", title: "Yogo, four years in", pages: 6 },
-  { slug: "2013-fall-newsletter", era: "Fall 2013", title: "The first walking tractor", pages: 6 },
-  { slug: "2021-08-12-albino-attack-update", era: "August 12, 2021", title: "Attack at Mitindo: initial update", pages: 1 },
-  { slug: "newsletter-33920168-2023", era: "2023", title: "Field update from Mwalwigi", pages: 2 },
-  { slug: "newsletter-8ac3f432-2024", era: "2024", title: "Yogo, fifteen years on", pages: 4 },
-  { slug: "newsletter-a863e7f8-2024", era: "2024", title: "Field update", pages: 3 },
-  { slug: "newsletter-f7e4406c-2024", era: "2024", title: "Field update", pages: 2 },
-  { slug: "newsletter-fa68e1c0-2024", era: "2024", title: "Year in review", pages: 4 },
+  { slug: "2013-spring-newsletter", era: "Spring 2013", title: "Spring 2013 Newsletter", pages: 6 },
+  { slug: "2013-fall-newsletter", era: "Fall 2013", title: "Fall 2013 Newsletter", pages: 6 },
+  { slug: "2021-08-12-albino-attack-update", era: "August 12, 2021", title: "Mitindo Update", pages: 1 },
+  { slug: "newsletter-33920168-2023", era: "2023", title: "2023 Newsletter", pages: 2 },
+  { slug: "newsletter-8ac3f432-2024", era: "2024", title: "2024 Newsletter (One)", pages: 4 },
+  { slug: "newsletter-a863e7f8-2024", era: "2024", title: "2024 Newsletter (Two)", pages: 3 },
+  { slug: "newsletter-f7e4406c-2024", era: "2024", title: "2024 Newsletter (Three)", pages: 2 },
+  { slug: "newsletter-fa68e1c0-2024", era: "2024", title: "2024 Newsletter (Four)", pages: 4 },
 ];
 
 export function generateStaticParams() {
