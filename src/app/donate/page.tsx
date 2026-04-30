@@ -106,49 +106,37 @@ export default function Donate() {
                 Clean water, farms, schools, and churches, across three villages.
               </h2>
               <ul className="flex flex-col gap-8">
-                <li className="flex gap-5 border-t border-cream/15 pt-6">
-                  <span className="font-heading text-2xl text-gold shrink-0 leading-none pt-1 w-8">01</span>
-                  <div>
-                    <p className="font-heading text-xl md:text-2xl text-cream mb-2 leading-[1.25]">
-                      Mwalwigi church build
-                    </p>
-                    <p className="text-lg text-cream/80 leading-[1.6]">
-                      Four temporary churches destroyed. Roughly 250 people gathering under a tree. Current urgent priority.
-                    </p>
-                  </div>
+                <li className="border-t border-cream/15 pt-6">
+                  <p className="font-heading text-xl md:text-2xl text-cream mb-2 leading-[1.25]">
+                    Mwalwigi church build
+                  </p>
+                  <p className="text-lg text-cream/80 leading-[1.6]">
+                    Four temporary churches destroyed. Roughly 250 people gathering under a tree. Current urgent priority.
+                  </p>
                 </li>
-                <li className="flex gap-5 border-t border-cream/15 pt-6">
-                  <span className="font-heading text-2xl text-gold shrink-0 leading-none pt-1 w-8">02</span>
-                  <div>
-                    <p className="font-heading text-xl md:text-2xl text-cream mb-2 leading-[1.25]">
-                      School feeding program
-                    </p>
-                    <p className="text-lg text-cream/80 leading-[1.6]">
-                      Two meals a day for 481 students. Biggest single pressure on the budget.
-                    </p>
-                  </div>
+                <li className="border-t border-cream/15 pt-6">
+                  <p className="font-heading text-xl md:text-2xl text-cream mb-2 leading-[1.25]">
+                    School feeding program
+                  </p>
+                  <p className="text-lg text-cream/80 leading-[1.6]">
+                    Two meals a day for 481 students. Biggest single pressure on the budget.
+                  </p>
                 </li>
-                <li className="flex gap-5 border-t border-cream/15 pt-6">
-                  <span className="font-heading text-2xl text-gold shrink-0 leading-none pt-1 w-8">03</span>
-                  <div>
-                    <p className="font-heading text-xl md:text-2xl text-cream mb-2 leading-[1.25]">
-                      Student sponsorship
-                    </p>
-                    <p className="text-lg text-cream/80 leading-[1.6]">
-                      $50/mo covers daycare-grade 6. $60/mo for grade 7-9. $70/mo for secondary. Through our partner AMIC.
-                    </p>
-                  </div>
+                <li className="border-t border-cream/15 pt-6">
+                  <p className="font-heading text-xl md:text-2xl text-cream mb-2 leading-[1.25]">
+                    Student sponsorship
+                  </p>
+                  <p className="text-lg text-cream/80 leading-[1.6]">
+                    $50/mo covers daycare-grade 6. $60/mo for grade 7-9. $70/mo for secondary. Through our partner AMIC.
+                  </p>
                 </li>
-                <li className="flex gap-5 border-t border-cream/15 pt-6">
-                  <span className="font-heading text-2xl text-gold shrink-0 leading-none pt-1 w-8">04</span>
-                  <div>
-                    <p className="font-heading text-xl md:text-2xl text-cream mb-2 leading-[1.25]">
-                      Clean-water wells
-                    </p>
-                    <p className="text-lg text-cream/80 leading-[1.6]">
-                      Hydrological surveys, drilling, storage tanks, irrigation lines.
-                    </p>
-                  </div>
+                <li className="border-t border-cream/15 pt-6">
+                  <p className="font-heading text-xl md:text-2xl text-cream mb-2 leading-[1.25]">
+                    Clean-water wells
+                  </p>
+                  <p className="text-lg text-cream/80 leading-[1.6]">
+                    Hydrological surveys, drilling, storage tanks, irrigation lines.
+                  </p>
                 </li>
               </ul>
 
