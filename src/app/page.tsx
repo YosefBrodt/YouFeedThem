@@ -30,7 +30,8 @@ export default function Home() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/15" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/15 to-transparent" />
         </div>
         <div className="container mx-auto px-8 max-w-7xl relative z-10">
           <BlurFade delay={0.25}>
