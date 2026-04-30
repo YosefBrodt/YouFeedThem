@@ -97,10 +97,10 @@ export default function Programs() {
             <BlurFade>
               <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative order-2 lg:order-1 group">
                 <Image
-                  src="/seje_school_photo.png"
+                  src="/photos/wayback-pulls/seje-academy-exterior.jpg"
                   alt="Seje Glory Centre Academy, Siaya District, Kenya"
                   fill
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-[0.85] sepia-[0.05]"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-[0.92]"
                   sizes="(max-width: 1024px) 100vw, 60vw"
                 />
               </Link>

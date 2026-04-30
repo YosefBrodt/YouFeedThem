@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Download, X } from "lucide-react";
 import { BlurFade } from "@/components/ui/blur-fade";
 
@@ -22,6 +22,7 @@ type Photo = {
 type Chapter = {
   id: string;
   number: string;
+  shortLabel: string;
   era: string;
   location?: string;
   title: string;
@@ -37,57 +38,36 @@ const chapters: Chapter[] = [
   {
     id: "origins",
     number: "Chapter One",
-    era: "2008–2010",
+    shortLabel: "Origins",
+    era: "2008",
     location: "Trinity Bible Church Ottawa, Canada",
     title: "Twenty-five people under a tree.",
     bg: "cream",
     lead: [
-      "In the spring of 2008, a small group at Trinity Bible Church in Osgoode, Ontario worked through Rick Warren's “40 Days of Community” curriculum. The introductory video reminded them of Mark 6 — the disciples telling Jesus to send the crowds away, Jesus telling the disciples, “you give them something to eat.” The group decided to act.",
-      "Lynn Fraser, a local businesswoman, introduced Roland and Theresa Poirier to Silas Owiti-Oduor, originally from a Kenyan village called Yogo. Pastor Shawn Ketcheson blessed the church’s new organic gardens on Sunday September 14, 2008. Deacon Dennis Kuz spoke. Cindy Girard photographed the day. Roland flew to Kenya in November.",
-      "He came back with a phrase he hasn’t stopped repeating: “You feed them. We help you do it.”",
+      "In the spring of 2008, a small group at Trinity Bible Church in Osgoode, Ontario worked through Rick Warren's 40 Days of Community curriculum. The introductory video reminded them of Mark 6, the disciples telling Jesus to send the crowds away, Jesus telling the disciples to feed them. The group decided to act.",
+      "Lynn Fraser introduced Roland and Theresa Poirier to Silas Owiti-Oduor, originally from a Kenyan village called Yogo. Pastor Shawn Ketcheson blessed the church's new organic gardens on Sunday September 14, 2008. Roland flew to Kenya in November.",
+      "He came back with a phrase he hasn't stopped repeating: you feed them, we help you do it.",
     ],
     pullQuote: {
       text: "I have seen the face of starvation. I have held it in my arms. It is a face of desperation, depravation and hopelessness. We came home with a goat in the truck, a 12-acre farm purchased, and a board of four Kenyans willing to give the rest of their lives to feeding their own village.",
       attribution: "Roland Poirier, trip-return letter, November 23, 2008",
     },
-    photos: [
-      {
-        src: "/photos/community-gathering.jpg",
-        alt: "Community gathering outside the YFT-built academy",
-        caption: "Yogo, two years after the founding.",
-        location: "Yogo, Siaya District, Kenya",
-        story:
-          "The first founding board on the Kenyan side: Doctarie Peter Okosh (Chairman), Pastor Pauline Owiti Oduor (signatory; gave her own $20/month salary to fund the pre-school in the early years), Eric Magunga (high-school teacher), and Bernard O. Oguna (agricultural engineer). Pauline’s small monthly stipend was the financial seed. The land was bought outright on that first trip.",
-      },
-      {
-        src: "/photos/portrait-a.jpg",
-        alt: "Portrait from the founding-era field",
-        caption: "A face from the early years.",
-        location: "Siaya District, Kenya",
-        story:
-          "Names and full stories of early-era subjects come forward when our partners on the ground are ready to share them. Many of the children photographed in 2008–2010 are now in their twenties; some of them are alumni in university today.",
-      },
-      {
-        src: "/photos/portrait-b.jpg",
-        alt: "Portrait from the founding-era field",
-        caption: "A face from the early years.",
-        location: "Siaya District, Kenya",
-      },
-    ],
+    photos: [],
     closing:
-      "By December 14, 2008, Roland and the team showed the trip footage at TBCO and turned it into Yogo's first formal supporter base. Theresa Poirier handled the website, the newsletters, the graphics, and the bookkeeping for the next fifteen years. The current site is the second one she helped imagine. She passed away before it shipped.",
+      "The first Kenyan board: Doctarie Peter Okosh as Chairman, Pastor Pauline Owiti Oduor as signatory (she gave her own $20/month salary to fund the pre-school in the early years), Eric Magunga, and Bernard O. Oguna. Theresa Poirier handled the website, the newsletters, the graphics, and the bookkeeping for the next fifteen years. The current site is the second one she helped imagine. She passed away before it shipped.",
   },
   {
     id: "yogo",
     number: "Chapter Two",
-    era: "2008–present",
+    shortLabel: "Yogo",
+    era: "2008 to present",
     location: "Yogo, Siaya District, Kenya",
     title: "From hard-as-driveway soil to twelve acres of harvest.",
     bg: "forest",
     lead: [
-      "Yogo is the mother project. The soil in 2008 was so depleted local farmers described it as “hard as a driveway.” Children were dying of water-borne disease. The first village well had been dug by hand and was contaminated.",
-      "Today Yogo has a twelve-acre farm, a clean-water borehole drilled to depth on the first attempt in 2011, a school that serves 281 students with 42 staff, and graduates studying nursing, teaching, and medical engineering at university. Class sizes are 25–30 students, against the 100+ at the nearest public school.",
-      "Every program at Yogo is run by Yogo. We partner, we plant, we step back. Elisha Otieno has been the farm manager since 2014.",
+      "Yogo is the mother project. The soil in 2008 was so depleted local farmers described it as hard as a driveway. Children were dying of water-borne disease. The first village well had been dug by hand and was contaminated.",
+      "Today Yogo has a twelve-acre farm, a clean-water borehole drilled to depth in 2011 after two prior attempts in the area had failed, a school that serves 281 students with 42 staff, and graduates studying nursing, teaching, and medical engineering at university.",
+      "Every program at Yogo is run by Yogo. We partner, we plant, we step back.",
     ],
     stats: [
       { value: "12", label: "acres" },
@@ -102,112 +82,97 @@ const chapters: Chapter[] = [
     photos: [
       {
         src: "/photos/wayback-pulls/yogo-school-exterior.jpg",
-        alt: "Yogo Glory Centre Academy, exterior view",
-        caption: "Yogo Glory Centre Academy.",
-        location: "Yogo, Siaya District, Kenya",
-        story:
-          "The school was built by the community, on land bought outright by the founding mission team in November 2008. Today it serves 281 students with 42 staff. In 2015, it was ranked in the top ten percent of schools in Siaya District.",
+        alt: "School building in Yogo",
+        caption: "A YFT-built school in Yogo.",
+        location: "Yogo, Kenya",
       },
       {
         src: "/photos/wayback-pulls/yogo-meal-ugali.jpg",
-        alt: "Students eating ugali at Yogo Glory Centre Academy",
-        caption: "Two meals a day, every school day, for 281 children.",
-        location: "Yogo Glory Centre Academy, Kenya",
+        alt: "Students eating at Yogo",
+        caption: "Mealtime.",
+        location: "Yogo, Kenya",
         story:
-          "The flagship program. Students at Yogo receive a hot uji (porridge) breakfast and a midday meal of ugali with beans or vegetables, sourced almost entirely from the on-site farm. The school feeding program is the single largest line item in the YFT budget. Every dollar of “where needed most” giving stabilises this program first.",
+          "The school feeding program (a hot uji breakfast and a midday meal of ugali with beans or vegetables) is the single largest line item in the YFT budget. Every dollar of where-needed-most giving stabilises this program first.",
       },
       {
         src: "/photos/wayback-pulls/yogo-class-portrait.jpg",
-        alt: "Class group portrait at Yogo",
-        caption: "A class of Yogo students.",
-        location: "Yogo Glory Centre Academy",
-        story:
-          "Class sizes at Yogo are kept between 25 and 30. By comparison, the nearest public school in Siaya District averages over 100 students per class. Smaller classes are why Yogo Glory Centre Academy was ranked in the top ten percent of district schools in 2015.",
+        alt: "Group of students in Yogo",
+        caption: "Students at Yogo.",
+        location: "Yogo, Kenya",
       },
       {
         src: "/photos/wayback-pulls/yogo-cgc-classroom.jpg",
-        alt: "Classroom interior at Yogo",
-        caption: "Inside one of the academy classrooms.",
+        alt: "Classroom interior in Yogo",
+        caption: "Inside the academy.",
         location: "Yogo, Kenya",
       },
       {
         src: "/photos/wayback-pulls/yogo-well-drilling-2011.jpg",
-        alt: "Drilling crew at the Yogo well, 2011",
-        caption: "The 2011 well, drilled to depth on the first attempt.",
-        date: "2011",
+        alt: "Drilling for water at Yogo",
+        caption: "Drilling for water.",
         location: "Yogo, Kenya",
         story:
-          "Two previous drilling attempts in the area had failed. YFT funded a hydrological survey before the third try, and the team hit clean water on the first attempt. The well has run continuously since.",
+          "Two previous drilling attempts in the area had failed. YFT funded a hydrological survey before the third try, and the team hit clean water on the first attempt in 2011. The well has run continuously since.",
       },
       {
         src: "/photos/wayback-pulls/water-storage-tank.jpg",
-        alt: "Water storage tank installed near the school",
-        caption: "Storage tank serving the school and the farm.",
+        alt: "Water tank at Yogo",
+        caption: "Water infrastructure at the school.",
         location: "Yogo, Kenya",
-        story:
-          "Solar-pumped from the borehole into a 5,000-litre tank, then gravity-fed to the school, the farm’s drip-line irrigation, and the surrounding community. A single source replacing kilometres of daily walking.",
       },
       {
         src: "/photos/wayback-pulls/elisha-farm-manager.jpg",
-        alt: "Elisha Otieno, farm manager, with a student",
-        caption: "Elisha Otieno, farm manager since 2014.",
-        location: "Yogo Farm, Kenya",
-        story:
-          "Elisha has run the Yogo farm operation for over a decade. Hired by the YCBO board in 2014, his agricultural background and instinct for the land turned the four-acre starter plot into the twelve-acre, ten-times-yield producer it is today.",
+        alt: "On the Yogo farm",
+        caption: "On the farm.",
+        location: "Yogo, Kenya",
       },
       {
         src: "/photos/wayback-pulls/walking-tractor-2014.jpg",
-        alt: "Yogo's first walking tractor, 2014",
-        caption: "The first walking tractor, 2014.",
-        date: "2014",
-        location: "Yogo Farm",
+        alt: "Walking tractor at Yogo Farm",
+        caption: "A walking tractor at the farm.",
+        location: "Yogo, Kenya",
         story:
-          "Funded by a young donor named Melissa, who organised her own fundraiser to buy it. The tractor replaced sixty people working the land for six weeks every planting season. In 2025 a 4WD tractor took its place, but the walking tractor was the moment the farm stopped being subsistence and started being a business that could feed the school and sell at market.",
+          "Yogo's first walking tractor was funded by a young donor named Melissa, who organised her own fundraiser to buy it. It replaced sixty people working the land for six weeks every planting season.",
       },
       {
         src: "/photos/wayback-pulls/kale-snowpea-shade-planting.jpg",
-        alt: "Kale planted in the shade of snow peas at Yogo Farm",
-        caption: "Kale in the shade of snow peas.",
-        location: "Yogo Farm, Kenya",
+        alt: "Companion planting at Yogo Farm",
+        caption: "Companion planting.",
+        location: "Yogo, Kenya",
         story:
-          "Companion planting. Snow peas climb the tall trellises and provide shade for the kale beneath, which can’t handle direct equatorial sun. Two crops, one bed, no irrigation cost. The farm runs raised-bed square-foot gardening, drip-line irrigation, sugar-cane composting, and bio-fertilisers across all twelve acres.",
+          "The Yogo farm runs raised-bed square-foot gardening, drip-line irrigation, sugar-cane composting, and bio-fertilisers across twelve acres.",
       },
       {
         src: "/photos/wayback-pulls/yogo-cabbage-harvest.jpg",
         alt: "Cabbage harvest at Yogo",
-        caption: "Cabbage harvest.",
-        location: "Yogo Farm",
+        caption: "From the harvest.",
+        location: "Yogo, Kenya",
       },
       {
         src: "/photos/wayback-pulls/drying-corn-millet.jpg",
-        alt: "Corn and millet drying after harvest",
-        caption: "Corn and millet, drying for storage.",
-        location: "Yogo Farm",
-        story:
-          "Surplus from the harvest is dried, milled, and either fed to the school as ugali through the dry season or sold at the local market in Siaya. Market revenue is reinvested into seed for the next planting cycle.",
+        alt: "Grain drying at Yogo",
+        caption: "Grain, drying for storage.",
+        location: "Yogo, Kenya",
       },
       {
         src: "/photos/shucking-peanuts-yogo.jpg",
-        alt: "Shucking peanuts at Yogo Farm",
-        caption: "Shucking peanuts after harvest.",
-        location: "Yogo Farm, Kenya",
-        story:
-          "Peanuts are part of the rotation. They fix nitrogen back into the soil and add protein to the school feeding program. The shucking is community work; everyone shows up.",
+        alt: "Shucking peanuts at Yogo",
+        caption: "Shucking peanuts.",
+        location: "Yogo, Kenya",
       },
     ],
-    closing:
-      "Yogo CBO has hosted the United Nations World Food Day at the farm. The model has been studied, copied, and replicated in Seje and Mwalwigi. The first cohort of Yogo alumni is in their third year of university.",
   },
   {
     id: "seje",
     number: "Chapter Three",
-    era: "2014–present",
+    shortLabel: "Seje",
+    era: "2014 to present",
     location: "Seje, Siaya District, Kenya",
     title: "Built with Stittsville. Run by Seje.",
     bg: "cream",
     lead: [
       "Seje is the second school. It was built in partnership with Stittsville Community Bible Church in Ontario, Canada. The model is the same as Yogo: partner, plant, transfer. Seje Glory Centre Academy now serves 200 students with 27 staff, and 110 students have transitioned to secondary school since 2019.",
-      "Like Yogo, Seje runs its own kitchen and its own farm. Like Yogo, the school exists alongside a community well, a drought response plan, and a programme to put the local children into clothes that match the dignity their classroom does.",
+      "Like Yogo, Seje runs its own kitchen and its own farm. Like Yogo, the school exists alongside a community well and a drought response plan.",
     ],
     stats: [
       { value: "200", label: "students" },
@@ -219,100 +184,85 @@ const chapters: Chapter[] = [
         src: "/photos/wayback-pulls/seje-academy-exterior.jpg",
         alt: "Seje Glory Centre Academy",
         caption: "Seje Glory Centre Academy.",
-        location: "Seje, Siaya District, Kenya",
+        location: "Seje, Kenya",
       },
       {
         src: "/photos/wayback-pulls/seje-breakfast.jpg",
-        alt: "Breakfast service at Seje",
-        caption: "Breakfast at Seje.",
-        location: "Seje Glory Centre Academy",
-        story:
-          "A morning serving of uji (porridge) and bread. Most of the students walk between two and five kilometres to get to school. Breakfast is the meal that decides whether they can stay through the afternoon.",
+        alt: "Meal service at Seje",
+        caption: "A meal at Seje.",
+        location: "Seje, Kenya",
       },
       {
         src: "/photos/wayback-pulls/seje-lunch-beans.jpg",
-        alt: "Lunch service at Seje, beans being prepared",
-        caption: "Beans for lunch.",
-        location: "Seje Glory Centre Academy",
-        story:
-          "The kitchen prepares one hot lunch a day, year-round. The protein cycle rotates beans, lentils, and ground peanuts depending on what the farm is yielding. The pots are large enough that nothing is left over by 1 pm.",
+        alt: "Beans being prepared at Seje",
+        caption: "Beans being prepared.",
+        location: "Seje, Kenya",
       },
       {
         src: "/photos/wayback-pulls/seje-breakfast-crowd.jpg",
-        alt: "Students lined up for breakfast at Seje",
-        caption: "The breakfast line.",
-        location: "Seje Glory Centre Academy",
+        alt: "Students at mealtime at Seje",
+        caption: "At mealtime.",
+        location: "Seje, Kenya",
       },
       {
         src: "/photos/wayback-pulls/seje-water-collection-drought.jpg",
-        alt: "Drought-era water collection at Seje, jerry cans and bicycles",
-        caption: "During drought, water is currency.",
+        alt: "Water collection at Seje",
+        caption: "Water collection.",
         location: "Seje, Kenya",
-        story:
-          "Siaya District is rain-fed. In drought years, like 2022–23, the community well becomes the only reliable water source for several kilometres. Jerry cans on bicycles is how the household run is made. The school stays open.",
       },
       {
         src: "/photos/wayback-pulls/seje-playground.jpg",
-        alt: "Children playing at Seje",
-        caption: "Recess.",
-        location: "Seje Glory Centre Academy",
+        alt: "Children at Seje",
+        caption: "Children at Seje.",
+        location: "Seje, Kenya",
       },
       {
         src: "/photos/wayback-pulls/seje-group-portrait.jpg",
-        alt: "Group portrait of Seje students",
-        caption: "A Seje class.",
-        location: "Seje Glory Centre Academy",
-      },
-      {
-        src: "/seje_school_photo.png",
-        alt: "Seje academy",
-        caption: "The academy in mid-build, partnership with Stittsville.",
+        alt: "Class group at Seje",
+        caption: "A class group at Seje.",
         location: "Seje, Kenya",
-        story:
-          "Stittsville Community Bible Church in Ontario, Canada raised the construction funds and sent the first mission teams. The school has since absorbed twelve cohorts of mission-trip volunteers from churches across Ontario.",
       },
     ],
   },
   {
     id: "tanzania",
     number: "Chapter Four",
-    era: "2018–present",
+    shortLabel: "Tanzania",
+    era: "2018 to present",
     location: "Mwalwigi, Mwanza Region, Tanzania",
     title: "Pastor Titus, twice.",
     bg: "forest",
     lead: [
-      "Pastor Titus Mashalla had already led a successful YFT farm and church partnership in Bukwimba, Tanzania (2010–2018) before he and his wife Happiness felt called to relocate to Mwalwigi. Mwalwigi was where the need was greater.",
+      "Pastor Titus Mashalla had already led a successful YFT farm and church partnership in Bukwimba, Tanzania (2010 to 2018) before he and his wife Happiness felt called to relocate to Mwalwigi. Mwalwigi was where the need was greater.",
       "On Thursday October 14, 2021, after two years of fundraising, the team drilled a borehole in Mwalwigi and hit clean water at ninety metres. A solar pump, a 5,000-litre storage tank, and fencing were installed in the months that followed. Women and children who had been walking up to ten kilometres a day for water now make a five-minute trip.",
-      "The current campaign is the church build. Four temporary structures have been destroyed by wind and torrential rain. Roughly 250 people gather for Sunday services under a tree. A 39ft × 48ft cement-block first phase has been quoted at $18,700; the architectural drawings are complete; the contractor has been selected. The Gathering House (Chesterville, ON) gave $2,250, doubled by a matching donor. The remainder is the open ask.",
+      "The current campaign is the church build. Four temporary structures have been destroyed by wind and torrential rain. Roughly 250 people gather for Sunday services under a tree. A 39ft by 48ft cement-block first phase has been quoted at $18,700; the architectural drawings are complete; the contractor has been selected.",
     ],
     stats: [
-      { value: "90m", label: "well depth, drilled Oct 2021" },
+      { value: "90m", label: "well depth" },
       { value: "10km", label: "previous daily water walk" },
       { value: "$18,700", label: "current church build budget" },
     ],
     photos: [
       {
         src: "/photos/wayback-pulls/titus-happiness-family.jpg",
-        alt: "Pastor Titus, Happiness, and family",
-        caption: "Pastor Titus, Happiness, and their three children.",
-        date: "October 2020",
+        alt: "Pastor Titus and family",
+        caption: "Pastor Titus, Happiness, and family.",
         location: "Mwalwigi, Tanzania",
         story:
-          "Pastor Titus Mashalla, his wife Happiness, and their children Shawn, Titus, and Evelyn. Field partner for YFT in Tanzania, in the role since the Bukwimba years (2010–2018) and continuing through the Mwalwigi relocation.",
+          "Pastor Titus Mashalla, his wife Happiness, and their three children. Field partner for YFT in Tanzania, in the role since the Bukwimba years (2010 to 2018) and continuing through the Mwalwigi relocation.",
       },
       {
         src: "/photos/wayback-pulls/mwalwigi-women-collecting-water.jpeg",
-        alt: "Women collecting water from the new well in Mwalwigi",
-        caption: "The new well, in use.",
-        date: "2022",
+        alt: "At the Mwalwigi well",
+        caption: "At the well.",
         location: "Mwalwigi, Tanzania",
         story:
-          "Within a week of the solar pump being installed, the well became the primary water source for the village. Women and children now make a five-minute walk to the well, twice a day, instead of the four-hour round trip to the river.",
+          "Within a week of the solar pump being installed, the well became the primary water source for the village. Women and children now make a five-minute walk to it, twice a day, instead of the four-hour round trip to the river.",
       },
       {
         src: "/photos/wayback-pulls/mwalwigi-well-success.jpg",
-        alt: "Drilling team and Pastor Titus the day water was reached",
-        caption: "Water at ninety metres, October 14, 2021.",
+        alt: "The day water was reached at Mwalwigi",
+        caption: "The day water was reached.",
         date: "October 14, 2021",
         location: "Mwalwigi, Tanzania",
         story:
@@ -321,29 +271,20 @@ const chapters: Chapter[] = [
       {
         src: "/photos/wayback-pulls/mwalwigi-church-under-tree.jpeg",
         alt: "Mwalwigi congregation gathering under a tree",
-        caption: "Sunday service, under a tree.",
+        caption: "Sunday gathering, under a tree.",
         location: "Mwalwigi, Tanzania",
         story:
           "Four temporary church structures have been destroyed by weather since 2018. The current congregation, roughly 250 people, gathers under this tree every Sunday. The church build campaign is the current YFT urgent priority.",
       },
       {
-        src: "/photos/pastor-titus-family-2020.jpg",
-        alt: "Pastor Titus and family, 2020",
-        caption: "Family portrait, 2020.",
-        date: "2020",
-        location: "Mwalwigi, Tanzania",
-      },
-      {
         src: "/photos/pastor-titus-blankets.jpg",
-        alt: "Pastor Titus distributing blankets in Mwalwigi",
+        alt: "Pastor Titus distributing blankets",
         caption: "Distributing blankets in Mwalwigi.",
         location: "Mwalwigi, Tanzania",
-        story:
-          "Visits to homes to minister, bring hope (and Bibles when available), and invite people to gather for Sunday services. The blanket distribution is a Pastor Titus signature; the rainy-season nights in the highlands are colder than visitors expect.",
       },
       {
         src: "/photos/drought-crops-titus.jpg",
-        alt: "Pastor Titus working drought-tolerant crops",
+        alt: "Working drought-tolerant crops",
         caption: "Working drought-tolerant crops.",
         location: "Mwalwigi, Tanzania",
         story:
@@ -351,17 +292,16 @@ const chapters: Chapter[] = [
       },
       {
         src: "/photos/water-dirty.jpg",
-        alt: "Contaminated surface water source",
-        caption: "What the water looked like before.",
+        alt: "Contaminated surface water",
+        caption: "What the water source looked like before.",
         location: "Mwalwigi, Tanzania, pre-2021",
-        story:
-          "The surface-water source the village relied on before the borehole. Contaminated, ten kilometres from most homes, and the only available option for years.",
       },
     ],
   },
   {
     id: "mitindo",
     number: "Chapter Five",
+    shortLabel: "Mitindo",
     era: "August 2021",
     location: "Mitindo, Tanzania",
     title: "When the attack came, the response had to come too.",
@@ -369,34 +309,11 @@ const chapters: Chapter[] = [
     lead: [
       "On August 12, 2021, seven children with albinism were attacked near a remote Tanzanian village. The motivation was ritual superstition. It was not the first such attack in the region.",
       "Mitindo village houses and protects roughly 200 children with albinism year-round, shielded from violence and given access to the medical care, sun protection, and special-needs support that their condition requires. After the August attack, 38 additional children were brought to Mitindo for protection. YFT mobilised funds for bedding, clothing, and care supplies, alongside our partner ministries.",
-      "We don’t lead with this story. We don’t put it on the home page. But it is part of what we do, and the donors and supporters who fund this work deserve to know that their gifts also go to children who have nowhere else to be safe.",
+      "We don't lead with this story. We don't put it on the home page. But it is part of what we do, and the donors who fund this work deserve to know that their gifts also go to children who have nowhere else to be safe.",
     ],
     photos: [],
     closing:
-      "Three newsletter PDFs from August and September 2021 document the attack, the response, and the recovery in detail. They are linked at the bottom of this page.",
-  },
-  {
-    id: "team",
-    number: "Chapter Six",
-    era: "Now",
-    title: "The people doing the work.",
-    bg: "cream",
-    lead: [
-      "Eleven of these portraits came back with the Wayback archive. We don’t yet know which face is which name. Roland is reviewing them; the captions will be updated as they’re identified. The roster, in the meantime, is real:",
-      "Roland Poirier (Founder, Director). Bishop Silas Owiti-Oduor (Field leadership, Kenya). Pastor Titus Mashalla (Field partner, Tanzania). Dr. David LoCastro (Medical Director, mission-trip lead). Bob Elliott (Chair, Community Development; project-managed the Mwalwigi well and church build). Dianne Elliott (GCF / Partners in Hope Tanzania liaison). Ada Madison Poirier (Media). Pauline Owiti Oduor (Founding board, Yogo). Elisha Otieno (Farm Manager, Yogo). Lynn Fraser (Founding connector). And Theresa Poirier, in memoriam, who built the previous version of this website by hand.",
-    ],
-    photos: [
-      { src: "/photos/wayback-pulls/team-portrait-1.jpg", alt: "Team portrait 1", caption: "Member, identification pending." },
-      { src: "/photos/wayback-pulls/team-portrait-3.jpg", alt: "Team portrait 3", caption: "Member, identification pending." },
-      { src: "/photos/wayback-pulls/team-portrait-4.jpg", alt: "Team portrait 4", caption: "Member, identification pending." },
-      { src: "/photos/wayback-pulls/team-portrait-5.jpg", alt: "Team portrait 5", caption: "Member, identification pending." },
-      { src: "/photos/wayback-pulls/team-portrait-6.jpg", alt: "Team portrait 6", caption: "Member, identification pending." },
-      { src: "/photos/wayback-pulls/team-portrait-7.jpg", alt: "Team portrait 7", caption: "Member, identification pending." },
-      { src: "/photos/wayback-pulls/team-portrait-8.jpg", alt: "Team portrait 8", caption: "Member, identification pending." },
-      { src: "/photos/wayback-pulls/team-portrait-9.jpg", alt: "Team portrait 9", caption: "Member, identification pending." },
-      { src: "/photos/wayback-pulls/team-portrait-10.jpg", alt: "Team portrait 10", caption: "Member, identification pending." },
-      { src: "/photos/wayback-pulls/team-portrait-11.jpg", alt: "Team portrait 11", caption: "Member, identification pending." },
-    ],
+      "Three newsletter PDFs from August and September 2021 document the attack, the response, and the recovery in detail. They are linked in the archive at the bottom of this page.",
   },
 ];
 
@@ -425,6 +342,9 @@ const allPhotos: FlatPhoto[] = chapters.flatMap((c) =>
 
 export default function Media() {
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
+  const [activeChapter, setActiveChapter] = useState<string>(chapters[0].id);
+  const [showIndicator, setShowIndicator] = useState(false);
+  const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
   const close = useCallback(() => setSelectedIdx(null), []);
   const next = useCallback(
@@ -439,6 +359,7 @@ export default function Media() {
     []
   );
 
+  // Lightbox keyboard nav + scroll lock
   useEffect(() => {
     if (selectedIdx === null) return;
     const onKey = (e: KeyboardEvent) => {
@@ -455,11 +376,40 @@ export default function Media() {
     };
   }, [selectedIdx, close, next, prev]);
 
-  const selected = selectedIdx !== null ? allPhotos[selectedIdx] : null;
+  // Track which chapter is currently in view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Use the entry closest to the top of the viewport
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible[0]) {
+          const id = visible[0].target.getAttribute("data-chapter-id");
+          if (id) setActiveChapter(id);
+        }
+      },
+      { rootMargin: "-30% 0px -60% 0px", threshold: 0 }
+    );
+    Object.values(sectionRefs.current).forEach((el) => {
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
 
-  // Build the index map: for a photo's src+chapter, get its flat index
+  // Show the indicator only after we scroll past the cover
+  useEffect(() => {
+    const onScroll = () => setShowIndicator(window.scrollY > 400);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const selected = selectedIdx !== null ? allPhotos[selectedIdx] : null;
   const indexFor = (src: string, chapterTitle: string) =>
     allPhotos.findIndex((p) => p.src === src && p.chapterTitle === chapterTitle);
+
+  const activeChapterMeta = chapters.find((c) => c.id === activeChapter) ?? chapters[0];
 
   return (
     <main className="w-full pt-28 md:pt-32">
@@ -482,26 +432,40 @@ export default function Media() {
           </BlurFade>
           <BlurFade delay={0.2}>
             <p className="text-xl md:text-2xl text-cream/85 leading-[1.6] max-w-3xl">
-              A chaptered photo essay of YFT&rsquo;s work in Kenya and Tanzania, drawn from the field, the founding-era newsletters, and the Wayback archive of every version of this site since 2008. Click any image for the full caption and story.
+              A photo essay of YFT&rsquo;s work in Kenya and Tanzania, with newsletter archives going back to 2013. Click any image for the full caption.
             </p>
           </BlurFade>
         </div>
       </header>
 
-      {/* ─── Chapter rail (desktop) ─── */}
-      <ChapterRail />
+      {/* ─── Persistent chapter indicator ─── */}
+      <ActiveChapterIndicator
+        chapters={chapters}
+        activeChapter={activeChapter}
+        visible={showIndicator}
+      />
 
       {/* ─── Chapters ─── */}
       {chapters.map((chapter) => (
         <ChapterSection
           key={chapter.id}
           chapter={chapter}
+          sectionRef={(el) => {
+            sectionRefs.current[chapter.id] = el;
+          }}
           onSelect={(src) => setSelectedIdx(indexFor(src, chapter.title))}
         />
       ))}
 
       {/* ─── Newsletter Archive ─── */}
-      <section id="archive" className="bg-forest py-24 md:py-32 border-t border-cream/10">
+      <section
+        id="archive"
+        className="bg-forest py-24 md:py-32 border-t border-cream/10"
+        data-chapter-id="archive"
+        ref={(el) => {
+          sectionRefs.current["archive"] = el;
+        }}
+      >
         <div className="container mx-auto px-8 max-w-7xl">
           <BlurFade>
             <p className="font-sans text-sm uppercase tracking-[0.2em] text-gold font-bold mb-6">
@@ -510,12 +474,12 @@ export default function Media() {
           </BlurFade>
           <BlurFade delay={0.1}>
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-cream mb-8 leading-[1.05] max-w-4xl">
-              Every newsletter we&rsquo;ve sent since 2013.
+              Every newsletter we have, since 2013.
             </h2>
           </BlurFade>
           <BlurFade delay={0.15}>
             <p className="text-xl text-cream/80 leading-[1.6] max-w-2xl mb-14">
-              Long-form letters from Roland and the team. Some recovered from the Wayback Machine, some directly from our records. Free to download.
+              Long-form letters from Roland and the team. Free to download.
             </p>
           </BlurFade>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
@@ -544,11 +508,6 @@ export default function Media() {
               </BlurFade>
             ))}
           </div>
-          <BlurFade delay={0.4}>
-            <p className="font-sans text-sm text-cream/55 mt-14 max-w-2xl leading-[1.6]">
-              Two of the August–September 2021 PDFs were truncated by the Wayback Machine’s 1MB cap; the originals have been requested from Roland directly and will replace these copies once received.
-            </p>
-          </BlurFade>
         </div>
       </section>
 
@@ -598,42 +557,66 @@ export default function Media() {
 // Subcomponents
 // ─────────────────────────────────────────────────────────────────────────────
 
-function ChapterRail() {
+function ActiveChapterIndicator({
+  chapters,
+  activeChapter,
+  visible,
+}: {
+  chapters: Chapter[];
+  activeChapter: string;
+  visible: boolean;
+}) {
+  const activeIdx = chapters.findIndex((c) => c.id === activeChapter);
+  // If the user has scrolled past all chapters into the archive, show "Archive"
+  const isArchive = activeChapter === "archive";
+
   return (
-    <nav
-      aria-label="Chapter navigation"
-      className="hidden xl:flex fixed top-1/2 right-8 -translate-y-1/2 z-40 flex-col gap-3 pointer-events-none"
+    <div
+      aria-hidden="true"
+      className={`hidden md:flex fixed bottom-8 right-8 z-40 items-stretch transition-all duration-300 ${
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+      }`}
     >
-      {chapters.map((c) => (
-        <a
-          key={c.id}
-          href={`#${c.id}`}
-          className="pointer-events-auto group flex items-center gap-3 justify-end"
-        >
-          <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-cream/0 group-hover:text-cream transition-colors duration-300 bg-charcoal/85 px-3 py-1 backdrop-blur-sm">
-            {c.number}
-          </span>
-          <span className="block w-2 h-2 rounded-full bg-cream/40 group-hover:bg-gold transition-colors" />
-        </a>
-      ))}
-      <a
-        href="#archive"
-        className="pointer-events-auto group flex items-center gap-3 justify-end mt-2 pt-3 border-t border-cream/15"
-      >
-        <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-cream/0 group-hover:text-cream transition-colors duration-300 bg-charcoal/85 px-3 py-1 backdrop-blur-sm">
-          Archive
-        </span>
-        <span className="block w-2 h-2 rounded-sm bg-cream/40 group-hover:bg-gold transition-colors" />
-      </a>
-    </nav>
+      <div className="flex items-stretch bg-charcoal/95 text-cream backdrop-blur-md shadow-2xl shadow-black/30 border border-cream/10">
+        {/* Progress dots */}
+        <div className="flex flex-col justify-center gap-2 px-4 py-4 border-r border-cream/10">
+          {chapters.map((c, i) => (
+            <span
+              key={c.id}
+              className={`block transition-all duration-300 rounded-full ${
+                i === activeIdx && !isArchive
+                  ? "w-2 h-2 bg-gold"
+                  : "w-1.5 h-1.5 bg-cream/30"
+              }`}
+            />
+          ))}
+        </div>
+        {/* Active label */}
+        <div className="px-5 py-3.5 flex flex-col justify-center min-w-[180px]">
+          <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-gold font-bold leading-none mb-1.5">
+            {isArchive ? "Archive" : `Chapter ${activeIdx >= 0 ? toRoman(activeIdx + 1) : ""}`}
+          </p>
+          <p className="font-heading text-base text-cream leading-tight">
+            {isArchive ? "Newsletters" : chapters[activeIdx]?.shortLabel ?? ""}
+          </p>
+        </div>
+      </div>
+    </div>
   );
+}
+
+function toRoman(n: number) {
+  const map: Record<number, string> = { 1: "I", 2: "II", 3: "III", 4: "IV", 5: "V" };
+  return map[n] ?? String(n);
 }
 
 function ChapterSection({
   chapter,
+  sectionRef,
   onSelect,
 }: {
   chapter: Chapter;
+  sectionRef: (el: HTMLElement | null) => void;
   onSelect: (src: string) => void;
 }) {
   const bgClass =
@@ -648,7 +631,12 @@ function ChapterSection({
   const accent = chapter.bg === "cream" ? "text-terracotta" : "text-gold";
 
   return (
-    <section id={chapter.id} className={`${bgClass} py-24 md:py-32 border-t ${border}`}>
+    <section
+      id={chapter.id}
+      data-chapter-id={chapter.id}
+      ref={sectionRef}
+      className={`${bgClass} py-24 md:py-32 border-t ${border}`}
+    >
       <div className="container mx-auto px-8 max-w-7xl">
         {/* Chapter header */}
         <BlurFade>
@@ -766,8 +754,6 @@ function PhotoGrid({
   bg: Chapter["bg"];
   onSelect: (src: string) => void;
 }) {
-  // Asymmetric pattern: alternate full-bleed, 2-up, 3-up, 1+2.
-  // For chapters with many photos, repeat the pattern.
   const cardBg =
     bg === "cream" ? "bg-charcoal text-cream" : "bg-charcoal/60 text-cream";
 
@@ -801,14 +787,13 @@ function PhotoGrid({
     </button>
   );
 
-  // Build asymmetric layout
+  // Asymmetric layout: rotate solo / 2-up / 3-up / 2-up
   const groups: Photo[][] = [];
   let i = 0;
   let pattern = 0;
   while (i < photos.length) {
     const remaining = photos.length - i;
     if (pattern % 4 === 0 && remaining >= 1) {
-      // Full-bleed solo
       groups.push([photos[i]]);
       i += 1;
     } else if (pattern % 4 === 1 && remaining >= 2) {
@@ -818,7 +803,6 @@ function PhotoGrid({
       groups.push([photos[i], photos[i + 1], photos[i + 2]]);
       i += 3;
     } else if (pattern % 4 === 3 && remaining >= 2) {
-      // Asymmetric 1+2 split
       groups.push([photos[i], photos[i + 1]]);
       i += 2;
     } else {
@@ -849,7 +833,6 @@ function PhotoGrid({
             </div>
           );
         }
-        // 3-up
         return (
           <div key={gi} className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {group.map((p, pi) => (
@@ -887,13 +870,11 @@ function Lightbox({
       aria-modal="true"
       aria-label={`Detail for ${photo.alt}`}
     >
-      {/* Counter */}
       <div className="absolute top-4 md:top-6 left-4 md:left-8 z-10 font-sans text-sm uppercase tracking-[0.18em] text-cream/70 font-semibold">
         {String(index + 1).padStart(2, "0")} <span className="text-cream/40">/</span>{" "}
         {String(total).padStart(2, "0")}
       </div>
 
-      {/* Close */}
       <button
         type="button"
         onClick={(e) => {
@@ -906,7 +887,6 @@ function Lightbox({
         <X className="w-6 h-6" />
       </button>
 
-      {/* Prev */}
       <button
         type="button"
         onClick={(e) => {
@@ -919,7 +899,6 @@ function Lightbox({
         <ArrowLeft className="w-7 h-7" strokeWidth={1.5} />
       </button>
 
-      {/* Next */}
       <button
         type="button"
         onClick={(e) => {
@@ -932,7 +911,6 @@ function Lightbox({
         <ArrowRight className="w-7 h-7" strokeWidth={1.5} />
       </button>
 
-      {/* Card */}
       <div
         className="relative bg-charcoal max-w-5xl w-full my-auto"
         onClick={(e) => e.stopPropagation()}
@@ -968,7 +946,6 @@ function Lightbox({
           )}
         </div>
 
-        {/* Mobile prev/next */}
         <div className="flex md:hidden items-center justify-between p-4 border-t border-cream/10 bg-charcoal">
           <button
             type="button"
