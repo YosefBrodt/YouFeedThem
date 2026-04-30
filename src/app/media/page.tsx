@@ -276,14 +276,14 @@ const chapters: Chapter[] = [
 const newsletters = [
   { file: "2013-spring-newsletter.pdf", era: "Spring 2013", title: "Yogo, four years in" },
   { file: "2013-fall-newsletter.pdf", era: "Fall 2013", title: "The first walking tractor" },
+  { file: "2021-08-12-albino-attack-update.pdf", era: "August 12, 2021", title: "Attack at Mitindo: initial update" },
+  { file: "2021-08-26-albino-response.pdf", era: "August 26, 2021", title: "Response and care for the affected children" },
+  { file: "2021-09-20-albino-recovery.pdf", era: "September 20, 2021", title: "Recovery and ongoing support" },
   { file: "newsletter-33920168-2023.pdf", era: "2023", title: "Field update from Mwalwigi" },
   { file: "newsletter-8ac3f432-2024.pdf", era: "2024", title: "Yogo, fifteen years on" },
   { file: "newsletter-a863e7f8-2024.pdf", era: "2024", title: "Field update" },
   { file: "newsletter-f7e4406c-2024.pdf", era: "2024", title: "Field update" },
   { file: "newsletter-fa68e1c0-2024.pdf", era: "2024", title: "Year in review" },
-  { file: "2021-08-12-albino-attack-update.pdf", era: "August 12, 2021", title: "Attack at Mitindo: initial update" },
-  { file: "2021-08-26-albino-response.pdf", era: "August 26, 2021", title: "Response and care for the affected children" },
-  { file: "2021-09-20-albino-recovery.pdf", era: "September 20, 2021", title: "Recovery and ongoing support" },
 ];
 
 // Flatten all photos with chapter context for the lightbox
