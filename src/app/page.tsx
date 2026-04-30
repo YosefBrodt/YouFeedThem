@@ -113,7 +113,7 @@ export default function Home() {
                 We don&rsquo;t create dependency. We plant it, and step back.
               </h2>
               <p className="text-xl opacity-90 mb-6 leading-[1.6]">
-                In 2008, Yogo was twenty-five people worshiping under a tree, soil so depleted it was described as &ldquo;hard as a driveway,&rdquo; and children dying from water-borne disease. Today it has a school, a functioning farm, a clean-water well, and graduates in university.
+                When we first arrived in Yogo in 2008, half the children in the village were dying of water-borne disease. There was no farm, no school, and no well. Today there is a working farm, two schools across the network, a clean-water well, and graduates in university.
               </p>
               <p className="text-xl opacity-90 mb-12 leading-[1.6]">
                 We partner, train, and transfer ownership. Every program we&rsquo;ve started is still run by the community it was built for.
@@ -190,7 +190,7 @@ export default function Home() {
                   Church &amp; Community
                 </span>
                 <p className="font-heading text-2xl md:text-3xl text-cream leading-[1.3]">
-                  From twenty-five people under a tree in 2008 to ten churches in the district today.
+                  One small church in 2008 has multiplied into ten across the Siaya district today.
                 </p>
               </Link>
             </BlurFade>
@@ -247,6 +247,38 @@ export default function Home() {
               >
                 Fund the church build
               </Link>
+            </div>
+          </BlurFade>
+        </div>
+      </section>
+
+      {/* ── Section 4b: Visit your church ── */}
+      <section className="bg-charcoal py-20 md:py-24 text-cream">
+        <div className="container mx-auto px-8 max-w-7xl grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-center">
+          <BlurFade>
+            <div>
+              <p className="font-sans text-sm uppercase tracking-[0.2em] text-gold font-bold mb-6">
+                For Churches and Organizations
+              </p>
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl mb-6 leading-[1.1]">
+                Can we visit your church or organization?
+              </h2>
+              <p className="text-lg md:text-xl leading-[1.6] text-cream/85">
+                Roland and the team travel to churches, small groups, businesses, and families to share the work and the current urgent ask. No production. Just a real conversation about what&rsquo;s happening in Yogo, Seje, and Mwalwigi, and how your community can be part of it.
+              </p>
+            </div>
+          </BlurFade>
+          <BlurFade delay={0.15}>
+            <div className="lg:pl-12 lg:border-l border-cream/15">
+              <Link
+                href="/contact?subject=Host+a+YFT+presentation"
+                className="bg-cream text-forest hover:bg-gold text-base md:text-lg uppercase tracking-wider font-bold py-5 px-12 transition-colors inline-block"
+              >
+                Invite us to visit
+              </Link>
+              <p className="font-sans text-sm text-cream/55 leading-[1.7] mt-6 max-w-md">
+                Or browse <Link href="/get-involved" className="underline decoration-gold decoration-2 underline-offset-4 hover:text-cream transition-colors">six other ways to get involved</Link>.
+              </p>
             </div>
           </BlurFade>
         </div>

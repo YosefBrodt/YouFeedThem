@@ -46,7 +46,10 @@ export default function Footer() {
             <Link href="/about" className="text-base text-cream/80 hover:text-cream transition-colors">About</Link>
             <Link href="/programs" className="text-base text-cream/80 hover:text-cream transition-colors">Villages</Link>
             <Link href="/impact" className="text-base text-cream/80 hover:text-cream transition-colors">Impact</Link>
+            <Link href="/missions" className="text-base text-cream/80 hover:text-cream transition-colors">Missions</Link>
             <Link href="/media" className="text-base text-cream/80 hover:text-cream transition-colors">Media</Link>
+            <Link href="/get-involved" className="text-base text-cream/80 hover:text-cream transition-colors">Get Involved</Link>
+            <Link href="/contact" className="text-base text-cream/80 hover:text-cream transition-colors">Contact</Link>
             <Link href="/donate" className="text-base text-cream/80 hover:text-cream transition-colors">Partner</Link>
           </div>
 

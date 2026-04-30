@@ -18,7 +18,9 @@ const navLinks = [
   { href: "/about", label: "About" },
   { href: "/programs", label: "Villages" },
   { href: "/impact", label: "Impact" },
+  { href: "/missions", label: "Missions" },
   { href: "/media", label: "Media" },
+  { href: "/get-involved", label: "Get Involved" },
 ];
 
 export default function Navbar() {
@@ -50,7 +52,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden lg:flex items-center gap-7 xl:gap-8">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -80,8 +82,8 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* Mobile */}
-        <div className="md:hidden flex items-center gap-3">
+        {/* Mobile + tablet */}
+        <div className="lg:hidden flex items-center gap-3">
           <Link
             href="/donate"
             className="bg-gold text-forest text-xs uppercase tracking-wider font-semibold py-2.5 px-5 transition-colors"
@@ -118,6 +120,18 @@ export default function Navbar() {
                     </SheetClose>
                   );
                 })}
+                <SheetClose render={<span />}>
+                  <Link
+                    href="/contact"
+                    onClick={() => setOpen(false)}
+                    className={cn(
+                      "font-sans text-lg font-semibold uppercase tracking-wider transition-colors",
+                      pathname === "/contact" ? "text-gold" : "text-cream hover:text-gold"
+                    )}
+                  >
+                    Contact
+                  </Link>
+                </SheetClose>
                 <Link
                   href="/donate"
                   onClick={() => setOpen(false)}

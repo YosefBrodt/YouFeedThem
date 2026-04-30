@@ -38,13 +38,13 @@ const timeline = [
   },
   {
     year: "2018",
-    title: "First secondary school transitions",
-    body: "Yogo transitions its first students to secondary school. A total of 150 students have made that transition to date.",
+    title: "Tanzania chapter begins",
+    body: "Pastor Titus and his family relocate from Bukwimba to Mwalwigi where the need is greatest. A YFT team visits Mwalwigi for the first time to meet the community and assess.",
   },
   {
     year: "2019",
     title: "Seje joins the network",
-    body: "Seje Glory Centre Academy opens, partnered with Stittsville Community Bible Church in Ontario, Canada. A total of 110 students have now transitioned to secondary schools.",
+    body: "Seje Glory Centre Academy opens, partnered with Stittsville Community Bible Church in Ontario, Canada. A total of 110 Seje students have transitioned to secondary school since.",
   },
   {
     year: "2021",

@@ -7,24 +7,29 @@ import { BlurFade } from "@/components/ui/blur-fade";
 const team = [
   {
     name: "Roland Poirier",
-    role: "Founder",
-    bio: "Started You Feed Them in 2008 after he and his late wife Theresa visited Kenya and couldn&rsquo;t unsee what they saw. Eighteen years later, still visiting, still building.",
+    role: "Founder &middot; Nutritionist",
+    bio: "Roland started You Feed Them in 2008 after he and his late wife Theresa first visited Kenya. He is President of Nutra-Fix Inc., a probiotic supplement company he and Theresa founded together, and a past President of a local Future Farmers of America chapter, a background that shapes the agriculture-first model of every YFT village. He serves his local church as an Elder and one of the worship leaders. Hunting, hiking, canoeing, and time in his maple sugar bush keep him grounded between trips.",
     email: "roland@youfeedthem.com",
   },
   {
     name: "Bishop Silas Owiti Oduor",
     role: "Field Partner, Kenya",
-    bio: "Pastor Silas is from Yogo village. In 2008, fifty percent of the children in his community were dying from water-borne disease and malnutrition. He walked that reality to Canada, met Roland, and came home with a partnership.",
+    bio: "Pastor Silas is from Yogo village. In 2008, fifty percent of the children in his community were dying from water-borne disease and malnutrition. A mutual friend, Lynn Fraser, introduced him to Roland and Theresa in Canada. Silas has since grown a single church in Yogo into ten churches across the district and is now a Bishop spreading the gospel across Kenyan radio.",
   },
   {
     name: "Pastor Titus Mashalla",
     role: "Field Partner, Tanzania",
-    bio: "Leads Partners in Hope in Mwalwigi, Tanzania. Currently stewarding the church build project after four temporary churches were lost to weather.",
+    bio: "Leads Partners in Hope Tanzania in Mwalwigi. With his wife Happiness and their four children Shawn, Moses, Evelyn, and Ebenezer, Titus relocated from Bukwimba to Mwalwigi in 2018 to plant a church, a farm, and a community development organization where the need was greatest. Currently stewarding the permanent church build after four temporary structures were lost to weather.",
   },
   {
-    name: "Dr. David LoCastro",
-    role: "Medical Director",
-    bio: "Oversees medical, dental, and vision care across YFT mission trips.",
+    name: "Bob Elliott",
+    role: "Chair, Community Development Committee",
+    bio: "Retired sub-station electrician from Hydro Ottawa. Bob is the project-management spine on the well, the church build, and the agriculture builds, and an advisor to Partners in Hope Tanzania. He grew up working on his uncle&rsquo;s farm and brings the practical building knowledge that turns plans into structures that last. Married 38 years to Dianne, with three married daughters and six grandchildren.",
+  },
+  {
+    name: "Dianne Elliott",
+    role: "Advisor, Partners in Hope Tanzania",
+    bio: "Liaison with The Great Commission Foundation for their support of Partners in Hope. Dianne brings decades of small-business, marketing, and parent-council experience, plus a focus on the care of women and children through education and small enterprise. Married 38 years to Bob.",
   },
   {
     name: "Ada Madison Poirier",
@@ -104,13 +109,13 @@ export default function About() {
           <BlurFade delay={0.15}>
             <div className="flex flex-col gap-6">
               <p className="text-xl leading-[1.6] opacity-90">
-                In the spring of 2008, Roland and his late wife Theresa Poirier were part of a 40 Days of Community small group at Trinity Bible Church in Osgoode, Ontario. The opening session showed a video about the gospel account of Jesus and the loaves and fishes, the moment Jesus turned to His disciples about a hungry crowd and answered: <em className="font-heading">&ldquo;you give them something to eat.&rdquo;</em> The group decided to act.
+                In 2008, Roland and his late wife Theresa Poirier joined a small group at Trinity Bible Church in Osgoode, Ontario. The conversation that mattered came from Luke 9, the moment Jesus turned to his disciples in front of a hungry crowd and said <em className="font-heading">&ldquo;you give them something to eat.&rdquo;</em> The group decided to act on it.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
-                Lynn Fraser, a longtime friend of the family, introduced the Poiriers to Silas Owiti-Oduor, originally from a Kenyan village called Yogo. Pastor Shawn Ketcheson blessed the church&rsquo;s new organic gardens that September. Roland flew to Kenya in November.
+                A mutual friend, Lynn Fraser, introduced the Poiriers to Pastor Silas Owiti-Oduor, originally from a Kenyan village called Yogo. Silas described what was happening at home: about half the children in his community were dying of water-borne disease, malnutrition, and AIDS. Roland flew to Kenya later that year with a small team.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
-                He came back with a goat in the truck, a 12-acre farm purchased, a board of four Kenyans willing to run it, and a phrase he hasn&rsquo;t stopped repeating: <em className="font-heading">you feed them, we help you do it</em>. The mission began with nourishing the soil. Today lush farms are growing, two schools have been built, fresh water flows, and medical, dental, and vision care is part of every mission trip.
+                The team came back with land purchased for a community farm, four local leaders ready to run it, and a phrase Roland hasn&rsquo;t stopped repeating: <em className="font-heading">you feed them, we help you do it</em>. The mission began with nourishing the soil. Eighteen years later, two schools are running, farms are feeding the students, clean water flows in three villages, and medical, dental, and vision care is part of every mission trip.
               </p>
             </div>
           </BlurFade>
@@ -128,8 +133,11 @@ export default function About() {
               <p className="font-heading text-3xl md:text-4xl text-cream mb-4 leading-[1.2]">
                 Theresa Poirier
               </p>
-              <p className="font-sans text-lg text-cream/80 leading-[1.6] max-w-xl mx-auto">
-                Co-founder. Quiet builder. The work continues in her honor.
+              <p className="font-sans text-base uppercase tracking-[0.18em] text-gold/90 font-semibold mb-6">
+                Co-founder &middot; Marketing &amp; Mobilization Chair
+              </p>
+              <p className="font-sans text-lg text-cream/85 leading-[1.7] max-w-2xl mx-auto">
+                Theresa was on the trip to Kenya that started this. For the next fifteen years she ran the website, the newsletters, the graphics, and the bookkeeping, alongside Roland at Nutra-Fix Inc. Quiet, exacting, and never the loudest voice in the room. The work continues in her honor.
               </p>
             </div>
           </BlurFade>

@@ -44,17 +44,13 @@ const chapters: Chapter[] = [
     title: "Twenty-five people under a tree.",
     bg: "cream",
     lead: [
-      "In the spring of 2008, a small group at Trinity Bible Church in Osgoode, Ontario worked through Rick Warren's 40 Days of Community curriculum. The introductory video reminded them of Mark 6, the disciples telling Jesus to send the crowds away, Jesus telling the disciples to feed them. The group decided to act.",
-      "Lynn Fraser introduced Roland and Theresa Poirier to Silas Owiti-Oduor, originally from a Kenyan village called Yogo. Pastor Shawn Ketcheson blessed the church's new organic gardens on Sunday September 14, 2008. Roland flew to Kenya in November.",
-      "He came back with a phrase he hasn't stopped repeating: you feed them, we help you do it.",
+      "In 2008, a small group at Trinity Bible Church in Osgoode, Ontario worked through a community-study curriculum and landed on the gospel account of the loaves and the fishes. Jesus, looking at five loaves, two fish, and a hungry crowd of thousands, told his disciples: you give them something to eat. The group decided to act on it.",
+      "A mutual friend, Lynn Fraser, introduced Roland and Theresa Poirier to Silas Owiti-Oduor, a pastor from a Kenyan village called Yogo. Silas described what was happening in his community: about half the children were dying of water-borne disease, malnutrition, and AIDS. Roland flew to Kenya later that year.",
+      "The team came back with land purchased for a community farm, local leaders ready to run it, and a phrase Roland hasn't stopped repeating: you feed them, we help you do it.",
     ],
-    pullQuote: {
-      text: "I have seen the face of starvation. I have held it in my arms. It is a face of desperation, depravation and hopelessness.",
-      attribution: "Roland Poirier, trip-return letter, November 23, 2008",
-    },
     photos: [],
     closing:
-      "Roland came home from that first trip with a goat in the truck, a 12-acre farm purchased, and a four-person Kenyan board to run it: Doctarie Peter Okosh as Chairman, Pastor Pauline Owiti Oduor as signatory (she gave her own $20/month salary to fund the pre-school in the early years), Eric Magunga, and Bernard O. Oguna. Theresa Poirier handled the website, the newsletters, the graphics, and the bookkeeping for the next fifteen years. The current site is the second one she helped imagine. She passed away before it shipped.",
+      "Theresa Poirier handled the website, the newsletters, the graphics, and the bookkeeping for the next fifteen years, alongside Roland at their company Nutra-Fix Inc. The work she built quietly is the foundation everything since has been grafted onto.",
   },
   {
     id: "yogo",
@@ -76,8 +72,8 @@ const chapters: Chapter[] = [
       { value: "27", label: "alumni in university" },
     ],
     pullQuote: {
-      text: "Yogo CBO has hosted the United Nations World Food Day at the farm. The model has been studied, copied, and replicated in Seje and Mwalwigi.",
-      attribution: "From the YFT field record",
+      text: "Yogo&rsquo;s farm program has been recognized by the United Nations and the village hosted World Food Day at the farm. The model has been studied and replicated in Seje and Mwalwigi.",
+      attribution: "From the Yogo Past &amp; Present record",
     },
     photos: [
       {
@@ -197,7 +193,7 @@ const chapters: Chapter[] = [
     title: "Pastor Titus, twice.",
     bg: "forest",
     lead: [
-      "Pastor Titus Mashalla had already led a successful YFT farm and church partnership in Bukwimba, Tanzania (2010 to 2018) before he and his wife Happiness felt called to relocate to Mwalwigi. Mwalwigi was where the need was greater.",
+      "Pastor Titus Mashalla had already led a successful YFT farm and church partnership in Bukwimba, Tanzania before he and his wife Happiness felt called to relocate to Mwalwigi. Mwalwigi was where the need was greater. Titus and Happiness now have four children, Shawn, Moses, Evelyn, and Ebenezer.",
       "On Thursday October 14, 2021, after two years of fundraising, the team drilled a borehole in Mwalwigi and hit clean water at ninety metres. A solar pump, a 5,000-litre storage tank, and fencing were installed in the months that followed. Women and children who had been walking up to ten kilometres a day for water now make a five-minute trip.",
       "The current campaign is the church build. Four temporary structures have been destroyed by wind and torrential rain. Roughly 250 people gather for Sunday services under a tree. A 39ft by 48ft cement-block first phase has been quoted at $18,700; the architectural drawings are complete; the contractor has been selected.",
     ],
@@ -219,7 +215,7 @@ const chapters: Chapter[] = [
         caption: "At the Mwalwigi drilling site.",
         location: "Mwalwigi, Tanzania",
         story:
-          "The contractor was Supreme Water Drilling Ltd. The team drilled to ninety metres on October 14, 2021, after two years of fundraising. Within a week of the solar pump being installed, the well became the primary water source for the village.",
+          "The team drilled to ninety metres on October 14, 2021, after two years of fundraising. Over 300 people now collect clean, safe water at the site, no longer walking five to ten kilometres a day to lakes and rivers.",
       },
       {
         src: "/photos/drought-crops-titus.jpg",

@@ -29,7 +29,7 @@ export default function Programs() {
       </header>
 
       {/* Village 1: Yogo */}
-      <section className="py-24 md:py-28 bg-cream text-forest">
+      <section id="yogo" className="py-24 md:py-28 bg-cream text-forest scroll-mt-24">
         <div className="container mx-auto px-8 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-24 items-center">
             <BlurFade>
@@ -41,7 +41,7 @@ export default function Programs() {
                   Where this all started
                 </h2>
                 <p className="text-xl opacity-90 mb-6 leading-[1.6]">
-                  In 2008, Yogo was twenty-five people worshiping under a tree, a fifty percent child-mortality rate from water-borne disease, and soil described as &ldquo;hard as a driveway.&rdquo;
+                  Yogo in 2008: a fifty percent child-mortality rate from water-borne disease, no farm worth the name, no school, and a small church meeting under a tree.
                 </p>
                 <p className="text-xl opacity-90 mb-8 leading-[1.6]">
                   Today it has Yogo Glory Centre Academy (281 students, 42 staff), a 12-acre working farm feeding those students two meals a day, a clean-water well drilled successfully on the first attempt in 2011, and ten churches in the district. Cash crops from the farm are sold at local market, making the community self-sustaining.
@@ -96,7 +96,7 @@ export default function Programs() {
       </div>
 
       {/* Village 2: Seje */}
-      <section className="py-24 md:py-28 bg-cream text-forest">
+      <section id="seje" className="py-24 md:py-28 bg-cream text-forest scroll-mt-24">
         <div className="container mx-auto px-8 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-24 items-center">
             <BlurFade>
@@ -157,7 +157,7 @@ export default function Programs() {
       </div>
 
       {/* Village 3: Mwalwigi */}
-      <section className="py-24 md:py-28 bg-cream text-forest">
+      <section id="mwalwigi" className="py-24 md:py-28 bg-cream text-forest scroll-mt-24">
         <div className="container mx-auto px-8 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-24 items-center">
             <BlurFade>
@@ -267,7 +267,7 @@ export default function Programs() {
                   Places to gather
                 </h3>
                 <p className="text-lg text-cream/85 leading-[1.65]">
-                  Church builds, pastoral support, women&rsquo;s Bible studies, youth programs. From twenty-five people worshiping under a tree in 2008 to ten churches in the district today.
+                  Church builds, pastoral support, women&rsquo;s Bible studies, youth programs. One small Yogo church in 2008 has grown into ten across the district under Bishop Silas&rsquo;s ministry.
                 </p>
               </div>
             </BlurFade>
