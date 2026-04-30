@@ -37,8 +37,10 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-forest border-b border-cream/10",
-        scrolled ? "py-3 shadow-lg shadow-black/20" : "py-4 md:py-5"
+        "fixed top-0 left-0 w-full z-50 transition-all duration-300",
+        scrolled
+          ? "py-3 bg-forest border-b border-cream/10 shadow-lg shadow-black/20"
+          : "py-4 md:py-5 bg-transparent border-b border-transparent"
       )}
     >
       <div className="container mx-auto px-6 md:px-8 max-w-7xl flex justify-between items-center">
