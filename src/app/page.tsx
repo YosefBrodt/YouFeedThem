@@ -33,11 +33,6 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/15" />
         </div>
         <div className="container mx-auto px-8 max-w-7xl relative z-10">
-          <BlurFade delay={0.1}>
-            <p className="font-sans text-sm uppercase tracking-[0.2em] text-cream/80 font-semibold mb-6">
-              Since 2008 &middot; Kenya &middot; Tanzania
-            </p>
-          </BlurFade>
           <BlurFade delay={0.25}>
             <h1 className="font-heading text-5xl md:text-7xl lg:text-[120px] max-w-5xl leading-[0.95] text-cream">
               You feed them.

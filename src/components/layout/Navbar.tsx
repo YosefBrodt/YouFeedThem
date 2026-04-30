@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
@@ -44,18 +43,8 @@ export default function Navbar() {
       )}
     >
       <div className="container mx-auto px-6 md:px-8 max-w-7xl flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 md:w-12 md:h-12 bg-charcoal rounded-sm overflow-hidden shrink-0">
-            <Image
-              src="/logo/yft-logo-512.png"
-              alt="You Feed Them"
-              fill
-              className="object-cover"
-              sizes="48px"
-              priority
-            />
-          </div>
-          <span className="font-heading text-lg md:text-xl font-semibold text-cream leading-none tracking-tight hidden sm:block">
+        <Link href="/" className="flex items-center group">
+          <span className="font-heading text-2xl md:text-3xl font-semibold text-cream leading-none tracking-tight">
             You Feed Them
           </span>
         </Link>
