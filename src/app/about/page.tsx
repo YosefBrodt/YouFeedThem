@@ -32,6 +32,11 @@ const team = [
     bio: "Liaison with The Great Commission Foundation for their support of Partners in Hope. Dianne brings decades of small-business, marketing, and parent-council experience, plus a focus on the care of women and children through education and small enterprise. Married 38 years to Bob.",
   },
   {
+    name: "Dr. David LoCastro",
+    role: "Medical Director",
+    bio: "Oversees medical, dental, and vision care across YFT mission trips. Roland will fill in the longer bio.",
+  },
+  {
     name: "Ada Madison Poirier",
     role: "Media",
     bio: "Handles media and communications.",
