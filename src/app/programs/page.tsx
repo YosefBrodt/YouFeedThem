@@ -4,294 +4,329 @@ import Link from "next/link";
 import Image from "next/image";
 import { BlurFade } from "@/components/ui/blur-fade";
 
+/*
+  PROGRAMS — clarity-first rebuild (Jun 7 2026).
+  Goal: a stranger grasps each section in ~2 seconds. No paragraph walls.
+  Every block = short header + ONE tight line. Photos and labels carry the page.
+
+  Truth rules (truth-audit-jun7.md): VERIFIED facts only, nothing fabricated.
+    - VERIFIED: founded 2008, 12-acre Yogo farm, AMIC $50/$60/$70,
+      partners (GCF, AMIC, Stittsville, Hungry For Life), Tanzania/Mwalwigi + Mitindo real,
+      Stittsville<->Seje partnership, Bethlehem NY target + NY garden (Roland-sourced Jun 5).
+    - UNVERIFIED, kept OUT of prominence (no big stat bands): 281/200/110 students,
+      "10x" yield, "250 under a tree", "10 churches", well depths/dates/dollars, 69 staff, class sizes.
+    - SOFTENED: US 501(c)(3) NOT asserted as live fact; no US tax-receipt promise (beef line drops
+      the receipt). Canadian CRA receipts via Great Commission Foundation = fine (verified).
+    - Regenerative-beef farm NOT named (permission pending) -> "a partner regenerative farm north of New York City."
+    - US-expansion photos + two extra Kenya village names = clearly-marked placeholders (Roland owes them).
+*/
+
+const villages = [
+  {
+    place: "Yogo",
+    region: "Siaya District, Kenya",
+    since: "Since 2008",
+    line: "Where it started. A 12-acre working farm, a school, and clean water, run by the community.",
+    img: "/photos/shucking-peanuts-yogo.jpg",
+    alt: "Community members sorting the harvest in Yogo, Kenya",
+    caption: "Sorting the harvest · Yogo, Kenya",
+  },
+  {
+    place: "Seje",
+    region: "Siaya District, Kenya",
+    since: "With Stittsville Community Bible Church",
+    line: "A sister village, a second school. Same model: partner, plant, hand it over.",
+    img: "/photos/wayback-pulls/seje-academy-exterior.jpg",
+    alt: "The academy building at Seje, Kenya",
+    caption: "The academy · Seje, Kenya",
+  },
+];
+
 export default function Programs() {
   return (
     <main className="w-full pt-28 md:pt-32">
-      {/* Hero */}
+      {/* ───────────────────────── 1. HERO ───────────────────────── */}
       <header className="py-14 md:py-20 bg-forest text-cream">
         <div className="container mx-auto px-8 max-w-7xl">
           <BlurFade>
-            <p className="font-sans text-sm uppercase tracking-[0.2em] text-gold font-semibold mb-6">
-              Our Villages
+            <p className="font-sans text-sm uppercase tracking-[0.2em] text-gold font-bold mb-6">
+              Where we work
             </p>
           </BlurFade>
           <BlurFade delay={0.1}>
-            <h1 className="font-heading text-5xl md:text-7xl lg:text-[96px] mb-8 leading-[0.95] max-w-4xl">
-              Three villages. One model. Two countries.
+            <h1 className="font-heading text-[2.6rem] sm:text-6xl md:text-7xl lg:text-[88px] mb-7 leading-[0.98] md:leading-[0.95] max-w-4xl">
+              One model. Kenya, Tanzania, and home.
             </h1>
           </BlurFade>
           <BlurFade delay={0.2}>
-            <p className="text-2xl text-cream/90 leading-relaxed max-w-2xl">
-              We partner with a village, plant a program, transfer ownership, and stay for the long run.
+            <p className="text-xl md:text-2xl text-cream/90 leading-[1.55] max-w-2xl">
+              We partner with a community, plant a program, then hand it over.
             </p>
           </BlurFade>
         </div>
       </header>
 
-      {/* Village 1: Yogo */}
-      <section id="yogo" className="py-24 md:py-28 bg-cream text-forest scroll-mt-24">
+      {/* ───────────────────────── 2. KENYA — two villages, side by side ───────────────────────── */}
+      <section id="kenya" className="bg-cream py-24 md:py-28 text-forest scroll-mt-24">
         <div className="container mx-auto px-8 max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-24 items-center">
-            <BlurFade>
-              <div>
-                <span className="font-sans uppercase tracking-[0.15em] text-xs text-terracotta font-bold block mb-6">
-                  Yogo, Siaya District, Kenya &middot; Since 2008
+          <BlurFade>
+            <p className="font-sans text-sm uppercase tracking-[0.2em] text-terracotta font-bold mb-4">
+              Kenya
+            </p>
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl mb-14 leading-[1.1] max-w-3xl">
+              Two villages, the same way of working.
+            </h2>
+          </BlurFade>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+            {villages.map((v, i) => (
+              <BlurFade key={v.place} delay={0.08 + i * 0.07} className="h-full">
+                <figure className="flex flex-col gap-4 h-full">
+                  <div className="group relative aspect-[4/5] overflow-hidden bg-charcoal ring-1 ring-forest/20 shadow-[0_30px_60px_-20px_rgba(26,61,46,0.4)]">
+                    <Image
+                      src={v.img}
+                      alt={v.alt}
+                      fill
+                      className="object-cover saturate-[0.92] transition-transform duration-700 ease-out group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent" />
+                    <div className="absolute bottom-0 left-0 p-6">
+                      <span className="font-sans text-xs uppercase tracking-[0.18em] text-gold font-bold block mb-2">
+                        {v.since}
+                      </span>
+                      <span className="font-heading text-3xl md:text-4xl text-cream leading-none block">
+                        {v.place}
+                      </span>
+                      <span className="font-sans text-sm text-cream/80 mt-2 block">
+                        {v.region}
+                      </span>
+                    </div>
+                  </div>
+                  <figcaption className="font-sans text-base text-forest/85 leading-[1.5]">
+                    {v.line}
+                  </figcaption>
+                </figure>
+              </BlurFade>
+            ))}
+          </div>
+
+          {/* Two more Kenya villages — placeholder names owed by Roland (Jun 7 confirm list) */}
+          {/* PLACEHOLDER — Roland to supply: exact names of the two additional Kenya villages. */}
+          <BlurFade delay={0.2}>
+            <div className="mt-8 lg:mt-10 border border-forest/10 bg-cream p-7 lg:p-8 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-8">
+              <span className="font-sans text-xs uppercase tracking-[0.18em] text-terracotta font-bold whitespace-nowrap">
+                Siaya District, Kenya
+              </span>
+              <span className="font-heading text-xl md:text-2xl text-forest/55 leading-[1.2]">
+                Two more villages in the network, names coming soon.
+              </span>
+            </div>
+          </BlurFade>
+        </div>
+      </section>
+
+      {/* ───────────────────────── 3. TANZANIA — current urgent need ───────────────────────── */}
+      <section id="tanzania" className="bg-forest py-24 md:py-28 scroll-mt-24">
+        <div className="container mx-auto px-8 max-w-7xl grid grid-cols-1 lg:grid-cols-[0.85fr_1fr] gap-12 lg:gap-20 items-center">
+          <BlurFade>
+            {/*
+              PLACEHOLDER — no recovered photo truthfully shows the Mwalwigi church/congregation.
+              The blanket photo (mwalwigi-well-success.jpg) actually shows Mitindo, so it is NOT used as
+              the lead image for the Mwalwigi church build. Swap in a real photo from Roland when supplied.
+            */}
+            <figure className="flex flex-col gap-4">
+              <div className="w-full aspect-[4/5] bg-charcoal relative overflow-hidden ring-1 ring-cream/10 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.5)] flex items-center justify-center">
+                <span className="font-sans text-xs uppercase tracking-[0.18em] text-cream/40 font-bold px-6 text-center">
+                  Mwalwigi church build &middot; photo coming soon
                 </span>
-                <h2 className="font-heading text-4xl md:text-5xl mb-8 leading-[1.1]">
-                  Where this all started
-                </h2>
-                <p className="text-xl opacity-90 mb-6 leading-[1.6]">
-                  Yogo in 2008: a fifty percent child-mortality rate from water-borne disease, no farm worth the name, no school, and a small church meeting under a tree.
-                </p>
-                <p className="text-xl opacity-90 mb-8 leading-[1.6]">
-                  Today it has Yogo Glory Centre Academy (281 students, 42 staff), a 12-acre working farm feeding those students two meals a day, a clean-water well drilled successfully on the first attempt in 2011, and ten churches in the district. Cash crops from the farm are sold at local market, making the community self-sustaining.
-                </p>
-                <div className="flex flex-wrap gap-10 mt-10">
-                  <div className="flex flex-col">
-                    <span className="font-heading text-5xl text-gold leading-none">281</span>
-                    <span className="font-sans text-sm uppercase tracking-wider opacity-70 mt-3 font-semibold">
-                      Students
+              </div>
+              <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-gold font-bold">
+                Mwalwigi, Mwanza Region, Tanzania
+              </figcaption>
+            </figure>
+          </BlurFade>
+          <BlurFade delay={0.15}>
+            <div>
+              <p className="font-sans text-sm uppercase tracking-[0.2em] text-gold font-bold mb-6">
+                Current urgent need
+              </p>
+              <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-cream mb-6 leading-[1.05]">
+                A church that can stand up to the weather.
+              </h2>
+              <p className="text-xl text-cream/85 leading-[1.6] mb-10 max-w-xl">
+                Temporary churches in Mwalwigi keep coming down in wind and rain. The congregation needs one that lasts.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-cream/10 border border-cream/10 mb-10">
+                <div className="bg-forest p-6">
+                  <h3 className="font-heading text-xl text-cream mb-2 leading-[1.2]">Clean water</h3>
+                  <p className="font-sans text-base text-cream/70 leading-[1.55]">
+                    Women and children walk hours each day to reach it. We&rsquo;re working on a well.
+                  </p>
+                </div>
+                <div className="bg-forest p-6">
+                  <h3 className="font-heading text-xl text-cream mb-2 leading-[1.2]">Mitindo, nearby</h3>
+                  <p className="font-sans text-base text-cream/70 leading-[1.55]">
+                    A school that shelters albino children. We help with bedding, clothing, and care.
+                  </p>
+                </div>
+              </div>
+
+              <Link
+                href="/donate"
+                className="bg-gold text-forest hover:bg-[#d1a862] text-base md:text-lg uppercase tracking-wider font-bold py-5 px-12 transition-colors inline-block min-h-[44px]"
+              >
+                Fund the church build
+              </Link>
+            </div>
+          </BlurFade>
+        </div>
+      </section>
+
+      {/* ───────────────────────── 4. UNITED STATES — the model comes home ───────────────────────── */}
+      <section id="united-states" className="bg-cream py-24 md:py-28 text-forest scroll-mt-24">
+        <div className="container mx-auto px-8 max-w-7xl">
+          <BlurFade>
+            <p className="font-sans text-sm uppercase tracking-[0.2em] text-terracotta font-bold mb-4">
+              New York, United States
+            </p>
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl mb-6 leading-[1.1] max-w-3xl">
+              The model comes home.
+            </h2>
+            <p className="text-xl opacity-90 leading-[1.6] max-w-2xl mb-14">
+              The same approach is taking root in North America. Teach a community to grow its own food, then hand it over.
+            </p>
+          </BlurFade>
+
+          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-stretch">
+            {/* Three US pillars */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-forest/10 border border-forest/10">
+              {[
+                {
+                  kicker: "The Garden",
+                  title: "Education that grows food",
+                  line: "Raised beds, drip irrigation, living soil. The community learns it, then owns it.",
+                },
+                {
+                  kicker: "Food Banks & Churches",
+                  title: "Plugging into the local network",
+                  line: "Most US food banks run through churches. The garden becomes the education layer.",
+                },
+                {
+                  kicker: "Regenerative Beef",
+                  title: "Give, get first dibs",
+                  line: "Support the work, get first access to grass-fed meat from a partner farm north of NYC.",
+                },
+              ].map((p, i) => (
+                <BlurFade key={p.kicker} delay={0.08 + i * 0.06} className="h-full">
+                  <div className="bg-cream p-7 lg:p-8 h-full flex flex-col">
+                    <span className="font-sans text-xs uppercase tracking-[0.15em] text-terracotta font-bold mb-4 block">
+                      {p.kicker}
                     </span>
+                    <h3 className="font-heading text-xl md:text-2xl mb-3 leading-[1.2]">
+                      {p.title}
+                    </h3>
+                    <p className="font-sans text-base text-forest/75 leading-[1.6]">
+                      {p.line}
+                    </p>
                   </div>
-                  <div className="flex flex-col">
-                    <span className="font-heading text-5xl text-gold leading-none">12</span>
-                    <span className="font-sans text-sm uppercase tracking-wider opacity-70 mt-3 font-semibold">
-                      Acre farm
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="font-heading text-5xl text-gold leading-none">10&times;</span>
-                    <span className="font-sans text-sm uppercase tracking-wider opacity-70 mt-3 font-semibold">
-                      Yield increase
-                    </span>
-                  </div>
+                </BlurFade>
+              ))}
+            </div>
+
+            {/* US photo placeholder + charitable-status note (softened) */}
+            <BlurFade delay={0.15} className="h-full">
+              <div className="flex flex-col gap-6 h-full">
+                {/* PLACEHOLDER — Roland to supply: US community-garden photos. */}
+                <div className="relative flex-1 min-h-[180px] overflow-hidden bg-charcoal ring-1 ring-forest/15 flex items-center justify-center">
+                  <span className="font-sans text-xs uppercase tracking-[0.18em] text-cream/40 font-bold px-6 text-center">
+                    First US community garden &middot; photo coming soon
+                  </span>
+                </div>
+                <div className="border border-terracotta/25 bg-terracotta/5 p-6">
+                  <p className="font-sans text-xs uppercase tracking-[0.15em] text-terracotta font-bold mb-3">
+                    US charitable status
+                  </p>
+                  <p className="font-sans text-sm text-forest/80 leading-[1.6]">
+                    An early target is Bethlehem, New York. For US tax receipts, please{" "}
+                    <Link
+                      href="/contact"
+                      className="underline decoration-terracotta decoration-2 underline-offset-4 hover:text-forest transition-colors"
+                    >
+                      contact us
+                    </Link>
+                    .
+                  </p>
                 </div>
               </div>
             </BlurFade>
-            <BlurFade delay={0.2}>
-              <figure className="flex flex-col gap-4">
-                <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative group ring-1 ring-forest/25 shadow-[0_30px_60px_-20px_rgba(26,61,46,0.45)]">
-                  <Image
-                    src="/photos/shucking-peanuts-yogo.jpg"
-                    alt="Sorting peanuts at the Yogo farm"
-                    fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-[0.9] sepia-[0.03]"
-                    sizes="(max-width: 1024px) 100vw, 60vw"
-                  />
-                </Link>
-                <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-terracotta font-bold">
-                  Sorting the harvest &middot; Yogo, Kenya
-                </figcaption>
-              </figure>
-            </BlurFade>
           </div>
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="bg-cream">
-        <div className="container mx-auto px-8 max-w-7xl">
-          <div className="w-full h-[1px] bg-forest/10" />
-        </div>
-      </div>
-
-      {/* Village 2: Seje */}
-      <section id="seje" className="py-24 md:py-28 bg-cream text-forest scroll-mt-24">
-        <div className="container mx-auto px-8 max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-24 items-center">
-            <BlurFade>
-              <figure className="flex flex-col gap-4 order-2 lg:order-1">
-                <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative group ring-1 ring-forest/25 shadow-[0_30px_60px_-20px_rgba(26,61,46,0.45)]">
-                  <Image
-                    src="/photos/wayback-pulls/seje-academy-exterior.jpg"
-                    alt="Seje academy under construction"
-                    fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-[0.92]"
-                    sizes="(max-width: 1024px) 100vw, 60vw"
-                  />
-                </Link>
-                <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-terracotta font-bold">
-                  Academy under construction &middot; Seje, Kenya
-                </figcaption>
-              </figure>
-            </BlurFade>
-            <BlurFade delay={0.2}>
-              <div className="order-1 lg:order-2">
-                <span className="font-sans uppercase tracking-[0.15em] text-xs text-terracotta font-bold block mb-6">
-                  Seje, Siaya District, Kenya
-                </span>
-                <h2 className="font-heading text-4xl md:text-5xl mb-8 leading-[1.1]">
-                  A sister village, a second school
-                </h2>
-                <p className="text-xl opacity-90 mb-6 leading-[1.6]">
-                  After meeting with Seje&rsquo;s community leaders to discuss their needs, clean water, education, shelter, and food topped the list. A partnership formed with Stittsville Community Bible Church in Ontario, Canada to address them holistically.
-                </p>
-                <p className="text-xl opacity-90 mb-8 leading-[1.6]">
-                  Seje Glory Centre Academy now serves 200 students with 27 staff and has transitioned 110 students to secondary school since 2019. Like Yogo, the model is identical: partner, plant, transfer.
-                </p>
-                <div className="flex flex-wrap gap-10">
-                  <div className="flex flex-col">
-                    <span className="font-heading text-5xl text-gold leading-none">200</span>
-                    <span className="font-sans text-sm uppercase tracking-wider opacity-70 mt-3 font-semibold">
-                      Students
-                    </span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="font-heading text-5xl text-gold leading-none">110</span>
-                    <span className="font-sans text-sm uppercase tracking-wider opacity-70 mt-3 font-semibold">
-                      To secondary school
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </BlurFade>
-          </div>
-        </div>
-      </section>
-
-      {/* Divider */}
-      <div className="bg-cream">
-        <div className="container mx-auto px-8 max-w-7xl">
-          <div className="w-full h-[1px] bg-forest/10" />
-        </div>
-      </div>
-
-      {/* Village 3: Mwalwigi */}
-      <section id="mwalwigi" className="py-24 md:py-28 bg-cream text-forest scroll-mt-24">
-        <div className="container mx-auto px-8 max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-24 items-center">
-            <BlurFade>
-              <div>
-                <span className="font-sans uppercase tracking-[0.15em] text-xs text-terracotta font-bold block mb-6">
-                  Mwalwigi, Mwanza Region, Tanzania
-                </span>
-                <h2 className="font-heading text-4xl md:text-5xl mb-8 leading-[1.1]">
-                  The current urgent project
-                </h2>
-                <p className="text-xl opacity-90 mb-6 leading-[1.6]">
-                  Mwalwigi is predominantly women and children. Women and children walk five to ten kilometers each day, two to three hours, to gather water. Only half of Tanzania&rsquo;s population has consistent access to quality water.
-                </p>
-                <p className="text-xl opacity-90 mb-8 leading-[1.6]">
-                  Pastor Titus Mashalla, our field partner in Mwalwigi, has been gathering almost 250 people under a tree for Sunday services after four temporary churches were taken down by wind and torrential rain. A permanent church build is the current fundraising focus.
-                </p>
-                <p className="text-xl opacity-90 mb-8 leading-[1.6]">
-                  Nearby, Mitindo village houses and protects roughly 200 albino children year-round, shielding them from violence rooted in local superstition. YFT partners in providing bedding, clothing, and special-needs care.
-                </p>
-                <Link
-                  href="/donate"
-                  className="inline-block bg-forest text-cream hover:bg-forest/90 text-sm uppercase tracking-wider font-bold py-4 px-8 transition-colors"
-                >
-                  Fund the Mwalwigi church build
-                </Link>
-              </div>
-            </BlurFade>
-            <BlurFade delay={0.2}>
-              <figure className="flex flex-col gap-4">
-                <Link href="/donate" className="block w-full h-[400px] lg:h-[600px] overflow-hidden bg-charcoal relative group ring-1 ring-forest/25 shadow-[0_30px_60px_-20px_rgba(26,61,46,0.45)]">
-                  <Image
-                    src="/photos/pastor-titus-blankets.jpg"
-                    alt="Distributing blankets at the Mitindo school"
-                    fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 saturate-[0.9]"
-                    sizes="(max-width: 1024px) 100vw, 60vw"
-                  />
-                </Link>
-                <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-terracotta font-bold">
-                  Distributing blankets &middot; Mitindo, Tanzania
-                </figcaption>
-              </figure>
-            </BlurFade>
-          </div>
-        </div>
-      </section>
-
-      {/* The four focus areas */}
+      {/* ───────────────────────── 5. FOUR FOCUS AREAS — glanceable grid ───────────────────────── */}
       <section className="bg-forest py-24 md:py-28">
         <div className="container mx-auto px-8 max-w-7xl">
           <BlurFade>
-            <p className="font-sans text-sm uppercase tracking-[0.2em] text-gold font-bold mb-6">
-              Our Four Focus Areas
-            </p>
-          </BlurFade>
-          <BlurFade delay={0.1}>
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-cream mb-16 leading-[1.1] max-w-3xl">
+            <p className="font-sans text-sm uppercase tracking-[0.2em] text-gold font-bold mb-4">
               What we plant in every village
+            </p>
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-cream mb-14 leading-[1.1] max-w-3xl">
+              Four things a village needs to stand on its own.
             </h2>
           </BlurFade>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
-            <BlurFade delay={0.1}>
-              <div className="border-t border-cream/15 pt-8">
-                <p className="font-sans text-xs uppercase tracking-[0.15em] text-gold font-bold mb-3">
-                  Clean Water
-                </p>
-                <h3 className="font-heading text-2xl md:text-3xl text-cream mb-4 leading-[1.2]">
-                  Wells that work
-                </h3>
-                <p className="text-lg text-cream/85 leading-[1.65]">
-                  We partner on hydrological surveys and drill where others have failed. Women and children in Mwalwigi currently walk up to ten kilometers a day for water. We&rsquo;re working on that.
-                </p>
-              </div>
-            </BlurFade>
-            <BlurFade delay={0.2}>
-              <div className="border-t border-cream/15 pt-8">
-                <p className="font-sans text-xs uppercase tracking-[0.15em] text-gold font-bold mb-3">
-                  Food Security
-                </p>
-                <h3 className="font-heading text-2xl md:text-3xl text-cream mb-4 leading-[1.2]">
-                  Farms that feed the school
-                </h3>
-                <p className="text-lg text-cream/85 leading-[1.65]">
-                  Raised-bed square foot gardening, drip-line irrigation, composting, bio-fertilizers, crop rotation. In Yogo, we went from depleted soil to a 10x yield increase, feeding 281 students two meals a day and selling the surplus at market.
-                </p>
-              </div>
-            </BlurFade>
-            <BlurFade delay={0.3}>
-              <div className="border-t border-cream/15 pt-8">
-                <p className="font-sans text-xs uppercase tracking-[0.15em] text-gold font-bold mb-3">
-                  Education
-                </p>
-                <h3 className="font-heading text-2xl md:text-3xl text-cream mb-4 leading-[1.2]">
-                  Schools that send graduates to university
-                </h3>
-                <p className="text-lg text-cream/85 leading-[1.65]">
-                  Two Glory Centre Academies across Yogo and Seje serve 481 students with 69 staff. 27 alumni are in university today in programs from nursing to medical engineering. Class sizes are 25-30 compared to 100 in the nearest public schools.
-                </p>
-              </div>
-            </BlurFade>
-            <BlurFade delay={0.4}>
-              <div className="border-t border-cream/15 pt-8">
-                <p className="font-sans text-xs uppercase tracking-[0.15em] text-gold font-bold mb-3">
-                  Church &amp; Community
-                </p>
-                <h3 className="font-heading text-2xl md:text-3xl text-cream mb-4 leading-[1.2]">
-                  Places to gather
-                </h3>
-                <p className="text-lg text-cream/85 leading-[1.65]">
-                  Church builds, pastoral support, women&rsquo;s Bible studies, youth programs. One small Yogo church in 2008 has grown into ten across the district under Bishop Silas&rsquo;s ministry.
-                </p>
-              </div>
-            </BlurFade>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-cream/10 border border-cream/10">
+            {[
+              {
+                label: "Clean Water",
+                line: "Wells drilled where others have failed, so no one walks hours for water.",
+              },
+              {
+                label: "Food Security",
+                line: "Farms that feed the school and sell the surplus at market.",
+              },
+              {
+                label: "Education",
+                line: "Schools the community runs, carrying students through to university.",
+              },
+              {
+                label: "Church & Community",
+                line: "A permanent place to gather, worship, and lead the work locally.",
+              },
+            ].map((f, i) => (
+              <BlurFade key={f.label} delay={0.08 + i * 0.06} className="h-full">
+                <div className="bg-forest h-full p-8 lg:p-9 flex flex-col">
+                  <span className="font-heading text-2xl md:text-[28px] text-cream leading-[1.15] mb-4">
+                    {f.label}
+                  </span>
+                  <p className="font-sans text-base text-cream/70 leading-[1.6]">
+                    {f.line}
+                  </p>
+                </div>
+              </BlurFade>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* ───────────────────────── 6. CTA ───────────────────────── */}
       <section className="bg-cream py-24 md:py-28 text-forest">
         <div className="container mx-auto px-8 max-w-3xl text-center">
           <BlurFade>
-            <h2 className="font-heading text-4xl md:text-5xl mb-6 leading-[1.1]">
-              Partner with a village
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl mb-7 leading-[1.05]">
+              Partner with a village.
             </h2>
           </BlurFade>
           <BlurFade delay={0.15}>
-            <p className="text-xl opacity-90 leading-[1.6] mb-12">
-              You can direct your gift to a specific village or project: the Mwalwigi church build, student sponsorship at Yogo or Seje Academy, or the clean-water fund. Just tell us where.
+            <p className="text-lg md:text-xl opacity-90 leading-[1.6] mb-10 max-w-2xl mx-auto">
+              Direct your gift where you want it: the Mwalwigi church build, a student, or clean water. Just tell us where.
             </p>
           </BlurFade>
           <BlurFade delay={0.3}>
             <Link
               href="/donate"
-              className="bg-gold text-forest hover:bg-[#d1a862] text-base md:text-lg uppercase tracking-wider font-bold py-5 px-12 transition-colors inline-block"
+              className="bg-gold text-forest hover:bg-[#d1a862] text-base md:text-lg uppercase tracking-wider font-bold py-5 px-12 transition-colors inline-block min-h-[44px]"
             >
               Partner with us
             </Link>

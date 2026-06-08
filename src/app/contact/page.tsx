@@ -50,7 +50,7 @@ function ContactForm() {
           Thank you
         </p>
         <h2 className="font-heading text-3xl md:text-4xl mb-6 leading-[1.15]">
-          Got it. We&rsquo;ll be in touch.
+          Got it. We’ll be in touch.
         </h2>
         <p className="text-lg text-forest/85 leading-[1.6] mb-2">
           A note has been sent to Roland and the team. Most replies come within 48 hours.
@@ -203,7 +203,7 @@ export default function Contact() {
                     <Mail className="w-5 h-5 text-gold mt-1 shrink-0" strokeWidth={1.75} />
                     <div>
                       <p className="font-sans text-xs uppercase tracking-[0.15em] text-cream/60 font-bold mb-1">
-                        Roland Poirier &middot; Founder
+                        Roland Poirier · Founder
                       </p>
                       <a
                         href="mailto:roland@youfeedthem.com"
@@ -217,7 +217,7 @@ export default function Contact() {
                     <Mail className="w-5 h-5 text-gold mt-1 shrink-0" strokeWidth={1.75} />
                     <div>
                       <p className="font-sans text-xs uppercase tracking-[0.15em] text-cream/60 font-bold mb-1">
-                        Media &amp; Communications
+                        Media & Communications
                       </p>
                       <a
                         href="mailto:contact@youfeedthem.com"

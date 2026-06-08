@@ -7,7 +7,7 @@ import { BlurFade } from "@/components/ui/blur-fade";
 const team = [
   {
     name: "Roland Poirier",
-    role: "Founder &middot; Nutritionist",
+    role: "Founder · Nutritionist",
     bio: "Roland started You Feed Them in 2008 after he and his late wife Theresa first visited Kenya. He is President of Nutra-Fix Inc., a probiotic supplement company he and Theresa founded together, and a past President of a local Future Farmers of America chapter, a background that shapes the agriculture-first model of every YFT village. He serves his local church as an Elder and one of the worship leaders. Hunting, hiking, canoeing, and time in his maple sugar bush keep him grounded between trips.",
     email: "roland@youfeedthem.com",
   },
@@ -17,31 +17,16 @@ const team = [
     bio: "Pastor Silas is from Yogo village. In 2008, fifty percent of the children in his community were dying from water-borne disease and malnutrition. A mutual friend, Lynn Fraser, introduced him to Roland and Theresa in Canada. Silas has since grown a single church in Yogo into ten churches across the district and is now a Bishop spreading the gospel across Kenyan radio.",
   },
   {
-    name: "Pastor Titus Mashalla",
-    role: "Field Partner, Tanzania",
-    bio: "Leads Partners in Hope Tanzania in Mwalwigi. With his wife Happiness and their four children Shawn, Moses, Evelyn, and Ebenezer, Titus relocated from Bukwimba to Mwalwigi in 2018 to plant a church, a farm, and a community development organization where the need was greatest. Currently stewarding the permanent church build after four temporary structures were lost to weather.",
-  },
-  {
-    name: "Bob Elliott",
-    role: "Chair, Community Development Committee",
-    bio: "Retired sub-station electrician from Hydro Ottawa. Bob is the project-management spine on the well, the church build, and the agriculture builds, and an advisor to Partners in Hope Tanzania. He grew up working on his uncle&rsquo;s farm and brings the practical building knowledge that turns plans into structures that last. Married 38 years to Dianne, with three married daughters and six grandchildren.",
-  },
-  {
-    name: "Dianne Elliott",
-    role: "Advisor, Partners in Hope Tanzania",
-    bio: "Liaison with The Great Commission Foundation for their support of Partners in Hope. Dianne brings decades of small-business, marketing, and parent-council experience, plus a focus on the care of women and children through education and small enterprise. Married 38 years to Bob.",
-  },
-  {
     name: "Dr. David LoCastro",
     role: "Medical Director",
-    bio: "Oversees medical, dental, and vision care across YFT mission trips. Roland will fill in the longer bio.",
+    /* PLACEHOLDER — Roland to supply: Dr. LoCastro's full bio (still outstanding as of Jun 5 call) */
+    bio: "Oversees medical, dental, and vision care across YFT mission trips.",
   },
-  {
-    name: "Ada Madison Poirier",
-    role: "Media",
-    bio: "Handles media and communications.",
-    email: "ada@youfeedthem.com",
-  },
+  /*
+    REMOVED per Roland (Jun 5 call): Pastor Titus Mashalla, Bob Elliott, Dianne Elliott,
+    Ada Madison Poirier. See yft-corrections-jun5.md. The village Mwalwigi stays as a
+    location/partner elsewhere on the site; only the pastor's personal content was removed.
+  */
 ];
 
 const partners = [
@@ -62,11 +47,16 @@ const partners = [
     region: "Canada / USA",
     note: "Sponsors students at Yogo and Seje Glory Centre Academies at $50 to $70 per month depending on grade.",
   },
+  /*
+    PLACEHOLDER — Roland to confirm (Sunday Jun 7 confirm list): Speroway.
+    Roland did not recognize Speroway on the Jun 5 call. Hidden from display pending
+    his confirmation. Do not delete; re-enable if he confirms it is a real partner.
   {
     name: "Speroway",
     region: "Canada",
     note: "Key partner in transitioning YFT alumni into university education.",
   },
+  */
   {
     name: "Stittsville Community Bible Church",
     region: "Ontario, Canada",
@@ -114,13 +104,13 @@ export default function About() {
           <BlurFade delay={0.15}>
             <div className="flex flex-col gap-6">
               <p className="text-xl leading-[1.6] opacity-90">
-                In 2008, Roland and his late wife Theresa Poirier joined a small group at Trinity Bible Church in Osgoode, Ontario. The conversation that mattered came from Luke 9, the moment Jesus turned to his disciples in front of a hungry crowd and said <em className="font-heading">&ldquo;you give them something to eat.&rdquo;</em> The group decided to act on it.
+                In 2008, Roland and his late wife Theresa Poirier joined a small group at Trinity Bible Church in Osgoode, Ontario. The conversation that mattered came from Luke 9, the moment Jesus turned to his disciples in front of a hungry crowd and said <em className="font-heading">“you give them something to eat.”</em> The group decided to act on it.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
                 A mutual friend, Lynn Fraser, introduced the Poiriers to Pastor Silas Owiti-Oduor, originally from a Kenyan village called Yogo. Silas described what was happening at home: about half the children in his community were dying of water-borne disease, malnutrition, and AIDS. Roland flew to Kenya later that year with a small team.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
-                The team came back with land purchased for a community farm, four local leaders ready to run it, and a phrase Roland hasn&rsquo;t stopped repeating: <em className="font-heading">you feed them, we help you do it</em>. The mission began with nourishing the soil. Eighteen years later, two schools are running, farms are feeding the students, clean water flows in three villages, and medical, dental, and vision care is part of every mission trip.
+                The team came back with land purchased for a community farm, four local leaders ready to run it, and a phrase Roland hasn’t stopped repeating: <em className="font-heading">you feed them, we help you do it</em>. The mission began with nourishing the soil. Eighteen years later, two schools are running, farms are feeding the students, clean water flows in three villages, and medical, dental, and vision care is part of every mission trip.
               </p>
             </div>
           </BlurFade>
@@ -139,7 +129,7 @@ export default function About() {
                 Theresa Poirier
               </p>
               <p className="font-sans text-base uppercase tracking-[0.18em] text-gold/90 font-semibold mb-6">
-                Co-founder &middot; Marketing &amp; Mobilization Chair
+                Co-founder · Marketing & Mobilization Chair
               </p>
               <p className="font-sans text-lg text-cream/85 leading-[1.7] max-w-2xl mx-auto">
                 Theresa was on the trip to Kenya that started this. For the next fifteen years she ran the website, the newsletters, the graphics, and the bookkeeping, alongside Roland at Nutra-Fix Inc. Quiet, exacting, and never the loudest voice in the room. The work continues in her honor.
@@ -165,13 +155,47 @@ export default function About() {
           <BlurFade delay={0.15}>
             <div className="flex flex-col gap-6">
               <p className="text-xl leading-[1.6] opacity-90">
-                You Feed Them is not a registered charity. That is a deliberate choice. We believe in partnering with existing registered charities rather than duplicating infrastructure. It lets us stay lean, move fast, and route tax-receipted donations through partners who specialize in that work.
+                You Feed Them is pursuing US 501(c)(3) charitable status, applied for in early 2026 under the religious and education categories. For our work in Kenya and Tanzania, we partner with existing registered charities rather than duplicating infrastructure abroad, which keeps us lean and routes Canadian tax-receipted donations through partners who specialize in that work.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
                 We do not take salaries from program funds. Travel and overhead are covered separately through direct partnerships and personal contribution. When you give to Partners in Hope Tanzania through The Great Commission Foundation, 100% of your gift reaches the field.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
                 On the ground, every program is handed to the local community. The community chooses it, owns it, runs it. We visit, we measure, we adjust. We do not run schools, farms, or churches in East Africa. The communities do.
+              </p>
+            </div>
+          </BlurFade>
+        </div>
+      </section>
+
+      {/* Bringing the model home (US expansion) */}
+      <section className="bg-charcoal py-24 md:py-28 text-cream">
+        <div className="container mx-auto px-8 max-w-7xl grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-16 lg:gap-32">
+          <BlurFade>
+            <div>
+              <p className="font-sans text-sm uppercase tracking-[0.2em] text-gold font-bold mb-6">
+                Bringing the Model Home
+              </p>
+              <h2 className="font-heading text-4xl md:text-5xl leading-[1.1]">
+                The same process, now on US soil
+              </h2>
+            </div>
+          </BlurFade>
+          <BlurFade delay={0.15}>
+            <div className="flex flex-col gap-6">
+              <p className="text-xl leading-[1.6] text-cream/90">
+                You Feed Them has applied for US 501(c)(3) status under the religious and education categories. Once it is in hand, that charitable engine will let us run the same model we built in Kenya and Tanzania here in the United States and Canada.
+              </p>
+              <p className="text-xl leading-[1.6] text-cream/90">
+                The process is identical to the one we have used for eighteen years. Establish a local entity. Run the education. Hand the community ownership. In East Africa that meant a community-based organization, a farm, and a school. At home it means a community garden, a teaching program, and local partners who carry it forward.
+              </p>
+              <p className="text-xl leading-[1.6] text-cream/90">
+                {/* PLACEHOLDER — Roland to supply: US community-garden photos and the finished 501(c)(3) / Ink Authority assets to draw from. */}
+                Roland’s property in New York is the first of these gardens. Read how the US model works on our{" "}
+                <Link href="/programs#united-states" className="underline decoration-gold decoration-2 underline-offset-4 hover:text-gold transition-colors">
+                  villages page
+                </Link>
+                .
               </p>
             </div>
           </BlurFade>
@@ -279,7 +303,7 @@ export default function About() {
                 />
               </div>
               <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-gold font-bold">
-                Roland in Yogo &middot; November 2008
+                Roland in Yogo · November 2008
               </figcaption>
             </figure>
           </BlurFade>

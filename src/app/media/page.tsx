@@ -71,10 +71,6 @@ const chapters: Chapter[] = [
       { value: "2", label: "meals a day" },
       { value: "27", label: "alumni in university" },
     ],
-    pullQuote: {
-      text: "Yogo&rsquo;s farm program has been recognized by the United Nations and the village hosted World Food Day at the farm. The model has been studied and replicated in Seje and Mwalwigi.",
-      attribution: "From the Yogo Past &amp; Present record",
-    },
     photos: [
       {
         src: "/photos/wayback-pulls/yogo-school-exterior.jpg",
@@ -190,10 +186,10 @@ const chapters: Chapter[] = [
     shortLabel: "Tanzania",
     era: "2018 to present",
     location: "Mwalwigi, Mwanza Region, Tanzania",
-    title: "Pastor Titus, twice.",
+    title: "Mwalwigi, where the need was greatest.",
     bg: "forest",
     lead: [
-      "Pastor Titus Mashalla had already led a successful YFT farm and church partnership in Bukwimba, Tanzania before he and his wife Happiness felt called to relocate to Mwalwigi. Mwalwigi was where the need was greater. Titus and Happiness now have four children, Shawn, Moses, Evelyn, and Ebenezer.",
+      "The work in Tanzania centers on Mwalwigi, a community of mostly women and children where the need was greatest. The same partner, plant, transfer model that built Yogo was carried here.",
       "On Thursday October 14, 2021, after two years of fundraising, the team drilled a borehole in Mwalwigi and hit clean water at ninety metres. A solar pump, a 5,000-litre storage tank, and fencing were installed in the months that followed. Women and children who had been walking up to ten kilometres a day for water now make a five-minute trip.",
       "The current campaign is the church build. Four temporary structures have been destroyed by wind and torrential rain. Roughly 250 people gather for Sunday services under a tree. A 39ft by 48ft cement-block first phase has been quoted at $18,700; the architectural drawings are complete; the contractor has been selected.",
     ],
@@ -216,14 +212,6 @@ const chapters: Chapter[] = [
         location: "Mwalwigi, Tanzania",
         story:
           "The team drilled to ninety metres on October 14, 2021, after two years of fundraising. Over 300 people now collect clean, safe water at the site, no longer walking five to ten kilometres a day to lakes and rivers.",
-      },
-      {
-        src: "/photos/drought-crops-titus.jpg",
-        alt: "Pastor Titus inspecting struggling crops in a dry field",
-        caption: "Inspecting drought-tolerant crops.",
-        location: "Mwalwigi, Tanzania",
-        story:
-          "Mwalwigi has sporadic rainfall: heavy downpours in the wet season, near-drought the rest of the year. Drought-tolerant crops, drip-line irrigation, composting, and bio-fertilisers are how the farm produces year-round.",
       },
     ],
   },
@@ -248,12 +236,6 @@ const chapters: Chapter[] = [
         location: "Mitindo, Tanzania",
         story:
           "Many of the children visible here have albinism (note the wide-brimmed sun hats, which protect against severe UV damage). The blankets, sun hats, and mosquito netting were funded directly through YFT donors and partner ministries after the August 2021 events.",
-      },
-      {
-        src: "/photos/pastor-titus-blankets.jpg",
-        alt: "Pastor Titus distributing folded blankets at Mitindo",
-        caption: "Distributing the blankets.",
-        location: "Mitindo, Tanzania",
       },
       {
         src: "/photos/wayback-pulls/mwalwigi-church-under-tree.jpeg",
@@ -378,7 +360,7 @@ export default function Media() {
           </BlurFade>
           <BlurFade delay={0.2}>
             <p className="text-xl md:text-2xl text-cream/85 leading-[1.6] max-w-3xl">
-              A photo essay of YFT&rsquo;s work in Kenya and Tanzania, with newsletter archives going back to 2013. Click any image for the full caption.
+              A photo essay of YFT’s work in Kenya and Tanzania, with newsletter archives going back to 2013. Click any image for the full caption.
             </p>
           </BlurFade>
         </div>
@@ -686,7 +668,7 @@ function ChapterSection({
               }`}
             >
               <blockquote className="font-heading text-2xl md:text-3xl lg:text-4xl leading-[1.25]">
-                &ldquo;{chapter.pullQuote.text}&rdquo;
+                “{chapter.pullQuote.text}”
               </blockquote>
               <figcaption
                 className={`font-sans text-sm uppercase tracking-[0.15em] mt-6 ${muted}`}
@@ -842,7 +824,7 @@ function Lightbox({
         </div>
         <div className="p-6 md:p-10">
           <p className="font-sans text-xs uppercase tracking-[0.18em] text-gold font-bold mb-3">
-            {photo.chapterNumber} &middot; {photo.chapterTitle}
+            {photo.chapterNumber} · {photo.chapterTitle}
           </p>
           <p className="font-heading text-2xl md:text-3xl text-cream mb-4 leading-[1.25]">
             {photo.caption}

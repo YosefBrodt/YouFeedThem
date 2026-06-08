@@ -14,7 +14,7 @@ const timeline = [
   {
     year: "2009",
     title: "First harvest",
-    body: "The garden at Yogo, planted on depleted soil described as &lsquo;hard as a driveway,&rsquo; yields ten times the expected corn crop. Yogo Glory Centre Academy opens with a kindergarten and pre-kindergarten class.",
+    body: "The garden at Yogo, planted on depleted soil described as ‘hard as a driveway,’ yields ten times the expected corn crop. Yogo Glory Centre Academy opens with a kindergarten and pre-kindergarten class.",
   },
   {
     year: "2010",
@@ -29,7 +29,7 @@ const timeline = [
   {
     year: "2014",
     title: "Farm expands, first tractor",
-    body: "Yogo farm goes from 4 to 12 acres. A walking tractor is purchased during that year&rsquo;s mission trip. Yogo Community Based Organization hires Elisha Otieno as Farm Manager.",
+    body: "Yogo farm goes from 4 to 12 acres. A walking tractor is purchased during that year’s mission trip. Yogo Community Based Organization hires Elisha Otieno as Farm Manager.",
   },
   {
     year: "2015",
@@ -39,7 +39,7 @@ const timeline = [
   {
     year: "2018",
     title: "Tanzania chapter begins",
-    body: "Pastor Titus and his family relocate from Bukwimba to Mwalwigi where the need is greatest. A YFT team visits Mwalwigi for the first time to meet the community and assess.",
+    body: "The work expands into Mwalwigi, Tanzania, where the need is greatest. A YFT team visits Mwalwigi for the first time to meet the community and assess.",
   },
   {
     year: "2019",
@@ -52,9 +52,15 @@ const timeline = [
     body: "After an attack on albino children near one of the villages, YFT mobilizes support for the 200 albino children housed year-round at a nearby school for their protection.",
   },
   {
+    /* US 501(c)(3): applied Jan 2026 via Ink Authority, status PENDING (not yet confirmed approved). Do NOT state as secured until Roland supplies EIN + determination letter. */
+    year: "2026",
+    title: "The model comes home",
+    body: "You Feed Them applies for US 501(c)(3) charitable status under the religious and education categories. Roland’s property in New York becomes the first US community garden, mirroring the Kenya community-based-organization process: establish the entity, run the education, transfer ownership. A regenerative-beef donor partnership and local food-bank outreach take shape alongside it.",
+  },
+  {
     year: "Today",
-    title: "481 students. 27 in university.",
-    body: "Yogo Academy serves 281 students with 42 staff. Seje serves 200 with 27 staff. Twenty-seven alumni are in university today, in nursing, teaching, and medical engineering. The first cohort is in their third year.",
+    title: "481 students. 27 in university. And growing at home.",
+    body: "Yogo Academy serves 281 students with 42 staff. Seje serves 200 with 27 staff. Twenty-seven alumni are in university today, in nursing, teaching, and medical engineering. The first cohort is in their third year. The same model is now taking root in the United States and Canada.",
   },
 ];
 
@@ -94,7 +100,7 @@ export default function Impact() {
                 You Feed Them does not run the schools. We did not hire the farm manager. We do not preach at the churches. The people who live in Yogo, Seje, and Mwalwigi do all of that. Our job has always been to show up, partner, and help the community take the first step. Their job is to take every step after.
               </p>
               <p className="text-xl leading-[1.7] opacity-90">
-                That&rsquo;s why, eighteen years in, the work is compounding instead of collapsing.
+                That’s why, eighteen years in, the work is compounding instead of collapsing.
               </p>
             </div>
           </BlurFade>
@@ -216,7 +222,7 @@ export default function Impact() {
                   />
                 </div>
                 <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-gold font-bold">
-                  Then &middot; The water before, pre-2011
+                  Then · The water before, pre-2011
                 </figcaption>
                 <p className="text-lg text-cream/85 leading-[1.65]">
                   Women and children walked hours each day to gather water that had to be boiled before use. The first village well had been dug by hand and was contaminated.
@@ -227,18 +233,18 @@ export default function Impact() {
               <figure className="flex flex-col gap-4">
                 <div className="w-full aspect-[4/3] overflow-hidden bg-charcoal relative ring-1 ring-cream/20 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)]">
                   <Image
-                    src="/photos/drought-crops-titus.jpg"
-                    alt="Working drought-tolerant crops in Mwalwigi"
+                    src="/photos/wayback-pulls/mwalwigi-women-collecting-water.jpeg"
+                    alt="The drilling rig at the Mwalwigi well site"
                     fill
                     className="object-cover saturate-[0.95]"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-gold font-bold">
-                  Now &middot; Drought-tolerant crops, Mwalwigi
+                  Now · Clean water reached, Mwalwigi
                 </figcaption>
                 <p className="text-lg text-cream/85 leading-[1.65]">
-                  The model that worked in Yogo, hydrological survey, drilling, drip-line irrigation, drought-tolerant crops, is now being applied in Mwalwigi. Pastor Titus and his community are the next chapter.
+                  The model that worked in Yogo, hydrological survey, drilling, drip-line irrigation, drought-tolerant crops, is now being applied in Mwalwigi. The community there is the next chapter.
                 </p>
               </figure>
             </BlurFade>

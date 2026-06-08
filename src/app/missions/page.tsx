@@ -68,7 +68,7 @@ export default function Missions() {
           </BlurFade>
           <BlurFade delay={0.2}>
             <p className="text-xl md:text-2xl text-cream/90 leading-[1.6] max-w-3xl">
-              YFT trips run two to three weeks. The work is set by the funds raised and the needs of the village we&rsquo;re visiting. The relationships are set by you.
+              YFT trips run two to three weeks. The work is set by the funds raised and the needs of the village we’re visiting. The relationships are set by you.
             </p>
           </BlurFade>
         </div>
@@ -93,7 +93,7 @@ export default function Missions() {
                 Most trips travel to Yogo or Seje in Kenya, or Mwalwigi in Tanzania. You stay near the village, work alongside our field partners, and step into whatever the priority is that season: building, farming, water, agriculture, teaching, or simply being present with the kids.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
-                Teams typically run five to twelve people. We have travelled with single-church groups, mixed-church groups, and groups of friends and family who simply wanted to come and serve. Every evening the team debriefs together. By the end of the second week, you know the people in the village by name and the people on your own team in a way that doesn&rsquo;t happen at home.
+                Teams typically run five to twelve people. We have travelled with single-church groups, mixed-church groups, and groups of friends and family who simply wanted to come and serve. Every evening the team debriefs together. By the end of the second week, you know the people in the village by name and the people on your own team in a way that doesn’t happen at home.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
                 We are not a tour operator. We are a small team that has been going for eighteen years and we will tell you exactly what to expect.
@@ -139,7 +139,7 @@ export default function Missions() {
                   Logistics, lodging, ground partners
                 </h3>
                 <p className="text-lg text-cream/85 leading-[1.65]">
-                  We coordinate flights, in-country travel, lodging, food, daily transport to the village, and the on-the-ground partnership with Bishop Silas in Kenya or Pastor Titus in Tanzania.
+                  We coordinate flights, in-country travel, lodging, food, daily transport to the village, and the on-the-ground partnership with Bishop Silas in Kenya and our field partners in Tanzania.
                 </p>
               </div>
             </BlurFade>
@@ -193,7 +193,7 @@ export default function Missions() {
         <div className="container mx-auto px-8 flex flex-col items-center max-w-3xl">
           <BlurFade>
             <p className="font-heading text-3xl md:text-4xl text-cream/90 mb-10 leading-[1.3] italic">
-              &ldquo;Go therefore, and make disciples of all nations.&rdquo;
+              “Go therefore, and make disciples of all nations.”
             </p>
           </BlurFade>
           <BlurFade delay={0.1}>
@@ -208,7 +208,7 @@ export default function Missions() {
           </BlurFade>
           <BlurFade delay={0.3}>
             <p className="text-xl text-cream/85 leading-[1.6] mb-12 max-w-2xl">
-              Send us a note. We&rsquo;ll set up a call and walk you through what the next trip looks like, what it would cost, and what your team could expect.
+              Send us a note. We’ll set up a call and walk you through what the next trip looks like, what it would cost, and what your team could expect.
             </p>
           </BlurFade>
           <BlurFade delay={0.4}>

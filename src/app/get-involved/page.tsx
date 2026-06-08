@@ -28,7 +28,7 @@ const ways = [
   {
     kicker: "04",
     title: "Run a fundraiser",
-    body: "Past partners have run alone-in-the-woods challenges, harvest dinners, marathon pledges, and church-wide drives. Whatever fits your community. We&rsquo;ll provide the materials and the back-of-house support.",
+    body: "Past partners have run alone-in-the-woods challenges, harvest dinners, marathon pledges, and church-wide drives. Whatever fits your community. We’ll provide the materials and the back-of-house support.",
     href: "/contact?subject=Run+a+fundraiser",
     cta: "Plan a fundraiser",
   },
@@ -124,7 +124,7 @@ export default function GetInvolved() {
           </BlurFade>
           <BlurFade delay={0.3}>
             <p className="text-xl text-cream/90 leading-[1.7] mb-12">
-              Roland, Bob and Dianne Elliott, or another team member will travel to you. We will bring photos, the story, and a clear ask. No high-pressure pitch, no production. Just a conversation.
+              Roland or another team member will travel to you. We will bring photos, the story, and a clear ask. No high-pressure pitch, no production. Just a conversation.
             </p>
           </BlurFade>
           <BlurFade delay={0.4}>
@@ -148,7 +148,7 @@ export default function GetInvolved() {
           </BlurFade>
           <BlurFade delay={0.1}>
             <p className="text-xl text-forest/85 leading-[1.6] mb-12 max-w-2xl">
-              Send us a short note. We&rsquo;ll figure it out together.
+              Send us a short note. We’ll figure it out together.
             </p>
           </BlurFade>
           <BlurFade delay={0.2}>

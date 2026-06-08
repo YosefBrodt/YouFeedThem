@@ -65,12 +65,7 @@ export default function Footer() {
             >
               roland@youfeedthem.com
             </a>
-            <a
-              href="mailto:ada@youfeedthem.com"
-              className="text-base text-cream/80 hover:text-cream transition-colors"
-            >
-              ada@youfeedthem.com (media)
-            </a>
+            {/* REMOVED per Roland (Jun 5): Ada Madison Poirier off the team; ada@ media address removed. */}
           </div>
 
           {/* Partners */}
@@ -95,7 +90,9 @@ export default function Footer() {
               Hungry For Life
             </a>
             <p className="text-base text-cream/80">Ambassador Ministries (AMIC)</p>
+            {/* PLACEHOLDER — Roland to confirm Speroway (Sunday Jun 7). Hidden from display pending confirmation; do not delete.
             <p className="text-base text-cream/80">Speroway</p>
+            */}
           </div>
         </div>
       </div>
@@ -106,7 +103,7 @@ export default function Footer() {
             &copy; {currentYear} You Feed Them. All rights reserved.
           </p>
           <p className="text-sm text-cream/50 max-w-md md:text-right">
-            You Feed Them is not a registered charity. Canadian tax-receipted giving via The Great Commission Foundation.
+            You Feed Them is a US-based 501(c)(3). Canadian tax-receipted giving via The Great Commission Foundation.
           </p>
         </div>
       </div>
