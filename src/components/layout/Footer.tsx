@@ -44,13 +44,14 @@ export default function Footer() {
             </h3>
             <Link href="/" className="text-base text-cream/80 hover:text-cream transition-colors">Home</Link>
             <Link href="/about" className="text-base text-cream/80 hover:text-cream transition-colors">About</Link>
-            <Link href="/programs" className="text-base text-cream/80 hover:text-cream transition-colors">Villages</Link>
+            <Link href="/east-africa" className="text-base text-cream/80 hover:text-cream transition-colors">East Africa</Link>
+            <Link href="/at-home" className="text-base text-cream/80 hover:text-cream transition-colors">At Home</Link>
             <Link href="/impact" className="text-base text-cream/80 hover:text-cream transition-colors">Impact</Link>
-            <Link href="/missions" className="text-base text-cream/80 hover:text-cream transition-colors">Missions</Link>
-            <Link href="/media" className="text-base text-cream/80 hover:text-cream transition-colors">Media</Link>
             <Link href="/get-involved" className="text-base text-cream/80 hover:text-cream transition-colors">Get Involved</Link>
+            <Link href="/missions" className="text-base text-cream/80 hover:text-cream transition-colors">Mission Trips</Link>
+            <Link href="/media" className="text-base text-cream/80 hover:text-cream transition-colors">Newsletters</Link>
             <Link href="/contact" className="text-base text-cream/80 hover:text-cream transition-colors">Contact</Link>
-            <Link href="/donate" className="text-base text-cream/80 hover:text-cream transition-colors">Partner</Link>
+            <Link href="/donate" className="text-base text-cream/80 hover:text-cream transition-colors">Donate</Link>
           </div>
 
           {/* Contact */}
@@ -90,9 +91,6 @@ export default function Footer() {
               Hungry For Life
             </a>
             <p className="text-base text-cream/80">Ambassador Ministries (AMIC)</p>
-            {/* PLACEHOLDER — Roland to confirm Speroway (Sunday Jun 7). Hidden from display pending confirmation; do not delete.
-            <p className="text-base text-cream/80">Speroway</p>
-            */}
           </div>
         </div>
       </div>
@@ -103,7 +101,7 @@ export default function Footer() {
             &copy; {currentYear} You Feed Them. All rights reserved.
           </p>
           <p className="text-sm text-cream/50 max-w-md md:text-right">
-            You Feed Them is a US-based 501(c)(3). Canadian tax-receipted giving via The Great Commission Foundation.
+            You Feed Them is pursuing US 501(c)(3) status. Canadian tax-receipted giving via The Great Commission Foundation.
           </p>
         </div>
       </div>

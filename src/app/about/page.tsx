@@ -47,16 +47,6 @@ const partners = [
     region: "Canada / USA",
     note: "Sponsors students at Yogo and Seje Glory Centre Academies at $50 to $70 per month depending on grade.",
   },
-  /*
-    PLACEHOLDER — Roland to confirm (Sunday Jun 7 confirm list): Speroway.
-    Roland did not recognize Speroway on the Jun 5 call. Hidden from display pending
-    his confirmation. Do not delete; re-enable if he confirms it is a real partner.
-  {
-    name: "Speroway",
-    region: "Canada",
-    note: "Key partner in transitioning YFT alumni into university education.",
-  },
-  */
   {
     name: "Stittsville Community Bible Church",
     region: "Ontario, Canada",
@@ -192,8 +182,8 @@ export default function About() {
               <p className="text-xl leading-[1.6] text-cream/90">
                 {/* PLACEHOLDER — Roland to supply: US community-garden photos and the finished 501(c)(3) / Ink Authority assets to draw from. */}
                 Roland’s property in New York is the first of these gardens. Read how the US model works on our{" "}
-                <Link href="/programs#united-states" className="underline decoration-gold decoration-2 underline-offset-4 hover:text-gold transition-colors">
-                  villages page
+                <Link href="/at-home" className="underline decoration-gold decoration-2 underline-offset-4 hover:text-gold transition-colors">
+                  At Home page
                 </Link>
                 .
               </p>
@@ -348,10 +338,10 @@ export default function About() {
                 Partner with us
               </Link>
               <Link
-                href="/programs"
+                href="/east-africa"
                 className="bg-transparent text-cream border border-cream/40 hover:border-cream hover:bg-cream/10 text-sm md:text-base uppercase tracking-wider font-semibold py-5 px-10 transition-colors inline-block"
               >
-                Explore the villages
+                Explore our work
               </Link>
             </div>
           </BlurFade>

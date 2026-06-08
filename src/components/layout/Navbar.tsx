@@ -16,10 +16,9 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "/about", label: "About" },
-  { href: "/programs", label: "Villages" },
+  { href: "/east-africa", label: "East Africa" },
+  { href: "/at-home", label: "At Home" },
   { href: "/impact", label: "Impact" },
-  { href: "/missions", label: "Missions" },
-  { href: "/media", label: "Media" },
   { href: "/get-involved", label: "Get Involved" },
 ];
 
@@ -78,7 +77,7 @@ export default function Navbar() {
               pathname === "/donate" && "ring-2 ring-cream ring-offset-2 ring-offset-forest"
             )}
           >
-            Partner
+            Donate
           </Link>
         </nav>
 
@@ -88,7 +87,7 @@ export default function Navbar() {
             href="/donate"
             className="bg-gold text-forest text-xs uppercase tracking-wider font-semibold py-2.5 px-5 transition-colors"
           >
-            Partner
+            Donate
           </Link>
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger>
@@ -137,7 +136,7 @@ export default function Navbar() {
                   onClick={() => setOpen(false)}
                   className="bg-gold text-forest hover:bg-[#d1a862] text-base uppercase tracking-wider font-semibold py-4 px-8 transition-colors text-center mt-4"
                 >
-                  Partner
+                  Donate
                 </Link>
               </nav>
             </SheetContent>

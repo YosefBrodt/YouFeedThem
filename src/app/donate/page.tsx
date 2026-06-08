@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Check, ExternalLink } from "lucide-react";
 import { BlurFade } from "@/components/ui/blur-fade";
 
@@ -53,6 +53,14 @@ export default function Donate() {
   const [customAmount, setCustomAmount] = useState<string>("");
   const [designation, setDesignation] = useState<string>("where-needed-most");
   const [method, setMethod] = useState<string>("card");
+
+  // Prefill the designation from a ?designation= link (e.g. the At Home beef-club CTAs).
+  useEffect(() => {
+    const param = new URLSearchParams(window.location.search).get("designation");
+    if (param && designations.some((d) => d.id === param)) {
+      setDesignation(param);
+    }
+  }, []);
 
   const isCustom = !tiers.some((t) => t.amount === amount);
   const displayAmount = isCustom ? customAmount : amount.toLocaleString();
@@ -116,6 +124,33 @@ export default function Donate() {
                 </p>
               </div>
             </div>
+          </div>
+        </BlurFade>
+      </section>
+
+      {/* Beef donor club callout */}
+      <section className="container mx-auto px-8 max-w-7xl mb-16 md:mb-20">
+        <BlurFade delay={0.1}>
+          <div className="bg-cream text-forest p-8 md:p-12 flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12">
+            <div className="lg:flex-1">
+              <p className="font-sans text-sm uppercase tracking-[0.2em] text-terracotta font-bold mb-4">
+                US supporters · The Beef Donor Club
+              </p>
+              <h2 className="font-heading text-3xl md:text-4xl leading-[1.15] mb-3">
+                Give to the work, get first dibs on the beef.
+              </h2>
+              <p className="text-lg text-forest/80 leading-[1.6] max-w-2xl">
+                Donate to our US community-garden and food-bank work and get first access to buy
+                certified-organic, grass-fed beef from a partner regenerative farm north of New York
+                City, by the half-cow or the cut.
+              </p>
+            </div>
+            <a
+              href="/at-home"
+              className="bg-forest text-cream hover:bg-charcoal text-base uppercase tracking-wider font-bold py-4 px-8 transition-colors whitespace-nowrap text-center"
+            >
+              How the club works
+            </a>
           </div>
         </BlurFade>
       </section>

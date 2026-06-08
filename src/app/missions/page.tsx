@@ -220,10 +220,10 @@ export default function Missions() {
                 Talk to us about a trip
               </Link>
               <Link
-                href="/programs"
+                href="/east-africa"
                 className="bg-transparent text-cream border border-cream/40 hover:border-cream hover:bg-cream/10 text-sm md:text-base uppercase tracking-wider font-semibold py-5 px-10 transition-colors inline-block"
               >
-                See the villages
+                See East Africa
               </Link>
             </div>
           </BlurFade>

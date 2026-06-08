@@ -243,9 +243,18 @@ export default function Home() {
             ))}
           </div>
 
+          <BlurFade delay={0.18}>
+            <Link
+              href="/east-africa"
+              className="inline-block mt-8 font-sans text-sm uppercase tracking-wider text-gold font-bold border-b-2 border-gold/40 hover:border-gold pb-1 transition-colors"
+            >
+              Explore East Africa &rarr;
+            </Link>
+          </BlurFade>
+
           {/* North America — the model comes home (placeholder-aware, no unverified specifics) */}
           <BlurFade delay={0.2}>
-            <div className="mt-6 lg:mt-6 grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-6">
+            <div className="mt-12 lg:mt-14 grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-6">
               {/* PLACEHOLDER — community-garden photo owed by Roland. Using a neutral panel until supplied. */}
               <div className="relative aspect-[16/10] lg:aspect-auto overflow-hidden bg-charcoal ring-1 ring-cream/10 flex items-center justify-center min-h-[220px]">
                 <span className="font-sans text-xs uppercase tracking-[0.18em] text-cream/40 font-bold px-6 text-center">
@@ -260,11 +269,17 @@ export default function Home() {
                 <h3 className="font-heading text-2xl md:text-3xl text-cream leading-[1.15] mb-4">
                   The model comes home.
                 </h3>
-                <p className="font-sans text-base text-cream/75 leading-[1.65]">
-                  The same approach we built in East Africa is now taking root in North America.
-                  The first US community garden is starting in New York, run the same way:
-                  teach the community to grow its own food, then hand it over.
+                <p className="font-sans text-base text-cream/75 leading-[1.65] mb-6">
+                  The same approach we built in East Africa is now taking root in North America:
+                  community gardens, church-backed food banks, and a regenerative-beef donor club.
+                  The first US garden is starting in New York, run the same way.
                 </p>
+                <Link
+                  href="/at-home"
+                  className="font-sans text-sm uppercase tracking-wider text-gold font-bold border-b-2 border-gold/40 hover:border-gold pb-1 self-start transition-colors"
+                >
+                  See the work at home &rarr;
+                </Link>
               </div>
             </div>
           </BlurFade>
