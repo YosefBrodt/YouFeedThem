@@ -98,7 +98,15 @@ export default function Footer() {
       <div className="border-t border-cream/10 py-8">
         <div className="container mx-auto px-8 max-w-7xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <p className="text-sm text-cream/50">
-            &copy; {currentYear} You Feed Them. All rights reserved.
+            &copy; {currentYear} You Feed Them. All rights reserved. · Site by{" "}
+            <a
+              href="https://kollaborate.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cream/60 hover:text-cream underline underline-offset-2 transition-colors"
+            >
+              Kollaborate
+            </a>
           </p>
           <p className="text-sm text-cream/50 max-w-md md:text-right">
             You Feed Them is pursuing US 501(c)(3) status. Canadian tax-receipted giving via The Great Commission Foundation.

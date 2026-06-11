@@ -45,7 +45,7 @@ const chapters: Chapter[] = [
     bg: "cream",
     lead: [
       "In 2008, a small group at Trinity Bible Church in Osgoode, Ontario worked through a community-study curriculum and landed on the gospel account of the loaves and the fishes. Jesus, looking at five loaves, two fish, and a hungry crowd of thousands, told his disciples: you give them something to eat. The group decided to act on it.",
-      "A mutual friend, Lynn Fraser, introduced Roland and Theresa Poirier to Silas Owiti-Oduor, a pastor from a Kenyan village called Yogo. Silas described what was happening in his community: about half the children were dying of water-borne disease, malnutrition, and AIDS. Roland flew to Kenya later that year.",
+      "A mutual friend introduced Roland and Theresa Poirier to Silas Owiti-Oduor, a pastor from a Kenyan village called Yogo. Silas described what was happening in his community: about half the children were dying of water-borne disease, malnutrition, and AIDS. Roland flew to Kenya later that year.",
       "The team came back with land purchased for a community farm, local leaders ready to run it, and a phrase Roland hasn't stopped repeating: you feed them, we help you do it.",
     ],
     photos: [],

@@ -59,9 +59,12 @@ export default function AtHome() {
                 walking in often have no job, no spare cash, and no way to grow their own food.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
+                {/* Geography fix Jun 10: Roland's property is "in New York" (exact location unstated);
+                    Bethlehem, NY is a township he is pitching, a separate thing. Don't conflate. */}
                 That is the exact problem we have been solving in Kenya and Tanzania for eighteen
-                years. So we are bringing the model home, starting on Roland&rsquo;s own property
-                near Bethlehem, New York, the first You Feed Them community garden in the US.
+                years. So we are bringing the model home, starting with Roland&rsquo;s own property
+                in New York, the first You Feed Them community garden in the US, and townships like
+                Bethlehem, New York are next on the list.
               </p>
             </div>
           </BlurFade>
@@ -119,7 +122,7 @@ export default function AtHome() {
           <BlurFade delay={0.2}>
             <div className="mt-6 relative aspect-[16/7] overflow-hidden bg-charcoal ring-1 ring-cream/10 flex items-center justify-center">
               <span className="font-sans text-xs uppercase tracking-[0.18em] text-cream/40 font-bold px-6 text-center">
-                First US community garden &middot; Bethlehem, New York &middot; photos coming soon
+                First US community garden &middot; New York &middot; photos coming soon
               </span>
             </div>
           </BlurFade>

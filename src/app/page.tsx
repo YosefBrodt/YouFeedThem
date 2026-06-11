@@ -59,9 +59,9 @@ export default function Home() {
           </BlurFade>
           <BlurFade delay={0.32}>
             <p className="font-sans text-lg md:text-2xl text-cream max-w-3xl mt-7 leading-[1.55] [text-shadow:0_1px_12px_rgba(0,0,0,0.55)]">
-              We help villages in Kenya, Tanzania, and now North America grow their own food,
-              run their own schools, and reach clean water, then we hand the work over to the
-              people who live there.
+              We help villages in Kenya and Tanzania grow their own food, run their own schools,
+              and reach clean water, then we hand the work over to the people who live there.
+              Now we&rsquo;re bringing the same model home to North America.
             </p>
           </BlurFade>
           <BlurFade delay={0.44}>

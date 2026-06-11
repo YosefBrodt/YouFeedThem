@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | You Feed Them",
   },
   description:
-    "Since 2008, You Feed Them has walked alongside remote villages in Kenya and Tanzania: clean water, food security, schools, and hope. 481 students today. 27 in university.",
+    "Since 2008, You Feed Them has walked alongside remote villages in Kenya and Tanzania: clean water, food security, schools, and hope. Now the same model is taking root in North America.",
   icons: {
     icon: "/favicon.png",
     apple: "/logo/apple-touch-icon.png",

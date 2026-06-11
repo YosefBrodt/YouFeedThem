@@ -112,18 +112,12 @@ export default function Programs() {
             ))}
           </div>
 
-          {/* Two more Kenya villages — placeholder names owed by Roland (Jun 7 confirm list) */}
-          {/* PLACEHOLDER — Roland to supply: exact names of the two additional Kenya villages. */}
-          <BlurFade delay={0.2}>
-            <div className="mt-8 lg:mt-10 border border-forest/10 bg-cream p-7 lg:p-8 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-8">
-              <span className="font-sans text-xs uppercase tracking-[0.18em] text-terracotta font-bold whitespace-nowrap">
-                Siaya District, Kenya
-              </span>
-              <span className="font-heading text-xl md:text-2xl text-forest/55 leading-[1.2]">
-                Two more villages in the network, names coming soon.
-              </span>
-            </div>
-          </BlurFade>
+          {/*
+            REMOVED (Jun 10 audit): the "Two more villages in the network, names coming soon" band.
+            Re-reading the Jun 5 transcript, Roland's "the two villages in Kenya" most plausibly
+            means Yogo and Seje themselves, not two additional unnamed villages. Do not re-add
+            unless Roland names real ones. See audit-2026-06-10.md item 1.
+          */}
         </div>
       </section>
 

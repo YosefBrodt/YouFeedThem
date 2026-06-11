@@ -14,12 +14,12 @@ const timeline = [
   {
     year: "2009",
     title: "First harvest",
-    body: "The garden at Yogo, planted on depleted soil described as ‘hard as a driveway,’ yields ten times the expected corn crop. Yogo Glory Centre Academy opens with a kindergarten and pre-kindergarten class.",
+    body: "The garden at Yogo, planted on depleted soil described as ‘hard as a driveway,’ yields its first harvest. Yogo Glory Centre Academy opens with a kindergarten and pre-kindergarten class.",
   },
   {
     year: "2010",
-    title: "Church grows from 25 to 250",
-    body: "The original congregation of twenty-five worshiping under a tree becomes two hundred and fifty. A new church building goes up.",
+    title: "The church gets a building",
+    body: "The congregation that began worshiping under a tree outgrows it. A new church building goes up.",
   },
   {
     year: "2011",
@@ -29,12 +29,12 @@ const timeline = [
   {
     year: "2014",
     title: "Farm expands, first tractor",
-    body: "Yogo farm goes from 4 to 12 acres. A walking tractor is purchased during that year’s mission trip. Yogo Community Based Organization hires Elisha Otieno as Farm Manager.",
+    body: "Yogo farm grows to twelve acres. A walking tractor is purchased during that year’s mission trip. The Yogo Community Based Organization hires its own farm manager.",
   },
   {
     year: "2015",
-    title: "School reaches Grade 5, ranks top 10%",
-    body: "Yogo Glory Centre Academy expands to classes 1-5. Government testing places Yogo students in the top 10th percentile of schools in the area.",
+    title: "School reaches Grade 5",
+    body: "Yogo Glory Centre Academy expands to classes 1-5.",
   },
   {
     year: "2018",
@@ -44,23 +44,23 @@ const timeline = [
   {
     year: "2019",
     title: "Seje joins the network",
-    body: "Seje Glory Centre Academy opens, partnered with Stittsville Community Bible Church in Ontario, Canada. A total of 110 Seje students have transitioned to secondary school since.",
+    body: "Seje Glory Centre Academy opens, partnered with Stittsville Community Bible Church in Ontario, Canada.",
   },
   {
     year: "2021",
     title: "Albino children protection",
-    body: "After an attack on albino children near one of the villages, YFT mobilizes support for the 200 albino children housed year-round at a nearby school for their protection.",
+    body: "After an attack on albino children near one of the villages, YFT mobilizes support for the albino children housed year-round at a nearby school for their protection.",
   },
   {
     /* US 501(c)(3): applied Jan 2026 via Ink Authority, status PENDING (not yet confirmed approved). Do NOT state as secured until Roland supplies EIN + determination letter. */
     year: "2026",
     title: "The model comes home",
-    body: "You Feed Them applies for US 501(c)(3) charitable status under the religious and education categories. Roland’s property in New York becomes the first US community garden, mirroring the Kenya community-based-organization process: establish the entity, run the education, transfer ownership. A regenerative-beef donor partnership and local food-bank outreach take shape alongside it.",
+    body: "You Feed Them applies for US 501(c)(3) charitable status under the religious and education categories. Roland’s property in New York is set to become the first US community garden, mirroring the Kenya community-based-organization process: establish the entity, run the education, transfer ownership. A regenerative-beef donor partnership and local food-bank outreach are taking shape alongside it.",
   },
   {
     year: "Today",
-    title: "481 students. 27 in university. And growing at home.",
-    body: "Yogo Academy serves 281 students with 42 staff. Seje serves 200 with 27 staff. Twenty-seven alumni are in university today, in nursing, teaching, and medical engineering. The first cohort is in their third year. The same model is now taking root in the United States and Canada.",
+    title: "Two schools, three villages. And growing at home.",
+    body: "Yogo and Seje Glory Centre Academies are running, the farms feed the students, and alumni have gone on to university in fields like nursing and teaching. The same model is now taking root in the United States and Canada.",
   },
 ];
 
@@ -76,8 +76,10 @@ export default function Impact() {
             </p>
           </BlurFade>
           <BlurFade delay={0.1}>
+            {/* H1 changed Jun 10: "From 25 people under a tree to 27 in university" rested on two
+                unverified numbers. Restore a stat-led headline only after Roland ticks the numbers list. */}
             <h1 className="font-heading text-5xl md:text-7xl lg:text-[96px] mb-8 leading-[0.95] max-w-5xl">
-              From 25 people under a tree to 27 in university.
+              Eighteen years of handing the work over.
             </h1>
           </BlurFade>
         </div>
@@ -88,7 +90,7 @@ export default function Impact() {
         <div className="container mx-auto px-8 max-w-[820px]">
           <BlurFade>
             <p className="font-heading text-3xl leading-[1.4] mb-14 text-forest first-letter:text-[6rem] first-letter:float-left first-letter:leading-[0.8] first-letter:pr-4 first-letter:pt-2 first-letter:text-gold">
-              In 2008, a pastor from a village in Kenya walked into a room in Canada and told Roland and Theresa that half the children in his community were dying. That conversation became a mission trip. That trip became a farm. That farm became a school. That school just sent its first students to university.
+              In 2008, a pastor from a village in Kenya walked into a room in Canada and told Roland and Theresa that half the children in his community were dying. That conversation became a mission trip. That trip became a farm. That farm became a school. That school has sent its first students on to university.
             </p>
           </BlurFade>
           <BlurFade delay={0.15}>
@@ -115,44 +117,50 @@ export default function Impact() {
               By the numbers, today
             </p>
           </BlurFade>
+          {/*
+            Stats band rebuilt Jun 10 with VERIFIED facts only (truth-audit-jun7.md).
+            Removed pending Roland's confirmation: 481 students, 27 in university,
+            260+ to secondary (contradicted the 110 figure), 2 meals a day.
+            Restore the big numbers as he ticks them off roland-numbers-confirm.md.
+          */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
             <BlurFade delay={0.1}>
               <div>
                 <div className="font-heading text-5xl md:text-7xl text-gold leading-none">
-                  <NumberTicker value={481} className="text-gold" />
+                  <NumberTicker value={18} className="text-gold" />
                 </div>
                 <p className="font-sans uppercase tracking-[0.1em] text-xs md:text-sm font-semibold text-cream/80 mt-4">
-                  Students enrolled
+                  Years of partnership, since 2008
                 </p>
               </div>
             </BlurFade>
             <BlurFade delay={0.15}>
               <div>
                 <div className="font-heading text-5xl md:text-7xl text-gold leading-none">
-                  <NumberTicker value={27} className="text-gold" />
+                  <NumberTicker value={3} className="text-gold" />
                 </div>
                 <p className="font-sans uppercase tracking-[0.1em] text-xs md:text-sm font-semibold text-cream/80 mt-4">
-                  Alumni in university
+                  Villages in East Africa
                 </p>
               </div>
             </BlurFade>
             <BlurFade delay={0.2}>
               <div>
                 <div className="font-heading text-5xl md:text-7xl text-gold leading-none">
-                  <NumberTicker value={260} className="text-gold" />+
+                  <NumberTicker value={2} className="text-gold" />
                 </div>
                 <p className="font-sans uppercase tracking-[0.1em] text-xs md:text-sm font-semibold text-cream/80 mt-4">
-                  Transitioned to secondary school
+                  Schools, run by their communities
                 </p>
               </div>
             </BlurFade>
             <BlurFade delay={0.25}>
               <div>
                 <div className="font-heading text-5xl md:text-7xl text-gold leading-none">
-                  <NumberTicker value={2} className="text-gold" />
+                  <NumberTicker value={12} className="text-gold" />
                 </div>
                 <p className="font-sans uppercase tracking-[0.1em] text-xs md:text-sm font-semibold text-cream/80 mt-4">
-                  Meals a day, every school day
+                  Acres of community farm at Yogo
                 </p>
               </div>
             </BlurFade>
@@ -240,8 +248,9 @@ export default function Impact() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
+                {/* Caption softened Jun 10: East Africa page says the Mwalwigi well is still in progress; do not assert "clean water reached" until Roland confirms. */}
                 <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-gold font-bold">
-                  Now · Clean water reached, Mwalwigi
+                  Now · The drill at work, Mwalwigi
                 </figcaption>
                 <p className="text-lg text-cream/85 leading-[1.65]">
                   The model that worked in Yogo, hydrological survey, drilling, drip-line irrigation, drought-tolerant crops, is now being applied in Mwalwigi. The community there is the next chapter.
@@ -257,7 +266,7 @@ export default function Impact() {
         <div className="container mx-auto px-8 max-w-3xl text-center">
           <BlurFade>
             <p className="font-heading text-3xl md:text-4xl text-forest leading-[1.3]">
-              The first cohort of Yogo students, who started in pre-K in 2008 with mud-walls and depleted soil, are now in their third year of university.
+              The first cohort of Yogo students, who started in pre-K with mud walls and depleted soil, are now in university.
             </p>
           </BlurFade>
         </div>

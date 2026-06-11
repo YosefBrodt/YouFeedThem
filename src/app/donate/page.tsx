@@ -33,17 +33,17 @@ const paymentMethods = [
   {
     id: "card",
     label: "Credit card",
-    note: "Online card payment. Processor integration pending.",
+    note: "We'll email you payment instructions.",
   },
   {
     id: "interac",
     label: "Interac e-Transfer",
-    note: "For Canadian donors. Send to the email Roland provides.",
+    note: "For Canadian donors. We'll send you the e-Transfer details.",
   },
   {
     id: "bank",
     label: "Bank-to-bank",
-    note: "Direct transfer. Roland sends account details on request.",
+    note: "Direct transfer. We'll send you the account details.",
   },
 ];
 
@@ -77,8 +77,11 @@ export default function Donate() {
           </p>
         </BlurFade>
         <BlurFade delay={0.1}>
+          {/* H1 softened Jun 10: "Every dollar reaches the field. We don't take a cut." was an absolute
+              financial promise nobody confirmed. The 100% claim is only sourced for GCF-routed gifts
+              (see About). Restore only with Roland's explicit sign-off. */}
           <h1 className="font-heading text-5xl md:text-[64px] lg:text-[80px] leading-[1.02] text-cream max-w-4xl">
-            Every dollar reaches the field. We don’t take a cut.
+            Give where you want it, or where the need is greatest.
           </h1>
         </BlurFade>
         <BlurFade delay={0.2}>
@@ -173,7 +176,7 @@ export default function Donate() {
                     Mwalwigi church build
                   </p>
                   <p className="text-lg text-cream/80 leading-[1.6]">
-                    Four temporary churches destroyed. Roughly 250 people gathering under a tree. Current urgent priority.
+                    Temporary churches keep coming down in wind and rain. The congregation needs a permanent building. Current urgent priority.
                   </p>
                 </li>
                 <li className="border-t border-cream/15 pt-6">
@@ -181,7 +184,7 @@ export default function Donate() {
                     School feeding program
                   </p>
                   <p className="text-lg text-cream/80 leading-[1.6]">
-                    Two meals a day for 481 students. Biggest single pressure on the budget.
+                    Daily meals for the students at Yogo and Seje. Biggest single pressure on the budget.
                   </p>
                 </li>
                 <li className="border-t border-cream/15 pt-6">

@@ -14,7 +14,7 @@ const team = [
   {
     name: "Bishop Silas Owiti Oduor",
     role: "Field Partner, Kenya",
-    bio: "Pastor Silas is from Yogo village. In 2008, fifty percent of the children in his community were dying from water-borne disease and malnutrition. A mutual friend, Lynn Fraser, introduced him to Roland and Theresa in Canada. Silas has since grown a single church in Yogo into ten churches across the district and is now a Bishop spreading the gospel across Kenyan radio.",
+    bio: "Pastor Silas is from Yogo village. In 2008, fifty percent of the children in his community were dying from water-borne disease and malnutrition. A mutual friend introduced him to Roland and Theresa in Canada. Silas has since grown a single church in Yogo into ten churches across the district and is now a Bishop spreading the gospel across Kenyan radio.",
   },
   {
     name: "Dr. David LoCastro",
@@ -97,7 +97,8 @@ export default function About() {
                 In 2008, Roland and his late wife Theresa Poirier joined a small group at Trinity Bible Church in Osgoode, Ontario. The conversation that mattered came from Luke 9, the moment Jesus turned to his disciples in front of a hungry crowd and said <em className="font-heading">“you give them something to eat.”</em> The group decided to act on it.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
-                A mutual friend, Lynn Fraser, introduced the Poiriers to Pastor Silas Owiti-Oduor, originally from a Kenyan village called Yogo. Silas described what was happening at home: about half the children in his community were dying of water-borne disease, malnutrition, and AIDS. Roland flew to Kenya later that year with a small team.
+                {/* "Lynn Fraser" stripped Jun 10: named person, no confirmed source (same call-notes that produced the disowned Speroway entry). Restore only if Roland confirms. */}
+                A mutual friend introduced the Poiriers to Pastor Silas Owiti-Oduor, originally from a Kenyan village called Yogo. Silas described what was happening at home: about half the children in his community were dying of water-borne disease, malnutrition, and AIDS. Roland flew to Kenya later that year with a small team.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
                 The team came back with land purchased for a community farm, four local leaders ready to run it, and a phrase Roland hasn’t stopped repeating: <em className="font-heading">you feed them, we help you do it</em>. The mission began with nourishing the soil. Eighteen years later, two schools are running, farms are feeding the students, clean water flows in three villages, and medical, dental, and vision care is part of every mission trip.
