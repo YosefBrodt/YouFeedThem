@@ -131,10 +131,13 @@ export default function Programs() {
               the lead image for the Mwalwigi church build. Swap in a real photo from Roland when supplied.
             */}
             <figure className="flex flex-col gap-4">
-              <div className="w-full aspect-[4/5] bg-charcoal relative overflow-hidden ring-1 ring-cream/10 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.5)] flex items-center justify-center">
-                <span className="font-sans text-xs uppercase tracking-[0.18em] text-cream/40 font-bold px-6 text-center">
-                  Mwalwigi church build &middot; photo coming soon
+              <div className="w-full aspect-[4/5] bg-charcoal relative overflow-hidden ring-1 ring-gold/25 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.5)] flex flex-col justify-center p-8 md:p-10 text-center">
+                <span className="font-sans text-xs uppercase tracking-[0.2em] text-gold font-bold mb-6">
+                  The need
                 </span>
+                <p className="font-heading text-2xl md:text-[32px] text-cream leading-[1.15]">
+                  Every storm takes the roof. We&rsquo;re building one that stays.
+                </p>
               </div>
               <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-gold font-bold">
                 Mwalwigi, Mwanza Region, Tanzania

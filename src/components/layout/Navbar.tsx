@@ -90,10 +90,8 @@ export default function Navbar() {
             Donate
           </Link>
           <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger>
-              <button className="text-cream p-2" aria-label="Open menu">
-                <Menu className="w-6 h-6" />
-              </button>
+            <SheetTrigger className="text-cream p-2" aria-label="Open menu">
+              <Menu className="w-6 h-6" />
             </SheetTrigger>
             <SheetContent side="right" className="bg-forest border-cream/10 w-full sm:max-w-sm">
               <SheetHeader>

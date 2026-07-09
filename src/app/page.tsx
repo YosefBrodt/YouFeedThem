@@ -255,13 +255,21 @@ export default function Home() {
           {/* North America — the model comes home (placeholder-aware, no unverified specifics) */}
           <BlurFade delay={0.2}>
             <div className="mt-12 lg:mt-14 grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-6">
-              {/* PLACEHOLDER — community-garden photo owed by Roland. Using a neutral panel until supplied. */}
-              <div className="relative aspect-[16/10] lg:aspect-auto overflow-hidden bg-charcoal ring-1 ring-cream/10 flex items-center justify-center min-h-[220px]">
-                <span className="font-sans text-xs uppercase tracking-[0.18em] text-cream/40 font-bold px-6 text-center">
-                  {/* Photo pending from Roland: first US community garden */}
-                  Community garden · photo coming soon
-                </span>
-              </div>
+              {/* Illustrative community-garden photo (Unsplash) until Roland supplies real US garden photos. Caption keeps it honest: not YFT's own site. */}
+              <figure className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[300px] overflow-hidden bg-charcoal ring-1 ring-cream/10">
+                <Image
+                  src="/photos/stock/community-garden-allotment-a.jpg"
+                  alt="Volunteers gathering and harvesting at a community allotment garden with greenhouses"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-4 pt-12">
+                  <span className="font-sans text-xs uppercase tracking-[0.15em] text-cream/85 font-semibold">
+                    A community garden like the first one now taking root in New York
+                  </span>
+                </figcaption>
+              </figure>
               <div className="bg-charcoal ring-1 ring-cream/10 p-8 lg:p-10 flex flex-col justify-center">
                 <span className="font-sans text-xs uppercase tracking-[0.18em] text-gold font-bold mb-4 block">
                   New York · United States
@@ -336,10 +344,13 @@ export default function Home() {
               so it is NOT used here. Swap in a real Mwalwigi church-build photo from Roland when supplied.
             */}
             <figure className="flex flex-col gap-4">
-              <div className="w-full aspect-[3/4] bg-charcoal relative overflow-hidden ring-1 ring-cream/10 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.5)] flex items-center justify-center">
-                <span className="font-sans text-xs uppercase tracking-[0.18em] text-cream/40 font-bold px-6 text-center">
-                  Mwalwigi church build · photo coming soon
+              <div className="w-full aspect-[3/4] bg-charcoal relative overflow-hidden ring-1 ring-gold/25 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.5)] flex flex-col justify-center p-8 md:p-10 text-center">
+                <span className="font-sans text-xs uppercase tracking-[0.2em] text-gold font-bold mb-6">
+                  The need
                 </span>
+                <p className="font-heading text-2xl md:text-[32px] text-cream leading-[1.15]">
+                  Every storm takes the roof. We&rsquo;re building one that stays.
+                </p>
               </div>
               <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-gold font-bold">
                 Mwalwigi, Tanzania

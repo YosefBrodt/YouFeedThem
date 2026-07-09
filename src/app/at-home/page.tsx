@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { BlurFade } from "@/components/ui/blur-fade";
 
 /*
@@ -118,13 +119,22 @@ export default function AtHome() {
             ))}
           </div>
 
-          {/* PLACEHOLDER — Roland to supply: US community-garden photos. */}
+          {/* Illustrative community-garden photo (Unsplash) until Roland supplies real US garden photos. Caption keeps it honest. */}
           <BlurFade delay={0.2}>
-            <div className="mt-6 relative aspect-[16/7] overflow-hidden bg-charcoal ring-1 ring-cream/10 flex items-center justify-center">
-              <span className="font-sans text-xs uppercase tracking-[0.18em] text-cream/40 font-bold px-6 text-center">
-                First US community garden &middot; New York &middot; photos coming soon
-              </span>
-            </div>
+            <figure className="mt-6 relative aspect-[16/7] overflow-hidden bg-charcoal ring-1 ring-cream/10">
+              <Image
+                src="/photos/stock/community-garden-allotment-b.jpg"
+                alt="A community allotment garden with greenhouses, raised beds, and people harvesting"
+                fill
+                className="object-cover"
+                sizes="100vw"
+              />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-5 pt-14">
+                <span className="font-sans text-xs uppercase tracking-[0.15em] text-cream/85 font-semibold">
+                  A community garden like the first one starting in New York
+                </span>
+              </figcaption>
+            </figure>
           </BlurFade>
         </div>
       </section>
