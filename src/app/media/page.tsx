@@ -40,12 +40,12 @@ const chapters: Chapter[] = [
     number: "Chapter One",
     shortLabel: "Origins",
     era: "2008",
-    location: "Trinity Bible Church Ottawa, Canada",
+    location: "Trinity Bible Church, Osgoode, Ontario",
     title: "Twenty-five people under a tree.",
     bg: "cream",
     lead: [
       "In 2008, a small group at Trinity Bible Church in Osgoode, Ontario worked through a community-study curriculum and landed on the gospel account of the loaves and the fishes. Jesus, looking at five loaves, two fish, and a hungry crowd of thousands, told his disciples: you give them something to eat. The group decided to act on it.",
-      "A mutual friend introduced Roland and Theresa Poirier to Silas Owiti-Oduor, a pastor from a Kenyan village called Yogo. Silas described what was happening in his community: about half the children were dying of water-borne disease, malnutrition, and AIDS. Roland flew to Kenya later that year.",
+      "A mutual friend introduced Roland and Theresa Poirier to Silas Owiti-Oduor, a pastor from a Kenyan village called Yogo. Silas described what was happening in his community: children were dying of water-borne disease and malnutrition. Roland flew to Kenya later that year.",
       "The team came back with land purchased for a community farm, local leaders ready to run it, and a phrase Roland hasn't stopped repeating: you feed them, we help you do it.",
     ],
     photos: [],
@@ -62,26 +62,24 @@ const chapters: Chapter[] = [
     bg: "forest",
     lead: [
       "Yogo is the mother project. The soil in 2008 was so depleted local farmers described it as hard as a driveway. Children were dying of water-borne disease. The first village well had been dug by hand and was contaminated.",
-      "Today Yogo has a twelve-acre farm, a clean-water borehole drilled to depth in 2011 after two prior attempts in the area had failed, a school that serves 281 students with 42 staff, and graduates studying nursing, teaching, and medical engineering at university.",
+      "Today Yogo has a twelve-acre farm, a clean-water borehole drilled after two prior attempts in the area had failed, a school, and graduates who have gone on to study nursing, teaching, and engineering at university.",
       "Every program at Yogo is run by Yogo. We partner, we plant, we step back.",
     ],
     stats: [
-      { value: "12", label: "acres" },
-      { value: "281", label: "students" },
-      { value: "2", label: "meals a day" },
-      { value: "27", label: "alumni in university" },
+      { value: "12", label: "acres farmed" },
+      { value: "2008", label: "established" },
     ],
     photos: [
       {
         src: "/photos/wayback-pulls/yogo-school-exterior.jpg",
-        alt: "Drilling rig hitting water at Yogo, 2011",
+        alt: "Drilling rig hitting water at Yogo",
         caption: "The moment water was reached.",
         location: "Yogo, Kenya",
         story:
-          "The third drilling attempt in the area, after two prior had failed. YFT funded a hydrological survey first; the team hit clean water on the first attempt in 2011. The well has run continuously since.",
+          "The third drilling attempt in the area, after two prior had failed. YFT funded a hydrological survey first; the team hit clean water on the first attempt. The well has run continuously since.",
       },
       {
-        src: "/photos/wayback-pulls/elisha-farm-manager.jpg",
+        src: "/photos/wayback-pulls/yogo-academy-students-play.jpg",
         alt: "Yogo Academy students playing a string game",
         caption: "Yogo Academy students at play.",
         date: "February 2014",
@@ -94,7 +92,7 @@ const chapters: Chapter[] = [
         date: "October 2009",
         location: "Yogo, Kenya",
         story:
-          "Raised-bed square-foot gardening with drip-line irrigation, even in the founding years. The Yogo farm grew from four acres in 2009 to twelve acres by 2014, with crop yields up roughly tenfold after sugar-cane composting and bio-fertilisers were introduced.",
+          "Raised-bed square-foot gardening with drip-line irrigation, even in the founding years. The Yogo farm grew to twelve acres over time, with crop yields rising sharply after sugar-cane composting and bio-fertilisers were introduced.",
       },
       {
         src: "/photos/wayback-pulls/walking-tractor-2014.jpg",
@@ -137,13 +135,8 @@ const chapters: Chapter[] = [
     title: "Built with Stittsville. Run by Seje.",
     bg: "cream",
     lead: [
-      "Seje is the second school. It was built in partnership with Stittsville Community Bible Church in Ontario, Canada. The model is the same as Yogo: partner, plant, transfer. Seje Glory Centre Academy now serves 200 students with 27 staff, and 110 students have transitioned to secondary school since 2019.",
+      "Seje is the second school. It was built in partnership with Stittsville Community Bible Church in Ontario, Canada. The model is the same as Yogo: partner, plant, transfer. Seje Glory Centre Academy runs its own classrooms and feeding program, and its students have gone on to secondary school.",
       "Like Yogo, Seje runs its own kitchen and its own farm. Like Yogo, the school exists alongside a community well and a drought response plan.",
-    ],
-    stats: [
-      { value: "200", label: "students" },
-      { value: "27", label: "staff" },
-      { value: "110", label: "now in secondary school" },
     ],
     photos: [
       {
@@ -158,7 +151,7 @@ const chapters: Chapter[] = [
         caption: "The academy, under construction.",
         location: "Seje, Kenya",
         story:
-          "Built in partnership with Stittsville Community Bible Church (Ontario, Canada), who raised the construction funds and sent the first mission teams. The school has since absorbed twelve cohorts of mission-trip volunteers from churches across Ontario.",
+          "Built in partnership with Stittsville Community Bible Church (Ontario, Canada), who raised the construction funds and sent the first mission teams. The school has since hosted mission-trip volunteers from churches across Ontario.",
       },
       {
         src: "/photos/wayback-pulls/seje-breakfast-crowd.jpg",
@@ -190,13 +183,8 @@ const chapters: Chapter[] = [
     bg: "forest",
     lead: [
       "The work in Tanzania centers on Mwalwigi, a community of mostly women and children where the need was greatest. The same partner, plant, transfer model that built Yogo was carried here.",
-      "On Thursday October 14, 2021, after two years of fundraising, the team drilled a borehole in Mwalwigi and hit clean water at ninety metres. A solar pump, a 5,000-litre storage tank, and fencing were installed in the months that followed. Women and children who had been walking up to ten kilometres a day for water now make a five-minute trip.",
-      "The current campaign is the church build. Four temporary structures have been destroyed by wind and torrential rain. Roughly 250 people gather for Sunday services under a tree. A 39ft by 48ft cement-block first phase has been quoted at $18,700; the architectural drawings are complete; the contractor has been selected.",
-    ],
-    stats: [
-      { value: "90m", label: "well depth" },
-      { value: "10km", label: "previous daily water walk" },
-      { value: "$18,700", label: "current church build budget" },
+      "After two years of fundraising, the team drilled a borehole in Mwalwigi and reached clean water. A solar pump, a storage tank, and fencing were installed in the months that followed. Women and children who had been walking long distances for water now make a short trip.",
+      "The current campaign is the church build. Earlier temporary structures were destroyed by wind and torrential rain, and the community still gathers for Sunday services under a tree. A cement-block first phase has been designed and quoted, the drawings are complete, and the contractor has been selected.",
     ],
     photos: [
       {
@@ -211,7 +199,7 @@ const chapters: Chapter[] = [
         caption: "At the Mwalwigi drilling site.",
         location: "Mwalwigi, Tanzania",
         story:
-          "The team drilled to ninety metres on October 14, 2021, after two years of fundraising. Over 300 people now collect clean, safe water at the site, no longer walking five to ten kilometres a day to lakes and rivers.",
+          "The team reached clean water after two years of fundraising. Hundreds of people now collect clean, safe water at the site, no longer walking long distances to lakes and rivers.",
       },
     ],
   },
@@ -224,8 +212,8 @@ const chapters: Chapter[] = [
     title: "When the attack came, the response had to come too.",
     bg: "charcoal",
     lead: [
-      "On August 12, 2021, seven children with albinism were attacked near a remote Tanzanian village. The motivation was ritual superstition. It was not the first such attack in the region.",
-      "Mitindo school houses and protects roughly 200 children with albinism year-round, shielded from violence and given access to the medical care, sun protection, and special-needs support that their condition requires. After the August attack, 38 additional children were brought to Mitindo for protection. YFT mobilised funds for bedding, blankets, sun hats, and care supplies.",
+      "In August 2021, children with albinism were attacked near a remote Tanzanian village. The motivation was ritual superstition. It was not the first such attack in the region.",
+      "Mitindo school houses and protects children with albinism year-round, shielded from violence and given access to the medical care, sun protection, and special-needs support that their condition requires. After the attack, more children were brought to Mitindo for protection. YFT mobilised funds for bedding, blankets, sun hats, and care supplies.",
       "We don't lead with this story. We don't put it on the home page. But it is part of what we do, and the donors who fund this work deserve to know that their gifts also go to children who have nowhere else to be safe.",
     ],
     photos: [
@@ -247,7 +235,7 @@ const chapters: Chapter[] = [
       },
     ],
     closing:
-      "Three newsletter PDFs from August and September 2021 document the attack, the response, and the recovery in detail. They are linked in the archive at the bottom of this page.",
+      "A newsletter from August 2021 documents the attack, the response, and the recovery. It is linked in the archive at the bottom of this page.",
   },
 ];
 
