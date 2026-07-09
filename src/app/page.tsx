@@ -266,7 +266,7 @@ export default function Home() {
                 />
                 <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-4 pt-12">
                   <span className="font-sans text-xs uppercase tracking-[0.15em] text-cream/85 font-semibold">
-                    A community garden like the first one now taking root in New York
+                    A community garden like the one You Feed Them is starting in New York
                   </span>
                 </figcaption>
               </figure>
