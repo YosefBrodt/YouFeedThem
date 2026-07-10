@@ -20,7 +20,8 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://youfeedthem.com"),
+  // Live domain. Switch back to youfeedthem.com after the .com migration lands (see vault, Jul 10).
+  metadataBase: new URL("https://youfeedthem.ca"),
   title: {
     default: "You Feed Them | Building Relationships. Bringing Hope.",
     template: "%s | You Feed Them",
@@ -51,6 +52,9 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        {/* Vercel Web Analytics (same script the @vercel/analytics package injects).
+            Requires Web Analytics to be enabled on the Vercel project; 404s harmlessly until then. */}
+        <script defer src="/_vercel/insights/script.js" />
       </body>
     </html>
   );

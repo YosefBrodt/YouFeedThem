@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://youfeedthem.com";
+// Live domain. Switch back to youfeedthem.com after the .com migration lands (see vault, Jul 10).
+const BASE_URL = "https://youfeedthem.ca";
 
 export default function robots(): MetadataRoute.Robots {
   return {
