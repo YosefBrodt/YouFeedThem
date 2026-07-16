@@ -96,6 +96,10 @@ export default function Missions() {
                 Teams typically run five to twelve people. We have travelled with single-church groups, mixed-church groups, and groups of friends and family who simply wanted to come and serve. Every evening the team debriefs together. By the end of the second week, you know the people in the village by name and the people on your own team in a way that doesn’t happen at home.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
+                {/* Photos pending from Roland's Dropbox (Feb 2026 medical camp). */}
+                Many trips also run a free medical camp alongside the village work. On our most recent trip the team saw more than seven thousand people for medical, dental, and vision care.
+              </p>
+              <p className="text-xl leading-[1.6] opacity-90">
                 We are not a tour operator. We are a small team that has been going for eighteen years and we will tell you exactly what to expect.
               </p>
             </div>

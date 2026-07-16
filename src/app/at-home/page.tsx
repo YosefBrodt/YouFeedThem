@@ -9,7 +9,8 @@ import { BlurFade } from "@/components/ui/blur-fade";
   Source: jun-5-call-transcript.md (Roland's own description). Truth rules:
     - US 501(c)(3): APPLIED Jan 2026 via Ink Authority, status PENDING. Do NOT promise US tax-deductibility
       as a live fact. Frame receipts as "once our US charitable status is confirmed."
-    - Regenerative-beef farm NOT named (permission pending) -> "a partner regenerative farm north of New York City."
+    - Regenerative-beef farm NOT named (permission pending) -> "regenerative farms." Location dropped
+      per Roland (Jul 13); emphasis is "omega-balanced," not "grass-fed."
     - First garden = Roland's property near Bethlehem/Albany, New York (Roland-sourced Jun 5).
     - US community-garden photos owed by Roland -> clearly-marked placeholders.
 */
@@ -60,12 +61,11 @@ export default function AtHome() {
                 walking in often have no job, no spare cash, and no way to grow their own food.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
-                {/* Geography fix Jun 10: Roland's property is "in New York" (exact location unstated);
-                    Bethlehem, NY is a township he is pitching, a separate thing. Don't conflate. */}
+                {/* Kept general per Roland (Jul 13): don't tie the first garden to his personal
+                    property or name a specific township. */}
                 That is the exact problem we have been solving in Kenya and Tanzania for eighteen
-                years. So we are bringing the model home, starting with Roland&rsquo;s own property
-                in New York, the first You Feed Them community garden in the US, and townships like
-                Bethlehem, New York are next on the list.
+                years. So we are bringing the model home, starting with the first You Feed Them
+                community garden in northern New York, with more communities to follow.
               </p>
             </div>
           </BlurFade>
@@ -151,9 +151,8 @@ export default function AtHome() {
                 Give to the work. Get first dibs on the beef.
               </h2>
               <p className="text-xl opacity-90 mb-6 leading-[1.6]">
-                We partner with a regenerative farm north of New York City that raises certified
-                organic, omega-balanced, grass-fed beef, the kind of meat you can trace from
-                pasture to plate.
+                We partner with regenerative farms that raise certified-organic, omega-balanced
+                beef, the kind of meat you can trace from pasture to plate.
               </p>
               <p className="text-xl opacity-90 leading-[1.6]">
                 Become a donor and you do two things at once: you fund the gardens and the food-bank
@@ -173,7 +172,7 @@ export default function AtHome() {
                   {[
                     "Make a donation to You Feed Them&rsquo;s US work.",
                     "Join the donor list for the partner farm&rsquo;s next harvest.",
-                    "Get first dibs to buy certified-organic, grass-fed beef, by the half-cow or the cut.",
+                    "Get first dibs to buy certified-organic, omega-balanced beef, by the half-cow or the cut.",
                   ].map((step, i) => (
                     <li key={i} className="flex gap-4">
                       <span className="font-heading text-xl text-gold leading-none shrink-0">
@@ -213,8 +212,10 @@ export default function AtHome() {
               </p>
               <p className="font-sans text-sm text-cream/70 leading-[1.6]">
                 Canadian donors can already receive a CRA tax receipt through our partner{" "}
+                {/* URL generalized Jul 13 (Roland): Partners in Hope Tanzania is off the site.
+                    Confirm the exact GCF "You Feed Them" project URL with Roland before launch. */}
                 <a
-                  href="https://gcfcanada.com/partners-in-hope-tanzania/"
+                  href="https://gcfcanada.com"
                   target="_blank"
                   rel="noreferrer"
                   className="underline decoration-gold decoration-2 underline-offset-4 hover:text-gold transition-colors"

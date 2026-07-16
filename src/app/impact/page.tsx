@@ -27,9 +27,11 @@ const timeline = [
     body: "After previous drilling attempts in the region had failed, a hydrological study was done. The drill hit clean, drinkable water on the first attempt.",
   },
   {
+    /* Walking-tractor line removed Jul 13 (Roland): it was traded in for the 2024 tractor.
+       A dedicated 2024 entry ("Mama Teresa" tractor) is pending Roland's Dropbox photos/video. */
     year: "2014",
-    title: "Farm expands, first tractor",
-    body: "Yogo farm grows to twelve acres. A walking tractor is purchased during that year’s mission trip. The Yogo Community Based Organization hires its own farm manager.",
+    title: "Farm expands to twelve acres",
+    body: "Yogo farm grows to twelve acres, and the Yogo Community Based Organization hires its own farm manager.",
   },
   {
     year: "2015",
@@ -55,12 +57,12 @@ const timeline = [
     /* US 501(c)(3): applied Jan 2026 via Ink Authority, status PENDING (not yet confirmed approved). Do NOT state as secured until Roland supplies EIN + determination letter. */
     year: "2026",
     title: "The model comes home",
-    body: "You Feed Them applies for US 501(c)(3) charitable status under the religious and education categories. Roland’s property in New York is set to become the first US community garden, mirroring the Kenya community-based-organization process: establish the entity, run the education, transfer ownership. A regenerative-beef donor partnership and local food-bank outreach are taking shape alongside it.",
+    body: "You Feed Them applies for US 501(c)(3) charitable status under the religious and education categories. The first US community garden is set to take root in northern New York, mirroring the Kenya community-based-organization process: establish the entity, run the education, transfer ownership. A regenerative-beef donor partnership and local food-bank outreach are taking shape alongside it.",
   },
   {
     year: "Today",
-    title: "Two schools, three villages. And growing at home.",
-    body: "Yogo and Seje Glory Centre Academies are running, the farms feed the students, and alumni have gone on to university in fields like nursing and teaching. The same model is now taking root in the United States and Canada.",
+    title: "Three schools, three villages. And growing at home.",
+    body: "Yogo and Seje Glory Centre Academies are running, a third and larger school has just opened, and the farms feed the students. Alumni have gone on to university in fields like nursing and teaching. The same model is now taking root in the United States and Canada.",
   },
 ];
 
@@ -147,7 +149,7 @@ export default function Impact() {
             <BlurFade delay={0.2}>
               <div>
                 <div className="font-heading text-5xl md:text-7xl text-gold leading-none">
-                  <NumberTicker value={2} className="text-gold" />
+                  <NumberTicker value={3} className="text-gold" />
                 </div>
                 <p className="font-sans uppercase tracking-[0.1em] text-xs md:text-sm font-semibold text-cream/80 mt-4">
                   Schools, run by their communities
@@ -157,10 +159,10 @@ export default function Impact() {
             <BlurFade delay={0.25}>
               <div>
                 <div className="font-heading text-5xl md:text-7xl text-gold leading-none">
-                  <NumberTicker value={12} className="text-gold" />
+                  <NumberTicker value={16} className="text-gold" />
                 </div>
                 <p className="font-sans uppercase tracking-[0.1em] text-xs md:text-sm font-semibold text-cream/80 mt-4">
-                  Acres of community farm at Yogo
+                  Acres of community farm
                 </p>
               </div>
             </BlurFade>

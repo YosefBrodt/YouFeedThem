@@ -184,7 +184,7 @@ const chapters: Chapter[] = [
     lead: [
       "The work in Tanzania centers on Mwalwigi, a community of mostly women and children where the need was greatest. The same partner, plant, transfer model that built Yogo was carried here.",
       "After two years of fundraising, the team drilled a borehole in Mwalwigi and reached clean water. A solar pump, a storage tank, and fencing were installed in the months that followed. Women and children who had been walking long distances for water now make a short trip.",
-      "The current campaign is the church build. Earlier temporary structures were destroyed by wind and torrential rain, and the community still gathers for Sunday services under a tree. A cement-block first phase has been designed and quoted, the drawings are complete, and the contractor has been selected.",
+      "Earlier temporary church structures had been destroyed by wind and torrential rain, and for a time the community gathered under a tree. A permanent church has since been completed. The focus in the region now is clean water and ongoing support for the community.",
     ],
     photos: [
       {

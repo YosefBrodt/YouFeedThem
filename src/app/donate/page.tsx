@@ -4,13 +4,16 @@ import { useState, useEffect } from "react";
 import { Check, ExternalLink } from "lucide-react";
 import { BlurFade } from "@/components/ui/blur-fade";
 
+/* Amounts kept, most descriptions removed per Roland (Jul 13): student-meal, student-
+   sponsorship, teacher-stipend, and church-build labels are off. Roland is supplying fresh
+   descriptions for the blank tiers; $100 / $500 / $10,000 wording he approved as-is. */
 const tiers = [
-  { amount: 25, label: "one week of student meals" },
-  { amount: 50, label: "one month sponsoring a primary student" },
+  { amount: 25, label: "" },
+  { amount: 50, label: "" },
   { amount: 100, label: "seeds and bio-fertilizer for a community plot" },
-  { amount: 250, label: "one month of a teacher’s stipend" },
+  { amount: 250, label: "" },
   { amount: 500, label: "irrigation line for a section of the farm" },
-  { amount: 5000, label: "major contribution to the Mwalwigi church build" },
+  { amount: 5000, label: "" },
   { amount: 10000, label: "cornerstone gift, acknowledged on the project" },
 ];
 
@@ -18,9 +21,7 @@ const designations = [
   { id: "where-needed-most", label: "Where needed most" },
   { id: "us-community-garden", label: "US community garden (New York)" },
   { id: "us-food-bank", label: "US food-bank outreach" },
-  { id: "mwalwigi-church", label: "Mwalwigi church build (Tanzania)" },
   { id: "school-feeding", label: "School feeding program (Kenya)" },
-  { id: "student-sponsorship", label: "Student sponsorship (Yogo or Seje)" },
   { id: "clean-water", label: "Clean water wells" },
   { id: "albino-children", label: "Albino children protection" },
 ];
@@ -105,10 +106,11 @@ export default function Donate() {
                 </p>
                 <p className="text-lg text-cream/90 leading-[1.6] mb-4">
                   For CRA-receipted giving, donate through our partner{" "}
-                  <strong className="text-cream">The Great Commission Foundation</strong>. Select the “Partners in Hope Tanzania” project to direct your gift to Mwalwigi.
+                  <strong className="text-cream">The Great Commission Foundation</strong>. Select the You Feed Them project to direct your gift.
                 </p>
+                {/* URL generalized Jul 13 (Roland): confirm the exact GCF "You Feed Them" project link before launch. */}
                 <a
-                  href="https://gcfcanada.com/partners-in-hope-tanzania/"
+                  href="https://gcfcanada.com"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 bg-cream text-forest hover:bg-gold text-sm uppercase tracking-wider font-bold py-3 px-6 transition-colors"
@@ -144,8 +146,8 @@ export default function Donate() {
               </h2>
               <p className="text-lg text-forest/80 leading-[1.6] max-w-2xl">
                 Donate to our US community-garden and food-bank work and get first access to buy
-                certified-organic, grass-fed beef from a partner regenerative farm north of New York
-                City, by the half-cow or the cut.
+                certified-organic, omega-balanced beef from a partner regenerative farm, by the
+                half-cow or the cut.
               </p>
             </div>
             <a
@@ -168,15 +170,23 @@ export default function Donate() {
                 Where it goes
               </p>
               <h2 className="font-heading text-3xl md:text-4xl text-cream mb-10 leading-[1.15]">
-                Clean water, farms, schools, and churches, across three villages.
+                Clean water, farms, and schools, across three villages.
               </h2>
               <ul className="flex flex-col gap-8">
                 <li className="border-t border-cream/15 pt-6">
                   <p className="font-heading text-xl md:text-2xl text-cream mb-2 leading-[1.25]">
-                    Mwalwigi church build
+                    Clean-water wells
                   </p>
                   <p className="text-lg text-cream/80 leading-[1.6]">
-                    Temporary churches keep coming down in wind and rain. The congregation needs a permanent building. Current urgent priority.
+                    Hydrological surveys, drilling, storage tanks, and irrigation lines. Current urgent priority.
+                  </p>
+                </li>
+                <li className="border-t border-cream/15 pt-6">
+                  <p className="font-heading text-xl md:text-2xl text-cream mb-2 leading-[1.25]">
+                    Farms &amp; food security
+                  </p>
+                  <p className="text-lg text-cream/80 leading-[1.6]">
+                    Seed, bio-fertilizer, and irrigation that turn depleted plots into working farms the community runs.
                   </p>
                 </li>
                 <li className="border-t border-cream/15 pt-6">
@@ -189,18 +199,10 @@ export default function Donate() {
                 </li>
                 <li className="border-t border-cream/15 pt-6">
                   <p className="font-heading text-xl md:text-2xl text-cream mb-2 leading-[1.25]">
-                    Student sponsorship
+                    US community gardens &amp; food banks
                   </p>
                   <p className="text-lg text-cream/80 leading-[1.6]">
-                    $50/mo covers daycare-grade 6. $60/mo for grade 7-9. $70/mo for secondary. Through our partner AMIC.
-                  </p>
-                </li>
-                <li className="border-t border-cream/15 pt-6">
-                  <p className="font-heading text-xl md:text-2xl text-cream mb-2 leading-[1.25]">
-                    Clean-water wells
-                  </p>
-                  <p className="text-lg text-cream/80 leading-[1.6]">
-                    Hydrological surveys, drilling, storage tanks, irrigation lines.
+                    The first gardens and food-bank partnerships taking root in New York, run the same way: build it, then hand it over.
                   </p>
                 </li>
               </ul>
@@ -329,12 +331,14 @@ export default function Donate() {
                       <span className="font-heading text-xl sm:text-2xl block">
                         ${tier.amount.toLocaleString()}
                       </span>
-                      <span
-                        className={`font-sans text-xs mt-1 block leading-snug ${
-                          selected ? "text-cream/70" : "text-forest/55"
-                        }`}
-                        dangerouslySetInnerHTML={{ __html: tier.label }}
-                      />
+                      {tier.label && (
+                        <span
+                          className={`font-sans text-xs mt-1 block leading-snug ${
+                            selected ? "text-cream/70" : "text-forest/55"
+                          }`}
+                          dangerouslySetInnerHTML={{ __html: tier.label }}
+                        />
+                      )}
                     </button>
                   );
                 })}
@@ -385,7 +389,7 @@ export default function Donate() {
       <section className="container mx-auto px-8 max-w-7xl mt-24 md:mt-28 pt-12 border-t border-cream/10">
         {/* PLACEHOLDER — Roland to confirm final legal language once US 501(c)(3) EIN and receipting process are in hand. */}
         <p className="text-sm text-cream/55 leading-[1.7] max-w-3xl">
-          For US donors, contact us about current charitable status and tax-receipt options. Canadian donors can receive a CRA tax receipt through our partner The Great Commission Foundation (a registered Canadian charity) for the Partners in Hope Tanzania project. Travel and mission-trip costs are not tax-deductible. Questions: roland@youfeedthem.com.
+          For US donors, contact us about current charitable status and tax-receipt options. Canadian donors can receive a CRA tax receipt through our partner The Great Commission Foundation (a registered Canadian charity) for the You Feed Them project. Travel and mission-trip costs are not tax-deductible. Questions: roland@youfeedthem.com.
         </p>
       </section>
     </main>

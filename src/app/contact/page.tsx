@@ -248,8 +248,9 @@ export default function Contact() {
                 <p className="text-lg text-cream/85 leading-[1.7] mb-4">
                   Canadian donors looking for a CRA tax receipt should give through our partner The Great Commission Foundation.
                 </p>
+                {/* URL generalized Jul 13 (Roland): Partners in Hope Tanzania is off the site. */}
                 <a
-                  href="https://gcfcanada.com/partners-in-hope-tanzania/"
+                  href="https://gcfcanada.com"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-block border-2 border-gold text-gold hover:bg-gold hover:text-forest text-sm uppercase tracking-wider font-bold py-3 px-6 transition-colors"

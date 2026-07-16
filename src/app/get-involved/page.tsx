@@ -119,7 +119,7 @@ export default function GetInvolved() {
           </BlurFade>
           <BlurFade delay={0.2}>
             <p className="text-xl text-cream/90 leading-[1.7] mb-6">
-              We are actively looking for churches, small groups, businesses, and families who can host a 20-minute presentation. The current focus is the Mwalwigi church build, a permanent structure to replace four temporary buildings lost to weather.
+              We are actively looking for churches, small groups, businesses, and families who can host a 20-minute presentation. The current focus is the work on the ground: clean water, the community farms, and the schools the villages run for themselves.
             </p>
           </BlurFade>
           <BlurFade delay={0.3}>

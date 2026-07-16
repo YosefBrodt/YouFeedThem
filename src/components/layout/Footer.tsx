@@ -75,7 +75,7 @@ export default function Footer() {
               Partners
             </h3>
             <a
-              href="https://gcfcanada.com/partners-in-hope-tanzania/"
+              href="https://gcfcanada.com"
               target="_blank"
               rel="noreferrer"
               className="text-base text-cream/80 hover:text-cream transition-colors"

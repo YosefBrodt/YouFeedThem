@@ -60,7 +60,7 @@ export default function Home() {
           <BlurFade delay={0.32}>
             <p className="font-sans text-lg md:text-2xl text-cream max-w-3xl mt-7 leading-[1.55] [text-shadow:0_1px_12px_rgba(0,0,0,0.55)]">
               We help villages in Kenya and Tanzania grow their own food, run their own schools,
-              and reach clean water, then we hand the work over to the people who live there.
+              and have access to clean water, then we hand the work over to the people who live there.
               Now we&rsquo;re bringing the same model home to North America.
             </p>
           </BlurFade>
@@ -334,23 +334,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ───────────────────────── 6. CURRENT ASK — Mwalwigi church build ───────────────────────── */}
+      {/* ───────────────────────── 6. CURRENT ASK — clean water wells ───────────────────────── */}
+      {/* Repurposed Jul 13 (Roland call): the Mwalwigi church build is complete, so it no longer
+          fronts an active ask. Clean water is a live, ongoing need Roland is keeping. Church-build
+          mentions are preserved only where the site describes past/historical work (timeline, media). */}
       <section className="bg-forest py-24 md:py-28">
         <div className="container mx-auto px-8 max-w-7xl grid grid-cols-1 lg:grid-cols-[0.55fr_1fr] gap-14 lg:gap-24 items-center">
           <BlurFade>
-            {/*
-              PLACEHOLDER — no recovered photo truthfully shows the Mwalwigi church/congregation.
-              The available "under a tree" file is actually a dormitory interior (see truth-audit-jun7.md),
-              so it is NOT used here. Swap in a real Mwalwigi church-build photo from Roland when supplied.
-            */}
             <figure className="flex flex-col gap-4">
-              <div className="w-full aspect-[3/4] bg-charcoal relative overflow-hidden ring-1 ring-gold/25 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.5)] flex flex-col justify-center p-8 md:p-10 text-center">
-                <span className="font-sans text-xs uppercase tracking-[0.2em] text-gold font-bold mb-6">
-                  The need
-                </span>
-                <p className="font-heading text-2xl md:text-[32px] text-cream leading-[1.15]">
-                  Every storm takes the roof. We&rsquo;re building one that stays.
-                </p>
+              <div className="w-full aspect-[3/4] bg-charcoal relative overflow-hidden ring-1 ring-gold/25 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.5)]">
+                {/* Alt fixed: the filename says "women collecting water" but the photo is a
+                    drilling rig at the Mwalwigi borehole site (see truth-audit-jun7.md). */}
+                <Image
+                  src="/photos/wayback-pulls/mwalwigi-women-collecting-water.jpeg"
+                  alt="A borehole drilling rig at work at the Mwalwigi drilling site, Tanzania"
+                  fill
+                  className="object-cover saturate-[0.92]"
+                  sizes="(max-width: 1024px) 100vw, 35vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               </div>
               <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-gold font-bold">
                 Mwalwigi, Tanzania
@@ -363,21 +365,22 @@ export default function Home() {
                 Current urgent need
               </p>
               <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-cream mb-8 leading-[1.05]">
-                Mwalwigi needs a church that can stand up to the weather.
+                Clean water, where families still walk hours to find it.
               </h2>
               <p className="text-xl text-cream/85 mb-6 leading-[1.6]">
-                Temporary churches in Mwalwigi, Tanzania keep coming down in high winds and
-                heavy rain. The congregation needs a permanent structure that lasts.
+                In parts of Kenya and Tanzania, women and children still walk hours each day for
+                water that has to be boiled before it is safe. We survey, drill, and build the
+                storage and irrigation that turns one well into a season of food.
               </p>
               <p className="text-xl text-cream/85 mb-10 leading-[1.6]">
-                We&rsquo;re raising funds for that build right now. Canadian donors can give through
-                The Great Commission Foundation and receive a CRA tax receipt.
+                This is the work we&rsquo;re raising funds for right now. Canadian donors can give
+                through The Great Commission Foundation and receive a CRA tax receipt.
               </p>
               <Link
-                href="/donate"
+                href="/donate?designation=clean-water"
                 className="bg-gold text-forest hover:bg-[#d1a862] text-base md:text-lg uppercase tracking-wider font-bold py-5 px-12 transition-colors inline-block min-h-[44px]"
               >
-                Fund the church build
+                Fund a clean-water well
               </Link>
             </div>
           </BlurFade>
@@ -399,15 +402,15 @@ export default function Home() {
             {[
               {
                 title: "Donate",
-                line: "A one-time or monthly gift goes to the farms, schools, water, and the current build.",
+                line: "A one-time or monthly gift goes to the farms, schools, and clean-water work across the villages.",
                 cta: "Donate",
                 href: "/donate",
               },
               {
-                title: "Sponsor a student",
-                line: "Through AMIC, sponsor a student at $50, $60, or $70 a month depending on their grade.",
-                cta: "Sponsor a student",
-                href: "/get-involved",
+                title: "Grow the model at home",
+                line: "Back the first US community gardens and food-bank work taking root in New York, built to be owned by the community.",
+                cta: "See the work at home",
+                href: "/at-home",
               },
               {
                 title: "Go on a mission trip",
@@ -498,7 +501,7 @@ export default function Home() {
           </BlurFade>
           <BlurFade delay={0.15}>
             <p className="text-lg md:text-xl text-cream/80 leading-[1.6] mb-10 max-w-2xl mx-auto">
-              Every gift goes toward food, water, schools, and the church build, then it keeps
+              Every gift goes toward food, water, and schools, then it keeps
               working long after, because every program is built to be owned by the people it serves.
             </p>
           </BlurFade>

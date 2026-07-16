@@ -17,7 +17,7 @@ import { BlurFade } from "@/components/ui/blur-fade";
       "10x" yield, "250 under a tree", "10 churches", well depths/dates/dollars, 69 staff, class sizes.
     - SOFTENED: US 501(c)(3) NOT asserted as live fact; no US tax-receipt promise (beef line drops
       the receipt). Canadian CRA receipts via Great Commission Foundation = fine (verified).
-    - Regenerative-beef farm NOT named (permission pending) -> "a partner regenerative farm north of New York City."
+    - Regenerative-beef farm NOT named (permission pending) -> "regenerative farms" (location dropped Jul 13).
     - US-expansion photos + two extra Kenya village names = clearly-marked placeholders (Roland owes them).
 */
 
@@ -121,23 +121,24 @@ export default function Programs() {
         </div>
       </section>
 
-      {/* ───────────────────────── 3. TANZANIA — current urgent need ───────────────────────── */}
+      {/* ───────────────────────── 3. TANZANIA — clean water + Mitindo ───────────────────────── */}
+      {/* Reframed Jul 13 (Roland call): the Mwalwigi church build is complete, so it no longer
+          fronts this section. The live Tanzania work is clean water + Mitindo albino protection. */}
       <section id="tanzania" className="bg-forest py-24 md:py-28 scroll-mt-24">
         <div className="container mx-auto px-8 max-w-7xl grid grid-cols-1 lg:grid-cols-[0.85fr_1fr] gap-12 lg:gap-20 items-center">
           <BlurFade>
-            {/*
-              PLACEHOLDER — no recovered photo truthfully shows the Mwalwigi church/congregation.
-              The blanket photo (mwalwigi-well-success.jpg) actually shows Mitindo, so it is NOT used as
-              the lead image for the Mwalwigi church build. Swap in a real photo from Roland when supplied.
-            */}
             <figure className="flex flex-col gap-4">
-              <div className="w-full aspect-[4/5] bg-charcoal relative overflow-hidden ring-1 ring-gold/25 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.5)] flex flex-col justify-center p-8 md:p-10 text-center">
-                <span className="font-sans text-xs uppercase tracking-[0.2em] text-gold font-bold mb-6">
-                  The need
-                </span>
-                <p className="font-heading text-2xl md:text-[32px] text-cream leading-[1.15]">
-                  Every storm takes the roof. We&rsquo;re building one that stays.
-                </p>
+              <div className="w-full aspect-[4/5] bg-charcoal relative overflow-hidden ring-1 ring-gold/25 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.5)]">
+                {/* Alt fixed: the filename says "women collecting water" but the photo is a
+                    drilling rig at the Mwalwigi borehole site (see truth-audit-jun7.md). */}
+                <Image
+                  src="/photos/wayback-pulls/mwalwigi-women-collecting-water.jpeg"
+                  alt="A borehole drilling rig at work at the Mwalwigi drilling site, Tanzania"
+                  fill
+                  className="object-cover saturate-[0.92]"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               </div>
               <figcaption className="font-sans text-xs uppercase tracking-[0.2em] text-gold font-bold">
                 Mwalwigi, Mwanza Region, Tanzania
@@ -147,20 +148,20 @@ export default function Programs() {
           <BlurFade delay={0.15}>
             <div>
               <p className="font-sans text-sm uppercase tracking-[0.2em] text-gold font-bold mb-6">
-                Current urgent need
+                Where we work in Tanzania
               </p>
               <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-cream mb-6 leading-[1.05]">
-                A church that can stand up to the weather.
+                Clean water, and protection for children who need it.
               </h2>
               <p className="text-xl text-cream/85 leading-[1.6] mb-10 max-w-xl">
-                Temporary churches in Mwalwigi keep coming down in wind and rain. The congregation needs one that lasts.
+                In Mwalwigi and the villages around it, the work now centers on two things: clean water for families who still walk hours to find it, and the albino children sheltered nearby at Mitindo.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-cream/10 border border-cream/10 mb-10">
                 <div className="bg-forest p-6">
                   <h3 className="font-heading text-xl text-cream mb-2 leading-[1.2]">Clean water</h3>
                   <p className="font-sans text-base text-cream/70 leading-[1.55]">
-                    Women and children walk hours each day to reach it. We&rsquo;re working on a well.
+                    Women and children walk hours each day to reach it. We survey, drill, and build the storage that lasts.
                   </p>
                 </div>
                 <div className="bg-forest p-6">
@@ -175,7 +176,7 @@ export default function Programs() {
                 href="/donate"
                 className="bg-gold text-forest hover:bg-[#d1a862] text-base md:text-lg uppercase tracking-wider font-bold py-5 px-12 transition-colors inline-block min-h-[44px]"
               >
-                Fund the church build
+                Partner with the Tanzania work
               </Link>
             </div>
           </BlurFade>
@@ -265,7 +266,7 @@ export default function Programs() {
           </BlurFade>
           <BlurFade delay={0.15}>
             <p className="text-lg md:text-xl opacity-90 leading-[1.6] mb-10 max-w-2xl mx-auto">
-              Direct your gift where you want it: the Mwalwigi church build, a student, or clean water. Just tell us where.
+              Direct your gift where you want it: clean water, a farm, or a school. Just tell us where.
             </p>
           </BlurFade>
           <BlurFade delay={0.3}>

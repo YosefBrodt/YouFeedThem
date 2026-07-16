@@ -14,7 +14,7 @@ const team = [
   {
     name: "Bishop Silas Owiti Oduor",
     role: "Field Partner, Kenya",
-    bio: "Pastor Silas is from Yogo village. In 2008, fifty percent of the children in his community were dying from water-borne disease and malnutrition. A mutual friend introduced him to Roland and Theresa in Canada. Silas has since grown a single church in Yogo into ten churches across the district and is now a Bishop spreading the gospel across Kenyan radio.",
+    bio: "Pastor Silas is from Yogo village. In 2008, fifty percent of the children in his community were dying from water-borne disease and malnutrition. A mutual friend introduced him to Roland and Theresa in Canada. Silas has since grown a single church in Yogo into seventeen churches across the district and is now a Bishop spreading the gospel across Kenyan radio.",
   },
   {
     name: "Dr. David LoCastro",
@@ -33,8 +33,8 @@ const partners = [
   {
     name: "The Great Commission Foundation",
     region: "Canada",
-    note: "Issues CRA tax receipts for Canadian donors giving to Partners in Hope Tanzania (YFT's Mwalwigi work).",
-    href: "https://gcfcanada.com/partners-in-hope-tanzania/",
+    note: "Issues CRA tax receipts for Canadian donors giving to the You Feed Them project.",
+    href: "https://gcfcanada.com",
   },
   {
     name: "Hungry For Life",
@@ -94,14 +94,14 @@ export default function About() {
           <BlurFade delay={0.15}>
             <div className="flex flex-col gap-6">
               <p className="text-xl leading-[1.6] opacity-90">
-                In 2008, Roland and his late wife Theresa Poirier joined a small group at Trinity Bible Church in Osgoode, Ontario. The conversation that mattered came from Luke 9, the moment Jesus turned to his disciples in front of a hungry crowd and said <em className="font-heading">“you give them something to eat.”</em> The group decided to act on it.
+                In 2008, a small group kept coming back to one sentence. It came from Luke 9, the moment Jesus turned to his disciples in front of a hungry crowd and said <em className="font-heading">“you give them something to eat.”</em> They decided to act on it.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
                 {/* "Lynn Fraser" stripped Jun 10: named person, no confirmed source (same call-notes that produced the disowned Speroway entry). Restore only if Roland confirms. */}
                 A mutual friend introduced the Poiriers to Pastor Silas Owiti-Oduor, originally from a Kenyan village called Yogo. Silas described what was happening at home: about half the children in his community were dying of water-borne disease, malnutrition, and AIDS. Roland flew to Kenya later that year with a small team.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
-                The team came back with land purchased for a community farm, four local leaders ready to run it, and a phrase Roland hasn’t stopped repeating: <em className="font-heading">you feed them, we help you do it</em>. The mission began with nourishing the soil. Eighteen years later, two schools are running, farms are feeding the students, clean water flows in three villages, and medical, dental, and vision care is part of every mission trip.
+                The team came back with land purchased for a community farm and a phrase Roland hasn’t stopped repeating: <em className="font-heading">you feed them, we help you do it</em>. The mission began with nourishing the soil. Eighteen years later, three schools are running, farms are feeding the students, clean water flows in three villages, and medical, dental, and vision care is part of every mission trip.
               </p>
             </div>
           </BlurFade>
@@ -123,7 +123,7 @@ export default function About() {
                 Co-founder · Marketing & Mobilization Chair
               </p>
               <p className="font-sans text-lg text-cream/85 leading-[1.7] max-w-2xl mx-auto">
-                Theresa was on the trip to Kenya that started this. For the next fifteen years she ran the website, the newsletters, the graphics, and the bookkeeping, alongside Roland at Nutra-Fix Inc. Quiet, exacting, and never the loudest voice in the room. The work continues in her honor.
+                Theresa was on one of the first trips to Kenya that started this. For the next fifteen years she ran the website, the newsletters, the graphics, and the bookkeeping, alongside Roland at Nutra-Fix Inc. Quiet, exacting, and never the loudest voice in the room. The work continues in her honor.
               </p>
             </div>
           </BlurFade>
@@ -149,7 +149,7 @@ export default function About() {
                 You Feed Them is pursuing US 501(c)(3) charitable status, applied for in early 2026 under the religious and education categories. For our work in Kenya and Tanzania, we partner with existing registered charities rather than duplicating infrastructure abroad, which keeps us lean and routes Canadian tax-receipted donations through partners who specialize in that work.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
-                We do not take salaries from program funds. Travel and overhead are covered separately through direct partnerships and personal contribution. When you give to Partners in Hope Tanzania through The Great Commission Foundation, 100% of your gift reaches the field.
+                We do not take salaries from program funds. Travel and overhead are covered separately through direct partnerships and personal contribution. When you give to the You Feed Them project through The Great Commission Foundation, 100% of your gift reaches the field.
               </p>
               <p className="text-xl leading-[1.6] opacity-90">
                 On the ground, every program is handed to the local community. The community chooses it, owns it, runs it. We visit, we measure, we adjust. We do not run schools, farms, or churches in East Africa. The communities do.
@@ -182,7 +182,7 @@ export default function About() {
               </p>
               <p className="text-xl leading-[1.6] text-cream/90">
                 {/* PLACEHOLDER — Roland to supply: US community-garden photos and the finished 501(c)(3) / Ink Authority assets to draw from. */}
-                Roland’s property in New York is the first of these gardens. Read how the US model works on our{" "}
+                The first of these gardens is taking root in northern New York. Read how the US model works on our{" "}
                 <Link href="/at-home" className="underline decoration-gold decoration-2 underline-offset-4 hover:text-gold transition-colors">
                   At Home page
                 </Link>
