@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <main className="w-full">
       {/* ───────────────────────── 1. HERO — clarity-first ───────────────────────── */}
-      <section className="relative w-full h-[88vh] min-h-[620px] md:h-[92vh] md:max-h-[900px] flex items-center md:items-end pt-32 md:pt-36 pb-16 md:pb-24 overflow-hidden">
+      <section className="relative w-full h-[88vh] min-h-[620px] md:h-[92vh] md:min-h-[780px] md:max-h-[900px] flex items-center md:items-end pt-32 md:pt-36 pb-16 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-charcoal">
           <video
             src="/hero-school-children.mp4"
